@@ -26,7 +26,7 @@ class MainTimeline extends Component {
             }
           }}
         >
-          <div style={{ userSelect: "none", display: "inline-flex", alignItems: "center", flexDirection: "row", backgroundColor: "yellow", height: 300, transform: `translate3d(${this.state.scrollLeft}px, 0,0)` }}>
+          <div style={{ paddingLeft: 40, userSelect: "none", display: "inline-flex", alignItems: "center", flexDirection: "row", backgroundColor: "yellow", height: 300, transform: `translate3d(${this.state.scrollLeft}px, 0,0)` }}>
             {
               oldTestament.map((book, i) => [
                 <div key={`books_${i}`} style={{ flex: "1 0 0" }}>
