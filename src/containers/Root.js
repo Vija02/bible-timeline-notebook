@@ -29,7 +29,7 @@ class Root extends Component {
             {
               oldTestament.map((book, i) => [
                 <div key={`books_${i}`} style={{ flex: "1 0 0" }}>
-                  <div style={{ padding: 5, backgroundColor: "grey" }}>
+                  <div style={{ padding: 5, backgroundColor: "grey", cursor: "pointer" }} onClick={() => { console.log(`${book} Clicked`) }}>
                     {book}
                   </div>
                 </div>,
