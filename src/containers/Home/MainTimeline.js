@@ -3,13 +3,14 @@ import ReactGesture from 'react-gesture';
 
 import oldTestament from 'assets/old.json'
 
+import { formatBook } from 'helper'
+
 class MainTimeline extends Component {
   constructor(props) {
     super(props);
     this.state = { holding: false, holdStart: 0, scrollLeft: 0, scrollStart: 0 };
   }
   render() {
-
     return (
       <div style={{ overflow: "hidden" }}>
         <ReactGesture
@@ -29,7 +30,7 @@ class MainTimeline extends Component {
             {
               oldTestament.map((book, i) => [
                 <div key={`books_${i}`} style={{ flex: "1 0 0" }}>
-                  <div style={{ padding: 5, backgroundColor: "grey", cursor: "pointer" }} onClick={() => { console.log(`${book} Clicked`) }}>
+                  <div style={{ padding: 5, backgroundColor: "grey", cursor: "pointer" }} onClick={() => { this.props.history.push(`/book/${formatBook(book)}`) }}>
                     {book}
                   </div>
                 </div>,
