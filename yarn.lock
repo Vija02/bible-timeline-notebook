@@ -5240,12 +5240,6 @@ react-scripts-cssmodules@^1.0.171:
   optionalDependencies:
     fsevents "1.1.2"
 
-react-scrolling@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/react-scrolling/-/react-scrolling-0.0.2.tgz#d1c1a38ad35de588a9c5b1fb83cec5ef20c38a21"
-  dependencies:
-    react-gesture "^0.0.5"
-
 react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
