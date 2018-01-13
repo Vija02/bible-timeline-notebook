@@ -1,0 +1,29 @@
+.timelineContainer {
+  overflow: hidden;
+}
+
+.scrollerContainer {
+  padding-left: 40px;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: yellow;
+  height: 300px;
+}
+
+.bookContainer{
+  flex: 1 0 0;
+}
+
+.bookSelector {
+  padding: 5px;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.dashedLine {
+  width: 50px;
+  border: 0px;
+  border-top: dashed 1px;
+}
