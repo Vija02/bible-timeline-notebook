@@ -7,11 +7,13 @@ import MainTimeline from './MainTimeline'
 
 export default class HomeIndex extends Component {
   render() {
-    return [
-      <MainTimeline {...this.props} />,
-      <Switch>
-        <Route path="/book" component={Book} />
-      </Switch>
-    ];
+    return (
+      <React.Fragment>
+        <MainTimeline {...this.props} />
+        <Switch>
+          <Route path="/book" component={Book} />
+        </Switch>
+      </React.Fragment>
+    );
   }
 }
