@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import { unformatBook } from 'helper'
+
 class Book extends Component {
   render() {
     const { loading, error } = this.props.data
 
     return (
       <div style={{ paddingLeft: 40 }}>
-        <p>{this.props.match.params.bookName}</p>
+        <p>{unformatBook(this.props.match.params.bookName)}</p>
         <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummaries.nodes[0].summary}</p>
       </div>
     );
