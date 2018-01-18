@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
+import { compose, graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 
-export default class Book extends Component {
+class Book extends Component {
   render() {
+    const { loading, error } = this.props.data
+
     return (
       <div style={{ paddingLeft: 40 }}>
         <p>{this.props.match.params.bookName}</p>
-        <p style={{ width: "30vw" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean velit velit, consequat nec porttitor rutrum, molestie eget nibh. Nullam accumsan commodo dolor, sed porta augue. Pellentesque tempus tincidunt neque a efficitur. Aliquam semper efficitur ante, nec malesuada risus blandit non. Proin scelerisque, est eget dignissim viverra, ligula odio dictum mauris, eget porttitor risus elit et magna. Sed molestie, augue non sollicitudin malesuada, nisl neque finibus lorem, ut sollicitudin sem justo sed quam. Nunc aliquam lacus diam, eget dignissim leo convallis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed porta sit amet arcu sit amet sollicitudin. Quisque posuere eu libero et eleifend. In et fringilla sapien. Aenean eu justo sed quam sollicitudin ultrices vitae pharetra felis. Sed ac dolor purus.</p>
+        <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummaries.nodes[0].summary}</p>
       </div>
     );
   }
 }
+
+export default compose(graphql(gql`
+mutation($bookName: String!, $summary: String!){
+  createBookSummary(input: {bookSummary:{bookName: $bookName, summary: $summary}}){
+    bookSummary{
+      id
+    }
+  }
+}
+`, {
+    props: ({ mutate }) => ({
+      createBookSummary: ({ bookName, summary }) => mutate({ variables: { bookName, summary } })
+    })
+  }), graphql(gql`
+query($bookName: String!){
+  bookSummaries: allBookSummaries(condition:{bookName: $bookName}){
+    nodes{
+      summary
+    }
+  }
+}
+`, { options: ({ match }) => ({ variables: { bookName: match.params.bookName } }) }))(Book)
