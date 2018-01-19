@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 import Scroller from './Scroller'
 
-import oldTestament from 'assets/old.json'
+import bookData from 'assets/book_metadata.json'
 import { formatBook } from 'helper'
 import styles from './MainTimeline.module.css'
+
+const oldTestament = bookData.filter(book => book.bookSection === "OT")
 
 class MainTimeline extends Component {
   render() {
@@ -16,9 +18,9 @@ class MainTimeline extends Component {
               oldTestament.map((book, i) => [
                 <div key={`books_${i}`} className={styles.bookContainer}>
                   <div className={styles.bookSelector} onClick={() => {
-                    this.props.history.push(`/book/${formatBook(book)}`)
+                    this.props.history.push(`/book/${formatBook(book.bookName)}`)
                   }}>
-                    {book}
+                    {book.bookName}
                   </div>
                 </div>,
                 <hr key={`hr_${i}`} className={styles.dashedLine} />
