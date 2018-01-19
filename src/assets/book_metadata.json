@@ -1,0 +1,596 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "Genesis",
+    "chaptersCount": 50,
+    "bookDivision": "Pentateuch",
+    "bookSection": "OT",
+    "shortName": "Ge",
+    "osisName": "Gen"
+  },
+  {
+    "bookId": 2,
+    "bookName": "Exodus",
+    "chaptersCount": 40,
+    "bookDivision": "Pentateuch",
+    "bookSection": "OT",
+    "shortName": "Ex",
+    "osisName": "Exo"
+  },
+  {
+    "bookId": 3,
+    "bookName": "Leviticus",
+    "chaptersCount": 27,
+    "bookDivision": "Pentateuch",
+    "bookSection": "OT",
+    "shortName": "Le",
+    "osisName": "Lev"
+  },
+  {
+    "bookId": 4,
+    "bookName": "Numbers",
+    "chaptersCount": 36,
+    "bookDivision": "Pentateuch",
+    "bookSection": "OT",
+    "shortName": "Nu",
+    "osisName": "Num"
+  },
+  {
+    "bookId": 5,
+    "bookName": "Deuteronomy",
+    "chaptersCount": 34,
+    "bookDivision": "Pentateuch",
+    "bookSection": "OT",
+    "shortName": "Dt",
+    "osisName": "Deu"
+  },
+  {
+    "bookId": 6,
+    "bookName": "Joshua",
+    "chaptersCount": 24,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Jos",
+    "osisName": "Jos"
+  },
+  {
+    "bookId": 7,
+    "bookName": "Judges",
+    "chaptersCount": 21,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Jdg",
+    "osisName": "Jdg"
+  },
+  {
+    "bookId": 8,
+    "bookName": "Ruth",
+    "chaptersCount": 4,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Ru",
+    "osisName": "Rut"
+  },
+  {
+    "bookId": 9,
+    "bookName": "1 Samuel",
+    "chaptersCount": 31,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "1Sa",
+    "osisName": "1Sa"
+  },
+  {
+    "bookId": 10,
+    "bookName": "2 Samuel",
+    "chaptersCount": 24,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "2Sa",
+    "osisName": "2Sa"
+  },
+  {
+    "bookId": 11,
+    "bookName": "1 Kings",
+    "chaptersCount": 22,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "1Ki",
+    "osisName": "1Kg"
+  },
+  {
+    "bookId": 12,
+    "bookName": "2 Kings",
+    "chaptersCount": 25,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "2Ki",
+    "osisName": "2Kg"
+  },
+  {
+    "bookId": 13,
+    "bookName": "1 Chronicles",
+    "chaptersCount": 29,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "1Ch",
+    "osisName": "1Ch"
+  },
+  {
+    "bookId": 14,
+    "bookName": "2 Chronicles",
+    "chaptersCount": 36,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "2Ch",
+    "osisName": "2Ch"
+  },
+  {
+    "bookId": 15,
+    "bookName": "Ezra",
+    "chaptersCount": 10,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Ezr",
+    "osisName": "Ezr"
+  },
+  {
+    "bookId": 16,
+    "bookName": "Nehemiah",
+    "chaptersCount": 13,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Ne",
+    "osisName": "Neh"
+  },
+  {
+    "bookId": 17,
+    "bookName": "Esther",
+    "chaptersCount": 10,
+    "bookDivision": "Historical",
+    "bookSection": "OT",
+    "shortName": "Es",
+    "osisName": "Est"
+  },
+  {
+    "bookId": 18,
+    "bookName": "Job",
+    "chaptersCount": 42,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "Job",
+    "osisName": "Job"
+  },
+  {
+    "bookId": 19,
+    "bookName": "Psalms",
+    "chaptersCount": 150,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "Ps",
+    "osisName": "Ps."
+  },
+  {
+    "bookId": 20,
+    "bookName": "Proverbs",
+    "chaptersCount": 31,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "Pr",
+    "osisName": "Pro"
+  },
+  {
+    "bookId": 21,
+    "bookName": "Ecclesiastes",
+    "chaptersCount": 12,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "Ec",
+    "osisName": "Ecc"
+  },
+  {
+    "bookId": 22,
+    "bookName": "Song of Solomon",
+    "chaptersCount": 8,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "So",
+    "osisName": "Son"
+  },
+  {
+    "bookId": 23,
+    "bookName": "Isaiah",
+    "chaptersCount": 66,
+    "bookDivision": "Major Prophets",
+    "bookSection": "OT",
+    "shortName": "Is",
+    "osisName": "Isa"
+  },
+  {
+    "bookId": 24,
+    "bookName": "Jeremiah",
+    "chaptersCount": 52,
+    "bookDivision": "Major Prophets",
+    "bookSection": "OT",
+    "shortName": "Je",
+    "osisName": "Jer"
+  },
+  {
+    "bookId": 25,
+    "bookName": "Lamentations",
+    "chaptersCount": 5,
+    "bookDivision": "Poetry-Wisdom",
+    "bookSection": "OT",
+    "shortName": "La",
+    "osisName": "Lam"
+  },
+  {
+    "bookId": 26,
+    "bookName": "Ezekiel",
+    "chaptersCount": 48,
+    "bookDivision": "Major Prophets",
+    "bookSection": "OT",
+    "shortName": "Eze",
+    "osisName": "Eze"
+  },
+  {
+    "bookId": 27,
+    "bookName": "Daniel",
+    "chaptersCount": 12,
+    "bookDivision": "Major Prophets",
+    "bookSection": "OT",
+    "shortName": "Da",
+    "osisName": "Dan"
+  },
+  {
+    "bookId": 28,
+    "bookName": "Hosea",
+    "chaptersCount": 14,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Ho",
+    "osisName": "Hos"
+  },
+  {
+    "bookId": 29,
+    "bookName": "Joel",
+    "chaptersCount": 3,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Joe",
+    "osisName": "Joe"
+  },
+  {
+    "bookId": 30,
+    "bookName": "Amos",
+    "chaptersCount": 9,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Am",
+    "osisName": "Amo"
+  },
+  {
+    "bookId": 31,
+    "bookName": "Obadiah",
+    "chaptersCount": 1,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Ob",
+    "osisName": "Oba"
+  },
+  {
+    "bookId": 32,
+    "bookName": "Jonah",
+    "chaptersCount": 4,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Jon",
+    "osisName": "Jon"
+  },
+  {
+    "bookId": 33,
+    "bookName": "Micah",
+    "chaptersCount": 7,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Mic",
+    "osisName": "Mic"
+  },
+  {
+    "bookId": 34,
+    "bookName": "Nahum",
+    "chaptersCount": 3,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Na",
+    "osisName": "Nah"
+  },
+  {
+    "bookId": 35,
+    "bookName": "Habakkuk",
+    "chaptersCount": 3,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Hab",
+    "osisName": "Hab"
+  },
+  {
+    "bookId": 36,
+    "bookName": "Zephaniah",
+    "chaptersCount": 3,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Zep",
+    "osisName": "Zep"
+  },
+  {
+    "bookId": 37,
+    "bookName": "Haggai",
+    "chaptersCount": 2,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Hag",
+    "osisName": "Hag"
+  },
+  {
+    "bookId": 38,
+    "bookName": "Zechariah",
+    "chaptersCount": 14,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Zec",
+    "osisName": "Zec"
+  },
+  {
+    "bookId": 39,
+    "bookName": "Malachi",
+    "chaptersCount": 4,
+    "bookDivision": "Minor Prophets",
+    "bookSection": "OT",
+    "shortName": "Mal",
+    "osisName": "Mal"
+  },
+  {
+    "bookId": 40,
+    "bookName": "Matthew",
+    "chaptersCount": 28,
+    "bookDivision": "Gospels",
+    "bookSection": "NT",
+    "shortName": "Mt",
+    "osisName": "Mat"
+  },
+  {
+    "bookId": 41,
+    "bookName": "Mark",
+    "chaptersCount": 16,
+    "bookDivision": "Gospels",
+    "bookSection": "NT",
+    "shortName": "Mk",
+    "osisName": "Mar"
+  },
+  {
+    "bookId": 42,
+    "bookName": "Luke",
+    "chaptersCount": 24,
+    "bookDivision": "Gospels",
+    "bookSection": "NT",
+    "shortName": "Lu",
+    "osisName": "Luk"
+  },
+  {
+    "bookId": 43,
+    "bookName": "John",
+    "chaptersCount": 21,
+    "bookDivision": "Gospels",
+    "bookSection": "NT",
+    "shortName": "Jn",
+    "osisName": "Joh"
+  },
+  {
+    "bookId": 44,
+    "bookName": "Acts",
+    "chaptersCount": 28,
+    "bookDivision": "Acts",
+    "bookSection": "NT",
+    "shortName": "Ac",
+    "osisName": "Act"
+  },
+  {
+    "bookId": 45,
+    "bookName": "Romans",
+    "chaptersCount": 16,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Ro",
+    "osisName": "Rom"
+  },
+  {
+    "bookId": 46,
+    "bookName": "1 Corinthians",
+    "chaptersCount": 16,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "1Co",
+    "osisName": "1Co"
+  },
+  {
+    "bookId": 47,
+    "bookName": "2 Corinthians",
+    "chaptersCount": 13,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "2Co",
+    "osisName": "2Co"
+  },
+  {
+    "bookId": 48,
+    "bookName": "Galatians",
+    "chaptersCount": 6,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Ga",
+    "osisName": "Gal"
+  },
+  {
+    "bookId": 49,
+    "bookName": "Ephesians",
+    "chaptersCount": 6,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Eph",
+    "osisName": "Eph"
+  },
+  {
+    "bookId": 50,
+    "bookName": "Philippians",
+    "chaptersCount": 4,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Php",
+    "osisName": "Phi"
+  },
+  {
+    "bookId": 51,
+    "bookName": "Colossians",
+    "chaptersCount": 4,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Col",
+    "osisName": "Col"
+  },
+  {
+    "bookId": 52,
+    "bookName": "1 Thessalonians",
+    "chaptersCount": 5,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "1Th",
+    "osisName": "1Th"
+  },
+  {
+    "bookId": 53,
+    "bookName": "2 Thessalonians",
+    "chaptersCount": 3,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "2Th",
+    "osisName": "2Th"
+  },
+  {
+    "bookId": 54,
+    "bookName": "1 Timothy",
+    "chaptersCount": 6,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "1Ti",
+    "osisName": "1Ti"
+  },
+  {
+    "bookId": 55,
+    "bookName": "2 Timothy",
+    "chaptersCount": 4,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "2Ti",
+    "osisName": "2Ti"
+  },
+  {
+    "bookId": 56,
+    "bookName": "Titus",
+    "chaptersCount": 3,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Tit",
+    "osisName": "Tit"
+  },
+  {
+    "bookId": 57,
+    "bookName": "Philemon",
+    "chaptersCount": 1,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Phm",
+    "osisName": "Phl"
+  },
+  {
+    "bookId": 58,
+    "bookName": "Hebrews",
+    "chaptersCount": 13,
+    "bookDivision": "Pauline Epistles",
+    "bookSection": "NT",
+    "shortName": "Heb",
+    "osisName": "Heb"
+  },
+  {
+    "bookId": 59,
+    "bookName": "James",
+    "chaptersCount": 5,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "Jas",
+    "osisName": "Jas"
+  },
+  {
+    "bookId": 60,
+    "bookName": "1 Peter",
+    "chaptersCount": 5,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "1Pe",
+    "osisName": "1Pe"
+  },
+  {
+    "bookId": 61,
+    "bookName": "2 Peter",
+    "chaptersCount": 3,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "2Pe",
+    "osisName": "2Pe"
+  },
+  {
+    "bookId": 62,
+    "bookName": "1 John",
+    "chaptersCount": 5,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "1Jn",
+    "osisName": "1Jo"
+  },
+  {
+    "bookId": 63,
+    "bookName": "2 John",
+    "chaptersCount": 1,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "2Jn",
+    "osisName": "2Jo"
+  },
+  {
+    "bookId": 64,
+    "bookName": "3 John",
+    "chaptersCount": 1,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "3Jn",
+    "osisName": "3Jo"
+  },
+  {
+    "bookId": 65,
+    "bookName": "Jude",
+    "chaptersCount": 1,
+    "bookDivision": "General Epistles",
+    "bookSection": "NT",
+    "shortName": "Jud",
+    "osisName": "Jud"
+  },
+  {
+    "bookId": 66,
+    "bookName": "Revelation",
+    "chaptersCount": 22,
+    "bookDivision": "Revelation",
+    "bookSection": "NT",
+    "shortName": "Re",
+    "osisName": "Rev"
+  }
+]
