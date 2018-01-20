@@ -3,6 +3,7 @@ import { compose, graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import { bookIdFromName, unformatBook } from 'helper'
+import styles from './Book.module.css'
 
 class Book extends Component {
   render() {
@@ -10,7 +11,7 @@ class Book extends Component {
 
     return (
       <div style={{ paddingLeft: 40 }}>
-        <p>{unformatBook(this.props.match.params.bookName)}</p>
+        <p>{unformatBook(this.props.match.params.bookName)} <i className={`fas fa-edit ${styles.editButton}`} /></p>
         <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummaries.nodes.length > 0 ? this.props.data.bookSummaries.nodes[0].summary : "No summary"}</p>
       </div>
     );
