@@ -11,6 +11,11 @@ class Book extends Component {
     super(props);
     this.state = { editing: false, bookSummary: "" };
   }
+  componentWillUpdate(nextProps, nextState) {
+    if (this.props.data.bookSummary !== nextProps.data.bookSummary) {
+      this.setState({ bookSummary: nextProps.data.bookSummary ? nextProps.data.bookSummary.summary : "" })
+    }
+  }
   render() {
     const { loading, error } = this.props.data
 
@@ -23,7 +28,7 @@ class Book extends Component {
         {
           this.state.editing ?
             <textarea value={this.state.bookSummary} onChange={linkState(this, "bookSummary")} /> :
-            <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummaries.nodes.length > 0 ? this.props.data.bookSummaries.nodes[0].summary : "No summary"}</p>
+            <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummary ? this.props.data.bookSummary.summary : "No summary"}</p>
         }
       </div>
     );
@@ -42,12 +47,11 @@ mutation($bookId: Int!, $summary: String!){
     props: ({ mutate }) => ({
       createBookSummary: ({ bookId, summary }) => mutate({ variables: { bookId, summary } })
     })
+    // TODO: Change to get from current user
   }), graphql(gql`
 query($bookId: Int!){
-  bookSummaries: allBookSummaries(condition:{bookId: $bookId}){
-    nodes{
-      summary
-    }
+  bookSummary: bookSummaryByUserIdAndBookId(userId: 1, bookId: $bookId){
+    summary
   }
 }
 `, { options: ({ match }) => ({ variables: { bookId: bookIdFromName(match.params.bookName) } }) }))(Book)
