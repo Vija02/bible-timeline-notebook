@@ -16,6 +16,16 @@ class Book extends Component {
       this.setState({ bookSummary: nextProps.data.bookSummary ? nextProps.data.bookSummary.summary : "" })
     }
   }
+
+  onConfirm() {
+    this.props.upsertBookSummary({ bookId: bookIdFromName(this.props.match.params.bookName), summary: this.state.bookSummary }).then(() => {
+      this.setState({ editing: false })
+    }).catch((err) => {
+      console.log(err);
+      alert("Error when updating summary. Please try again later.")
+    })
+  }
+
   render() {
     const { loading, error } = this.props.data
 
@@ -27,31 +37,49 @@ class Book extends Component {
         </div>
         {
           this.state.editing ?
-            <textarea value={this.state.bookSummary} onChange={linkState(this, "bookSummary")} /> :
+            <div className={styles.editBookContainer}>
+              <textarea value={this.state.bookSummary} onChange={linkState(this, "bookSummary")} />
+              <button onClick={() => { this.onConfirm() }}>Confirm</button>
+            </div> :
             <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummary ? this.props.data.bookSummary.summary : "No summary"}</p>
-        }
+          }
       </div>
     );
   }
 }
 
+// TODO: Change to get from current user
+const GetBookSummaryQuery = gql`
+query($bookId: Int!){
+  bookSummary: bookSummaryByUserIdAndBookId(userId: 1, bookId: $bookId){
+    nodeId
+    summary
+  }
+}
+`
+
 export default compose(graphql(gql`
 mutation($bookId: Int!, $summary: String!){
-  createBookSummary(input: {bookSummary:{bookId: $bookId, summary: $summary}}){
+  upsertBookSummary(input: {bookId: $bookId, summary: $summary}){
     bookSummary{
-      id
+      nodeId
+      summary
     }
   }
 }
 `, {
     props: ({ mutate }) => ({
-      createBookSummary: ({ bookId, summary }) => mutate({ variables: { bookId, summary } })
+      upsertBookSummary: ({ bookId, summary }) => mutate({
+        variables: { bookId, summary },
+        update: (proxy, { data: { upsertBookSummary } }) => {
+          const data = proxy.readQuery({ query: GetBookSummaryQuery, variables: { bookId } });
+          data.bookSummary = upsertBookSummary.bookSummary
+          proxy.writeQuery({ query: GetBookSummaryQuery, variables: { bookId }, data });
+        }
+      })
     })
-    // TODO: Change to get from current user
-  }), graphql(gql`
-query($bookId: Int!){
-  bookSummary: bookSummaryByUserIdAndBookId(userId: 1, bookId: $bookId){
-    summary
-  }
-}
-`, { options: ({ match }) => ({ variables: { bookId: bookIdFromName(match.params.bookName) } }) }))(Book)
+  }), graphql(GetBookSummaryQuery, {
+    options: ({ match }) => ({
+      variables: { bookId: bookIdFromName(match.params.bookName) },
+    })
+  }))(Book)
