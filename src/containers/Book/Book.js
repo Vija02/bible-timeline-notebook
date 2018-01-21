@@ -20,9 +20,9 @@ class Book extends Component {
     const { loading, error } = this.props.data
 
     return (
-      <div style={{ paddingLeft: 40, display: "flex", flexDirection: "column", marginTop: 20 }}>
-        <div style={{ display: "flex" }}>
-          <a style={{ marginRight: 5 }}>{unformatBook(this.props.match.params.bookName)}</a>
+      <div className={styles.bookContainer}>
+        <div className={styles.titleContainer}>
+          <a className={styles.title}>{unformatBook(this.props.match.params.bookName)}</a>
           <div onClick={() => { this.setState({ editing: !this.state.editing }) }}><i className={`fas fa-edit ${styles.editButton}`} /></div>
         </div>
         {

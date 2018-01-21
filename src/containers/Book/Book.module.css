@@ -1,3 +1,19 @@
+.bookContainer {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.titleContainer {
+  display: flex;
+}
+
+.title {
+  margin-right: 5px;
+}
+
 .editButton {
   color: grey;
   cursor: pointer;
