@@ -12,7 +12,7 @@
   height: 300px;
 }
 
-.bookContainer{
+.bookContainer {
   flex: 1 0 0;
 }
 
@@ -21,10 +21,19 @@
   background-color: #7494EA;
   cursor: pointer;
   color: white;
+  white-space: nowrap;
+  transition: background-color 0.1s ease;
+}
+.bookSelector:hover{
+  transition: background-color 0.2s ease;
+  background-color: rgb(86, 124, 230);
 }
 
 .dashedLine {
+  margin-left: 5px;
+  margin-right: 5px;
   width: 50px;
   border: 0px;
   border-top: dashed 1px;
+  color: #7494EA
 }
