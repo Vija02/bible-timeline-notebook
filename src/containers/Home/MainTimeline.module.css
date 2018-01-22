@@ -8,7 +8,7 @@
   display: inline-flex;
   align-items: center;
   flex-direction: row;
-  background-color: yellow;
+  background-color: rgb(227, 234, 255);
   height: 300px;
 }
 
@@ -18,8 +18,9 @@
 
 .bookSelector {
   padding: 5px;
-  background-color: grey;
+  background-color: #7494EA;
   cursor: pointer;
+  color: white;
 }
 
 .dashedLine {
