@@ -17,7 +17,7 @@ class MainTimeline extends Component {
             {
               oldTestament.map((book, i) => [
                 <div key={`books_${i}`} className={styles.bookContainer}>
-                  <div className={styles.bookSelector} onClick={() => {
+                  <div className={styles.bookSelector} onMouseDown={(e) => { e.stopPropagation() }} onClick={() => {
                     this.props.history.push(`/book/${formatBook(book.bookName)}`)
                   }}>
                     {book.bookName}

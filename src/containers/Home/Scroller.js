@@ -30,6 +30,7 @@ export default class Scroller extends Component {
         {({ x }) => {
           return (
             <ReactGesture
+              disableClick={false}
               onMouseDown={(e) => { this.setState({ holding: true, positionX: x, positionStart: x, holdStart: e.clientX, targetX: x }) }}
               onMouseUp={() => { this.setState({ holding: false }) }}
               onMouseMove={(e) => {
