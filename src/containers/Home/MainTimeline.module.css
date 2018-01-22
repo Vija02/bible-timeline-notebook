@@ -10,6 +10,7 @@
   flex-direction: row;
   background-color: rgb(227, 234, 255);
   height: 300px;
+  cursor: pointer;
 }
 
 .bookContainer {
@@ -22,10 +23,11 @@
   cursor: pointer;
   color: white;
   white-space: nowrap;
-  transition: background-color 0.1s ease;
+  transition: all 0.1s ease;
 }
 .bookSelector:hover{
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  transform: scale(1.1);
   background-color: rgb(86, 124, 230);
 }
 
