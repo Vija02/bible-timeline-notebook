@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import Scroller from './Scroller'
+import BookContainer from './BookContainer'
 
-import { formatBook, oldTestament } from 'helper'
+import { oldTestament } from 'helper'
 import styles from './MainTimeline.module.css'
 
 class MainTimeline extends Component {
@@ -13,15 +14,9 @@ class MainTimeline extends Component {
         <Scroller>
           <div className={styles.scrollerContainer}>
             <Switch>
-              <Route path="/" render={() => {
+              <Route path="/" render={(props) => {
                 return oldTestament.map((book, i) => [
-                  <div key={`books_${i}`} className={styles.bookContainer}>
-                    <div className={styles.bookSelector} onMouseDown={(e) => { e.stopPropagation() }} onClick={() => {
-                      this.props.history.push(`/book/${formatBook(book.bookName)}`)
-                    }}>
-                      {book.bookName}
-                    </div>
-                  </div>,
+                  <BookContainer {...props} key={`book_${i}`} book={book} />,
                   <hr key={`hr_${i}`} className={styles.dashedLine} />
                 ])
               }} />
