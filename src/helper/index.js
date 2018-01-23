@@ -15,3 +15,7 @@ export const unformatBook = (book) => {
 export const bookIdFromName = (book) => {
   return bookData.find(data => formatBook(data.bookName) === book).bookId
 }
+
+export const oldTestament = bookData.filter(book => book.bookSection === "OT")
+export const newTestament = bookData.filter(book => book.bookSection === "NT")
+export const booksRegex = bookData.map(book => formatBook(book.bookName)).join('|')
