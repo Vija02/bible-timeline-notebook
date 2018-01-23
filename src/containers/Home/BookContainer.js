@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {formatBook} from 'helper'
+import { formatBook } from 'helper'
 
 import styles from './BookContainer.module.css'
 

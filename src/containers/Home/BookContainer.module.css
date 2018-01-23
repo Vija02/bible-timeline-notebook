@@ -9,9 +9,11 @@
   cursor: pointer;
   color: white;
   font-size: 1.3em;
+  text-align: center;
   white-space: nowrap;
 }
-.bookSelector:hover{
+
+.bookSelector:hover {
   transition: all 0.2s ease;
   transform: scale(1.1);
   background-color: rgb(86, 124, 230);
