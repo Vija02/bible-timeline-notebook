@@ -13,12 +13,12 @@ export default class Scroller extends Component {
       holding: false, positionX: 0,
       positionStart: 0, // The position of x when the hold starts
       holdStart: 0, // The position of the cursor when the hold starts, used to calculate the distance from current hold
-      viewportWidth: 0, width: 0,
+      width: 0,
       targetX: 0,
     };
   }
   render() {
-    const xEnd = -this.state.width + this.state.viewportWidth
+    const xEnd = -this.state.width + document.documentElement.clientWidth
 
     const motionStyle = !this.state.holding && (this.state.targetX > 0 || this.state.targetX < xEnd) ?
       { x: spring(Math.min(Math.max(this.state.targetX, xEnd), 0)) } : // Handle out of bound
@@ -40,12 +40,8 @@ export default class Scroller extends Component {
               }}
             >
               <div>
-                <GetSize OnDimensionUpdate={({ width }) => { this.setState({ viewportWidth: width }) }}>
-                  <div>
-                    <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }) }}>
-                      {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
-                    </GetSize>
-                  </div>
+                <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }) }}>
+                  {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
                 </GetSize>
               </div>
             </ReactGesture>
