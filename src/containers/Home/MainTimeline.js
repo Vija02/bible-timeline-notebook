@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import Scroller from './Scroller'
 import BookContainer from './BookContainer'
 
-import { oldTestament } from 'helper'
+import { oldTestament, booksRegex } from 'helper'
 import styles from './MainTimeline.module.css'
 
 class MainTimeline extends Component {
@@ -13,14 +13,12 @@ class MainTimeline extends Component {
       <div className={styles.timelineContainer}>
         <Scroller>
           <div className={styles.scrollerContainer}>
-            <Switch>
-              <Route path="/" render={(props) => {
-                return oldTestament.map((book, i) => [
-                  <BookContainer {...props} key={`book_${i}`} book={book} />,
-                  <hr key={`hr_${i}`} className={styles.dashedLine} />
-                ])
-              }} />
-            </Switch>
+            <Route path={`/book/:bookName(${booksRegex})`} children={(props) => {
+              return oldTestament.map((book, i) => [
+                <BookContainer {...props} key={`book_${i}`} book={book} />,
+                <hr key={`hr_${i}`} className={styles.dashedLine} />
+              ])
+            }} />
           </div>
         </Scroller>
       </div>
