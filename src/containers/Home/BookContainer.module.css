@@ -2,7 +2,7 @@
   flex: 1 0 0;
 }
 
-.bookSelector {
+.bookSelector, .selectedBookSelector {
   transition: all 0.1s ease;
   padding: 10px;
   background-color: #7494EA;
