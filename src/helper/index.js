@@ -1,5 +1,9 @@
 import bookData from 'assets/book_metadata.json'
 
+export const clampValue = (val, min, max) => {
+  return Math.min(Math.max(val, min), max)
+}
+
 export const toTitleCase = (str) => {
   return str.replace(/\w\S*/g, (txt) => { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 }
