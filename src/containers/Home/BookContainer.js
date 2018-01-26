@@ -23,7 +23,7 @@ class BookContainer extends Component {
     const selected = this.props.match && this.props.match.params.bookName === formatBook(this.props.book.bookName)
 
     const motionStyle = selected ? {
-      width: spring(90) // vw
+      width: spring(this.props.extendedWidth) // vw
     } : {
         width: spring(this.state.width / document.documentElement.clientWidth * 100)
       }
