@@ -1,10 +1,12 @@
+@value padding: 10px;
+
 .bookContainer {
   flex: 1 0 0;
 }
 
 .bookSelector, .selectedBookSelector {
   transition: all 0.1s ease;
-  padding: 10px;
+  padding: padding;
   background-color: #7494EA;
   cursor: pointer;
   color: white;

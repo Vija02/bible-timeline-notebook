@@ -17,6 +17,7 @@ class BookContainer extends Component {
     if (selected && this.state.width === 0) {
       this.setState({ width: nextProps.size.width })
     }
+    this.state.width === 0 && this.props.onWidth(nextProps.size.width)
   }
   render() {
     const selected = this.props.match && this.props.match.params.bookName === formatBook(this.props.book.bookName)
@@ -31,10 +32,18 @@ class BookContainer extends Component {
       <div className={styles.bookContainer}>
         <Motion style={motionStyle}>
           {({ width }) => {
+            // If it's something and it isn't 0
+            const bookStyle = width !== 0 && this.props.size.width ?
+              { width: `calc(${width}vw - ${parseInt(styles.padding, 10) * 2}px)` } :
+              {}
             return (
-              <div className={selected ? styles.selectedBookSelector : styles.bookSelector} onMouseDown={(e) => { e.stopPropagation() }} style={width !== 0 && this.props.size.width ? { width: `${width}vw` } : {}} onClick={() => {
-                this.props.history.push(`/book/${formatBook(this.props.book.bookName)}`)
-              }}>
+              <div
+                className={selected ? styles.selectedBookSelector : styles.bookSelector}
+                onMouseDown={(e) => { e.stopPropagation() }}
+                style={bookStyle}
+                onClick={() => {
+                  this.props.history.push(`/book/${formatBook(this.props.book.bookName)}`)
+                }}>
                 {this.props.book.bookName}
               </div>
             )
