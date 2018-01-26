@@ -3,6 +3,7 @@ import ReactGesture from 'react-gesture';
 import { Motion, spring } from 'react-motion'
 
 import GetSize from 'components/GetSize'
+import { clampValue } from 'helper'
 
 const velocityMultiplier = 13;
 
@@ -15,23 +16,35 @@ export default class Scroller extends Component {
       holdStart: 0, // The position of the cursor when the hold starts, used to calculate the distance from current hold
       width: 0,
       targetX: 0,
+      propTargetValid: false, // Should the position be going to the target? (toogled on prop change)
     };
+  }
+  componentWillUpdate(nextProps, nextState) {
+    if (nextProps.target !== this.props.target) {
+      this.setState({ propTargetValid: true })
+    }
   }
   render() {
     const xEnd = -this.state.width + document.documentElement.clientWidth
 
-    const motionStyle = !this.state.holding && (this.state.targetX > 0 || this.state.targetX < xEnd) ?
-      { x: spring(Math.min(Math.max(this.state.targetX, xEnd), 0)) } : // Handle out of bound
-      this.state.holding ?
-        { x: this.state.positionX } :
-        { x: spring(this.state.targetX) }
+    let motionStyle;
+    if (this.state.propTargetValid) {                                                           // Handle motion from props
+      motionStyle = { x: spring(this.props.target ? -this.props.target : 0) }
+    } else if (!this.state.holding && (this.state.targetX > 0 || this.state.targetX < xEnd)) {  // Handle out of bound
+      motionStyle = { x: spring(clampValue(this.state.targetX, xEnd, 0)) }
+    } else if (this.state.holding) {                                                            // Handle dragging
+      motionStyle = { x: this.state.positionX }
+    } else {                                                                                    // Handle velocity
+      motionStyle = { x: spring(this.state.targetX) }
+    }
+
     return (
-      <Motion style={motionStyle}>
+      <Motion style={motionStyle} onRest={() => { this.state.propTargetValid && this.setState({ targetX: -this.props.target, propTargetValid: false }) }}>
         {({ x }) => {
           return (
             <ReactGesture
               disableClick={false}
-              onMouseDown={(e) => { this.setState({ holding: true, positionX: x, positionStart: x, holdStart: e.clientX, targetX: x }) }}
+              onMouseDown={(e) => { this.setState({ holding: true, positionX: x, positionStart: x, holdStart: e.clientX, targetX: x, propTargetValid: false }) }}
               onMouseUp={() => { this.setState({ holding: false }) }}
               onMouseMove={(e) => {
                 if (this.state.holding) {
@@ -40,7 +53,7 @@ export default class Scroller extends Component {
               }}
             >
               <div>
-                <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }) }}>
+                <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }); this.props.onWidth(width) }}>
                   {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
                 </GetSize>
               </div>

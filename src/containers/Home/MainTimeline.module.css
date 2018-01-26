@@ -1,9 +1,14 @@
+@value scrollerSidePadding: 40px;
+
+@value dashSideMargin: 5px;
+@value dashWidth: 50px;
+
 .timelineContainer {
   overflow: hidden;
 }
 
 .scrollerContainer {
-  padding-left: 40px;
+  padding-left: scrollerSidePadding;
   user-select: none;
   display: inline-flex;
   align-items: center;
@@ -14,9 +19,8 @@
 }
 
 .dashedLine {
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 50px;
+  margin: 0px dashSideMargin;
+  width: dashWidth;
   border: 0px;
   border-top: dashed 1px;
   color: #7494EA
