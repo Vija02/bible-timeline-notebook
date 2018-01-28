@@ -24,9 +24,6 @@ export default class Scroller extends Component {
       this.setState({ propTargetValid: true })
     }
   }
-  onScrollDown(){
-    // this.props.history.push('/')
-  }
   render() {
     const xEnd = -this.state.width + document.documentElement.clientWidth
 
@@ -55,7 +52,7 @@ export default class Scroller extends Component {
                 }
               }}
             >
-              <div onWheel={(e) => { e.deltaY > 0 && this.onScrollDown() }}>
+              <div onWheel={(e) => { e.deltaY > 0 && this.props.onScrollDown() }}>
                 <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }); this.props.onWidth(width) }}>
                   {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
                 </GetSize>

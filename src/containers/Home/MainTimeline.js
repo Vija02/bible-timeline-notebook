@@ -39,9 +39,15 @@ class MainTimeline extends Component {
             // Calculate center by subtracting the start val with (remaining space / 2)
             centerBookPos = clampValue(startOfBook - (document.documentElement.clientWidth - (extendedWidth / 100 * document.documentElement.clientWidth)) / 2, 0, -xEnd)
           }
-          
+
           return (
-            <Scroller target={centerBookPos || centerBookPos === 0 ? centerBookPos : undefined} onWidth={(width) => { this.state.width !== width && this.setState({ width }) }}>
+            <Scroller
+              target={centerBookPos || centerBookPos === 0 ? centerBookPos : undefined}
+              onWidth={(width) => { this.state.width !== width && this.setState({ width }) }}
+              onScrollDown={() => {
+                props.history.push('/')
+              }}
+            >
               <div className={styles.scrollerContainer}>
                 {
                   oldTestament.map((book, i) => [
