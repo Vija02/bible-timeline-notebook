@@ -42,7 +42,7 @@ export default class Scroller extends Component {
     }
 
     return (
-      <Motion style={motionStyle} onRest={() => { this.state.propTargetValid && this.setState({ targetX: -this.props.target, propTargetValid: false }) }}>
+      <Motion style={motionStyle} onRest={() => { this.state.propTargetValid && this.setState({ targetX: this.props.target ? -this.props.target : 0, propTargetValid: false }) }}>
         {({ x }) => {
           return (
             <ReactGesture
