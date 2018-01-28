@@ -12,12 +12,10 @@ class BookContainer extends Component {
     this.state = { width: 0 };
   }
   componentWillUpdate(nextProps, nextState) {
-    // Get inital size
-    const selected = nextProps.match && nextProps.match.params.bookName === formatBook(nextProps.book.bookName)
-    if (selected && this.state.width === 0) {
+    if(this.state.width === 0){
+      this.props.onWidth(nextProps.size.width)
       this.setState({ width: nextProps.size.width })
     }
-    this.state.width === 0 && this.props.onWidth(nextProps.size.width)
   }
   render() {
     const selected = this.props.match && this.props.match.params.bookName === formatBook(this.props.book.bookName)
