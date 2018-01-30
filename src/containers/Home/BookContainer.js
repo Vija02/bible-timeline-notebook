@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import sizeMe from 'react-sizeme'
 import { Motion, spring } from 'react-motion'
 
-import { formatBook } from 'helper'
+import { formatBook, bookIdFromName } from 'helper'
+import bookData from 'assets/book_metadata.json'
 
 import styles from './BookContainer.module.css'
 
@@ -12,11 +13,33 @@ class BookContainer extends Component {
     this.state = { width: 0 };
   }
   componentWillUpdate(nextProps, nextState) {
-    if(this.state.width === 0){
+    if (this.state.width === 0) {
       this.props.onWidth(nextProps.size.width)
       this.setState({ width: nextProps.size.width })
     }
   }
+
+  getBookArray() {
+    const chaptersCount = bookData[bookIdFromName(this.props.book.bookName) - 1].chaptersCount
+    let arr = []
+    for (let i = 0; i < chaptersCount; i++) {
+      arr.push(i + 1)
+    }
+    return (
+      <div className={styles.bookArrayContainer}>
+        {
+          arr.map((val, i) => (
+            <div key={`book_container_${i}`} className={styles.bookSection}>
+              <div className={styles.bookNumber}>
+                {val}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    )
+  }
+
   render() {
     const selected = this.props.match && this.props.match.params.bookName === formatBook(this.props.book.bookName)
 
@@ -42,7 +65,11 @@ class BookContainer extends Component {
                 onClick={() => {
                   this.props.history.push(`/book/${formatBook(this.props.book.bookName)}`)
                 }}>
-                {this.props.book.bookName}
+                {
+                  selected && this.props.size.width ?
+                    this.getBookArray() :
+                    this.props.book.bookName
+                }
               </div>
             )
           }}
