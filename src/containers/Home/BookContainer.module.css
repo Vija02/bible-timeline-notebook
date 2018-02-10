@@ -47,9 +47,10 @@
 .bookNumber {
   background-color: rgba(0, 0, 0, 0.466);
   transition: all 0.2s ease;
-  top: -20px;
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
   opacity: 0;
+  pointer-events: none;
 }
