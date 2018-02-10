@@ -52,5 +52,6 @@
   transform: translateX(-50%);
   position: absolute;
   opacity: 0;
+  /* Disable hover on child, alternatively make another container */
   pointer-events: none;
 }

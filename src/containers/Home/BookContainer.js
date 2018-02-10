@@ -19,6 +19,7 @@ class BookContainer extends Component {
     }
   }
 
+  // Create the array of chapters
   getBookArray() {
     const chaptersCount = bookData[bookIdFromName(this.props.book.bookName) - 1].chaptersCount
     let arr = []
