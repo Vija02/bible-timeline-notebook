@@ -212,3 +212,21 @@ it('only calls onChange if value is different', () => {
   verse().simulate('change', { target: { value: '200' } })
   expect(onChange).toHaveBeenCalledTimes(2)
 });
+
+it('shows the maximum chapter on placeholder when book is valid', () => {
+  book().simulate('change', { target: { value: 'random text' } })
+  expect(chapter().prop('placeholder')).not.toEqual("1-50")
+
+  book().simulate('change', { target: { value: 'genesis' } })
+  expect(chapter().prop('placeholder')).toEqual("1-50")
+});
+
+it('shows the maximum verse on placeholder when chapter is valid', () => {
+  book().simulate('change', { target: { value: 'genesis' } })
+  chapter().simulate('change', { target: { value: '51' } })
+  expect(verse().prop('placeholder')).not.toEqual("1-26")
+  
+  book().simulate('change', { target: { value: 'genesis' } })
+  chapter().simulate('change', { target: { value: '50' } })
+  expect(verse().prop('placeholder')).toEqual("1-26")
+});
