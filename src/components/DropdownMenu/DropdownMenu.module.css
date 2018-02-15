@@ -1,0 +1,15 @@
+.dropdown {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.dropdown:hover {
+  background-color: #393d4b;
+  padding: 15px;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-left: 15px;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AddSummary from './AddSummary'
+import DropdownMenu from 'components/DropdownMenu'
 
 import styles from './Sidebar.module.css'
 
@@ -11,9 +11,11 @@ export default class SideBarIndex extends Component {
         <div className={styles.sidebarTop}>
           <a className={styles.sidebarTopText}>Welcome</a>
         </div>
-        <div className={styles.dropdown}>
-          <AddSummary />
-        </div>
+        <DropdownMenu
+          iconClassName="fas fa-plus"
+          title="Add Summary"
+        >
+        </DropdownMenu>
       </div>
     );
   }
