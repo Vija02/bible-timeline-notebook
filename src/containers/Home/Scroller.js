@@ -25,7 +25,7 @@ export default class Scroller extends Component {
     }
   }
   render() {
-    const xEnd = -this.state.width + document.documentElement.clientWidth
+    const xEnd = -this.state.width + this.props.viewportWidth
 
     let motionStyle;
     if (this.state.propTargetValid) {                                                           // Handle motion from props
@@ -52,7 +52,7 @@ export default class Scroller extends Component {
                 }
               }}
             >
-              <div onWheel={(e) => { e.deltaY > 0 && this.props.onScrollDown() }}>
+              <div {...this.props} onWheel={(e) => { e.deltaY > 0 && this.props.onScrollDown() }}>
                 <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }); this.props.onWidth(width) }}>
                   {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
                 </GetSize>

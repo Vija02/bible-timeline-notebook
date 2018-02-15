@@ -4,16 +4,18 @@ import { Route } from 'react-router-dom'
 import Scroller from './Scroller'
 import BookContainer from './BookContainer'
 
+import GetSize from 'components/GetSize'
+
 import { oldTestament, booksRegex, bookIdFromName, clampValue } from 'helper'
 import styles from './MainTimeline.module.css'
 
-// Width in vw when the book selector is expanded
-const extendedWidth = 90;
+// Width in % when the book selector is expanded
+const extendedWidthPercentage = 90;
 
 class MainTimeline extends Component {
   constructor(props) {
     super(props);
-    this.state = { sizes: [], width: 0 };
+    this.state = { sizes: [], width: 0, viewportWidth: null };
   }
   render() {
     const xEnd = -this.state.width + document.documentElement.clientWidth
@@ -37,31 +39,36 @@ class MainTimeline extends Component {
             startOfBook += (bookId - 1) * dashTotalWidth + parseInt(styles.scrollerSidePadding, 10)
 
             // Calculate center by subtracting the start val with (remaining space / 2)
-            centerBookPos = clampValue(startOfBook - (document.documentElement.clientWidth - (extendedWidth / 100 * document.documentElement.clientWidth)) / 2, 0, -xEnd)
+            centerBookPos = clampValue(startOfBook - (this.state.viewportWidth - (extendedWidthPercentage / 100 * this.state.viewportWidth)) / 2, 0, -xEnd)
           }
 
           return (
-            <Scroller
-              target={centerBookPos || centerBookPos === 0 ? centerBookPos : undefined}
-              onWidth={(width) => { this.state.width !== width && this.setState({ width }) }}
-              onScrollDown={() => {
-                props.history.push('/')
-              }}
-            >
-              <div className={styles.scrollerContainer}>
-                {
-                  oldTestament.map((book, i) => [
-                    <BookContainer {...props}
-                      key={`book_${i}`}
-                      book={book}
-                      extendedWidth={extendedWidth}
-                      onWidth={(width) => { this.state.sizes[bookIdFromName(book.bookName)] !== width && this.setState(state => ({ sizes: { ...state.sizes, [bookIdFromName(book.bookName)]: width } })) }}
-                    />,
-                    <hr key={`hr_${i}`} className={styles.dashedLine} />
-                  ])
-                }
-              </div>
-            </Scroller>
+            <GetSize OnDimensionUpdate={({ width }) => { this.state.viewportWidth !== width && this.setState({ viewportWidth: width }); }}>
+              <Scroller
+                className={styles.fullSize}
+                target={centerBookPos || centerBookPos === 0 ? centerBookPos : undefined}
+                viewportWidth={this.state.viewportWidth}
+                onWidth={(width) => { this.state.width !== width && this.setState({ width }) }}
+                onScrollDown={() => {
+                  props.history.push('/')
+                }}
+              >
+                <div className={styles.scrollerContainer}>
+                  {
+                    oldTestament.map((book, i) => [
+                      <BookContainer {...props}
+                        key={`book_${i}`}
+                        book={book}
+                        extendedWidthPercentage={extendedWidthPercentage}
+                        onWidth={(width) => { this.state.sizes[bookIdFromName(book.bookName)] !== width && this.setState(state => ({ sizes: { ...state.sizes, [bookIdFromName(book.bookName)]: width } })) }}
+                        viewportWidth={this.state.viewportWidth}
+                      />,
+                      <hr key={`hr_${i}`} className={styles.dashedLine} />
+                    ])
+                  }
+                </div>
+              </Scroller>
+            </GetSize>
           )
         }}
         />
