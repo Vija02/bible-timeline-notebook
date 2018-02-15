@@ -1,3 +1,4 @@
+import React from 'react'
 import { Component } from 'react';
 import sizeMe from 'react-sizeme'
 
@@ -11,7 +12,7 @@ class GetSize extends Component {
     }
   }
   render() {
-    return (
+    return React.cloneElement(
       this.props.children
     );
   }
