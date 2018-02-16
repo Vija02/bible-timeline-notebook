@@ -37,7 +37,7 @@ export default class Scroller extends Component {
     } else {                                                                                    // Handle velocity
       motionStyle = { x: spring(this.state.targetX) }
     }
-
+    
     return (
       <Motion style={motionStyle} onRest={() => { this.state.propTargetValid && this.setState({ targetX: this.props.target ? -this.props.target : 0, propTargetValid: false }) }}>
         {({ x }) => {
@@ -52,7 +52,7 @@ export default class Scroller extends Component {
                 }
               }}
             >
-              <div {...this.props} onWheel={(e) => { e.deltaY > 0 && this.props.onScrollDown() }}>
+              <div className={this.props.className} onWheel={(e) => { e.deltaY > 0 && this.props.onScrollDown() }}>
                 <GetSize OnDimensionUpdate={({ width }) => { this.setState({ width }); this.props.onWidth(width) }}>
                   {React.cloneElement(this.props.children, { style: { transform: `translate3d(${x}px, 0, 0)` } })}
                 </GetSize>
