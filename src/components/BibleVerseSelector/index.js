@@ -71,7 +71,7 @@ export default class BibleVerseSelector extends Component {
     return (
       <div
         key={item.bookId}
-        style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
+        style={{ backgroundColor: highlighted ? '#868686' : 'transparent' }}
       >
         {item.bookName}
       </div>
@@ -86,7 +86,7 @@ export default class BibleVerseSelector extends Component {
           getItemValue={(item) => item.bookName}
           shouldItemRender={(item, value) => item.bookName.toLowerCase().indexOf(value.toLowerCase()) > -1}
           renderItem={this.renderItem}
-          renderMenu={(items, value, style) => <div style={style} className={styles.menu} children={items} />}
+          renderMenu={(items, value, style) => {console.log(items);return <div style={style} className={styles.menu} children={items} />}}
           renderInput={(props) => <input type="text" placeholder="Book" {...props} />}
           value={this.state.book}
           onChange={(e) => { this.validate("book", e.target.value) }}
