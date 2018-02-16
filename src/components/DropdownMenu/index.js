@@ -10,11 +10,13 @@ export default class DropdownMenuIndex extends Component {
           <i className={this.props.iconClassName} />
           <a className={`${styles.title}${this.props.opened ? "-open" : ""}`}>{this.props.title}</a>
         </div>
-        {
-          this.props.opened ?
-            React.cloneElement(this.props.children) :
-            null
-        }
+        <div className={this.props.opened ? styles.body : styles.closedBody}>
+          {
+            this.props.opened ?
+              React.cloneElement(this.props.children)
+              : null
+          }
+        </div>
       </div>
     );
   }
