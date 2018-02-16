@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:  "sidebar main" 
+                        "sidebar bottom";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr 200px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.bottom {
+  grid-area: bottom;
+}
