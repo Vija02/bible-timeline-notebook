@@ -13,7 +13,7 @@ export default class AddSummaryIndex extends Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", flexDirection: "column", marginBottom: 50 }}>
+      <div style={{ display: "flex", flexDirection: "column", marginBottom: 30 }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <a>From</a>
           <BibleVerseSelector onChange={linkState(this, "verse1")} />
