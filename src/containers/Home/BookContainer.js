@@ -41,6 +41,10 @@ class BookContainer extends Component {
     )
   }
 
+  getTitle(visible = true) {
+    return <div style={{ textAlign: "center", fontSize: "1.5em", opacity: visible ? 1 : 0 }}>{this.props.book.bookName}</div>
+  }
+
   render() {
     const selected = this.props.match && this.props.match.params.bookName === formatBook(this.props.book.bookName)
 
@@ -52,6 +56,9 @@ class BookContainer extends Component {
 
     return (
       <div className={styles.bookContainer}>
+        {
+          selected ? this.getTitle(true) : null
+        }
         <Motion style={motionStyle}>
           {({ width }) => {
             // If it's something and it isn't 0
@@ -75,6 +82,10 @@ class BookContainer extends Component {
             )
           }}
         </Motion>
+        {
+          // To make timeline show in the middle
+          selected ? this.getTitle(false) : null
+        }
       </div>
     );
   }
