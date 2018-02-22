@@ -6,7 +6,7 @@ import BookContainer from './BookContainer'
 
 import GetSize from 'components/GetSize'
 
-import { oldTestament, booksRegex, bookIdFromName, clampValue } from 'helper'
+import { oldTestament, booksRegex, bookIdFromName, clampValue, unformatBook } from 'helper'
 import styles from './MainTimeline.module.css'
 
 // Width in % when the book selector is expanded
@@ -17,6 +17,12 @@ class MainTimeline extends Component {
 		super(props)
 		this.state = { sizes: [], width: 0, viewportWidth: null }
 	}
+
+	getBookPositionOnGrid(bookName) {
+		const startPos = 2 * (bookIdFromName(bookName) - 1) + 1
+		return `${startPos}/${startPos + 1}`
+	}
+	
 	render() {
 		const xEnd = -this.state.width + document.documentElement.clientWidth
 
@@ -71,25 +77,41 @@ class MainTimeline extends Component {
 									<div className={styles.scrollerContainer}>
 										<div className={styles.scrollerGridContainer}>
 											<div className={styles.scrollerTitleContainer} />
-												{oldTestament.map((book, i) => [
-													<BookContainer
-														{...props}
-														key={`book_${i}`}
-														book={book}
-														extendedWidthPercentage={extendedWidthPercentage}
-														onWidth={width => {
-															this.state.sizes[bookIdFromName(book.bookName)] !== width &&
-																this.setState(state => ({
-																	sizes: {
-																		...state.sizes,
-																		[bookIdFromName(book.bookName)]: width,
-																	},
-																}))
-														}}
-														viewportWidth={this.state.viewportWidth}
-													/>,
-													<hr key={`hr_${i}`} className={styles.dashedLine} />,
-												])}
+											{oldTestament.map((book, i) => [
+												<BookContainer
+													{...props}
+													key={`book_${i}`}
+													book={book}
+													extendedWidthPercentage={extendedWidthPercentage}
+													onWidth={width => {
+														this.state.sizes[bookIdFromName(book.bookName)] !== width &&
+															this.setState(state => ({
+																sizes: {
+																	...state.sizes,
+																	[bookIdFromName(book.bookName)]: width,
+																},
+															}))
+													}}
+													viewportWidth={this.state.viewportWidth}
+												/>,
+												<hr key={`hr_${i}`} className={styles.dashedLine} />,
+											])}
+											{props.match && props.match.params.bookName ? (
+												<div
+													style={{
+														display: 'inline-flex',
+														justifyContent: 'center',
+														alignSelf: 'end',
+														fontSize: '1.5em',
+														gridRow: '1/2',
+														gridColumn: this.getBookPositionOnGrid(
+															props.match.params.bookName,
+														),
+													}}
+												>
+													{unformatBook(props.match.params.bookName)}
+												</div>
+											) : null}
 											{/* <div className={styles.scrollerSummaryContainer}>
 												<div
 													style={{
