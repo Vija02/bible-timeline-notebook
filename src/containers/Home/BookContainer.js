@@ -15,7 +15,7 @@ class BookContainer extends Component {
 	componentWillUpdate(nextProps, nextState) {
 		const selected = nextProps.match && nextProps.match.params.bookName === formatBook(nextProps.book.bookName)
 		if (this.state.width === 0) {
-			// If selected, the padding will be 0. Because of that, the width will be different from others. 
+			// If selected, the padding will be 0. Because of that, the width will be different from others.
 			// So if selected, we add the padding here to offset that
 			const padding = parseInt(styles.padding, 10) * 2
 			const width = selected ? nextProps.size.width + padding : nextProps.size.width
@@ -73,6 +73,9 @@ class BookContainer extends Component {
 				onClick={() => {
 					this.props.history.push(`/book/${formatBook(this.props.book.bookName)}`)
 				}}
+				onMouseDown={e => {
+					e.stopPropagation()
+				}}
 			>
 				{/* {selected ? this.getTitle(true) : null} */}
 				<Motion style={motionStyle}>
@@ -82,9 +85,6 @@ class BookContainer extends Component {
 						return (
 							<div
 								className={styles.bookSelector}
-								onMouseDown={e => {
-									e.stopPropagation()
-								}}
 								style={
 									selected
 										? { ...bookStyle, margin: 0 }

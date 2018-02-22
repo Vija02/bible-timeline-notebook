@@ -1,59 +1,65 @@
 @value padding: 10px;
-.bookContainer, .selectedBookContainer {
-  background-color: #7494EA;
-  grid-row: 2/3;
+.bookContainer,
+.selectedBookContainer {
+  transition: all 0.1s ease;
+	background-color: #7494ea;
+	grid-row: 2/3;
 }
 
 .bookSelector {
-  transition: all 0.1s ease;
-  margin: padding;
-  background-color: #7494EA;
-  cursor: pointer;
-  color: white;
-  font-size: 1.3em;
-  text-align: center;
-  white-space: nowrap;
+	transition: all 0.1s ease;
+	margin: padding;
+	background-color: #7494ea;
+	cursor: pointer;
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
+	white-space: nowrap;
 }
 
 .bookContainer:hover {
-  transition: all 0.2s ease;
-  transform: scale(1.1);
-  background-color: rgb(86, 124, 230);
+	transition: all 0.2s ease;
+	transform: scale(1.1);
+	background-color: rgb(86, 124, 230);
+}
+.bookContainer:hover .bookSelector {
+	transition: all 0.2s ease;
+	background-color: rgb(86, 124, 230);
 }
 
 .bookArrayContainer {
-  display: flex;
+	display: flex;
 }
 
 .bookSection {
-  flex: 1 1 0;
-  /* TODO: Make height dynamic with rest of the sections */
-  height: 44.8px;
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-  position: relative;
+	flex: 1 1 0;
+	/* TODO: Make height dynamic with rest of the sections */
+	height: 44.8px;
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+	position: relative;
 }
 
 .bookSection:last-child {
-  border-right: 0px;
+	border-right: 0px;
 }
 
 .bookSection:hover {
-  transition: all 0.1s ease;
-  background-color: rgba(0, 0, 0, 0.466);
+	transition: all 0.1s ease;
+	background-color: rgba(0, 0, 0, 0.466);
 }
 .bookSection:hover .bookNumber {
-  transition: all 0.05s ease;
-  opacity: 1;
+	transition: all 0.05s ease;
+	opacity: 1;
 }
 
 .bookNumber {
-  background-color: rgba(0, 0, 0, 0.466);
-  transition: all 0.2s ease;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  opacity: 0;
-  /* Disable hover on child, alternatively make another container */
-  pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.466);
+	transition: all 0.2s ease;
+	top: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	/* Disable hover on child, alternatively make another container */
+	pointer-events: none;
 }
