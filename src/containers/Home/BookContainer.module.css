@@ -1,11 +1,12 @@
 @value padding: 10px;
-.bookContainer {
-  flex: 1 0 0;
+.bookContainer, .selectedBookContainer {
+  background-color: #7494EA;
+  grid-row: 2/3;
 }
 
-.bookSelector, .selectedBookSelector {
+.bookSelector {
   transition: all 0.1s ease;
-  padding: padding;
+  margin: padding;
   background-color: #7494EA;
   cursor: pointer;
   color: white;
@@ -14,7 +15,7 @@
   white-space: nowrap;
 }
 
-.bookSelector:hover {
+.bookContainer:hover {
   transition: all 0.2s ease;
   transform: scale(1.1);
   background-color: rgb(86, 124, 230);
@@ -26,7 +27,8 @@
 
 .bookSection {
   flex: 1 1 0;
-  height: 50px;
+  /* TODO: Make height dynamic with rest of the sections */
+  height: 44.8px;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   position: relative;
 }
