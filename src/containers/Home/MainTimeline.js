@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Scroller from './Scroller'
 import BookContainer from './BookContainer'
+import SummaryContainer from './SummaryContainer'
 
 import GetSize from 'components/GetSize'
 
@@ -22,7 +23,7 @@ class MainTimeline extends Component {
 		const startPos = 2 * (bookIdFromName(bookName) - 1) + 1
 		return `${startPos}/${startPos + 1}`
 	}
-	
+
 	render() {
 		const xEnd = -this.state.width + document.documentElement.clientWidth
 
@@ -112,18 +113,10 @@ class MainTimeline extends Component {
 													{unformatBook(props.match.params.bookName)}
 												</div>
 											) : null}
-											{/* <div className={styles.scrollerSummaryContainer}>
-												<div
-													style={{
-														marginLeft: 100,
-														width: 200,
-														height: 20,
-														border: '1px solid black',
-														borderTop: 'none',
-													}}
-												/>
-											</div> */}
 										</div>
+										<SummaryContainer
+											summaries={[{ offset: 100, width: 100, title: 'Something happened here' }]}
+										/>
 									</div>
 								</Scroller>
 							</GetSize>

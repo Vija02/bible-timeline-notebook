@@ -7,7 +7,8 @@
 
 .scrollerContainer {
 	user-select: none;
-  display: inline-flex;
+	display: inline-flex;
+	flex-direction: column;
 	background-color: rgb(227, 234, 255);
 	height: 100%;
 	cursor: pointer;
@@ -17,7 +18,7 @@
 .scrollerGridContainer{
   display: grid;
   margin-left: scrollerSidePadding;
-  grid-template-rows: 1fr auto 1fr;
+	grid-template-rows: 200px auto;
 }
 
 .scrollTitleContainer {
@@ -31,10 +32,6 @@
 	align-items: center;
 	flex-direction: row;
 	cursor: pointer;
-}
-
-.scrollerSummaryContainer{
-  grid-row: 3/4;
 }
 
 .dashedLine {
