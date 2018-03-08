@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Scroller from './Scroller'
 import BookContainer from './BookContainer'
-import SummaryContainer from './SummaryContainer'
+import SummaryManager from './SummaryManager'
 
 import GetSize from 'components/GetSize'
 
@@ -17,11 +17,32 @@ class MainTimeline extends Component {
 	constructor(props) {
 		super(props)
 		this.state = { sizes: [], width: 0, viewportWidth: null }
+
+		this.calculateStartOfBook = this.calculateStartOfBook.bind(this)
+		this.getBookSize = this.getBookSize.bind(this)
 	}
 
 	getBookPositionOnGrid(bookName) {
 		const startPos = 2 * (bookIdFromName(bookName) - 1) + 1
 		return `${startPos}/${startPos + 1}`
+	}
+
+	calculateStartOfBook(bookId) {
+		const dashTotalWidth = parseInt(styles.dashSideMargin, 10) * 2 + parseInt(styles.dashWidth, 10)
+		let startOfBook = 0
+
+		// Add all books width
+		for (let j = 0; j < bookId - 1; j++) {
+			startOfBook += this.state.sizes[j + 1]
+		}
+		// Add miscellaneous
+		startOfBook += (bookId - 1) * dashTotalWidth + parseInt(styles.scrollerSidePadding, 10)
+
+		return startOfBook
+	}
+
+	getBookSize(bookId) {
+		return this.state.sizes[bookId]
 	}
 
 	render() {
@@ -32,20 +53,10 @@ class MainTimeline extends Component {
 				<Route
 					path={`/book/:bookName(${booksRegex})`}
 					children={props => {
-						const dashTotalWidth = parseInt(styles.dashSideMargin, 10) * 2 + parseInt(styles.dashWidth, 10)
-
-						let startOfBook
 						let centerBookPos
 						if (props.match) {
 							const bookId = bookIdFromName(props.match.params.bookName)
-
-							startOfBook = 0
-							// Add all books width
-							for (let j = 0; j < bookId - 1; j++) {
-								startOfBook += this.state.sizes[j + 1]
-							}
-							// Add miscellaneous
-							startOfBook += (bookId - 1) * dashTotalWidth + parseInt(styles.scrollerSidePadding, 10)
+							const startOfBook = this.calculateStartOfBook(bookId)
 
 							// Calculate center by subtracting the start val with (remaining space / 2)
 							centerBookPos = clampValue(
@@ -114,8 +125,9 @@ class MainTimeline extends Component {
 												</div>
 											) : null}
 										</div>
-										<SummaryContainer
-											summaries={[{ offset: 100, width: 100, title: 'Something happened here' }]}
+										<SummaryManager
+											calculateStartOfBook={this.calculateStartOfBook}
+											getBookSize={this.getBookSize}
 										/>
 									</div>
 								</Scroller>
