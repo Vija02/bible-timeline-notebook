@@ -20,6 +20,7 @@ class MainTimeline extends Component {
 
 		this.calculateStartOfBook = this.calculateStartOfBook.bind(this)
 		this.getBookSize = this.getBookSize.bind(this)
+		this.getSelectedBookSize = this.getSelectedBookSize.bind(this)
 	}
 
 	getBookPositionOnGrid(bookName) {
@@ -43,6 +44,10 @@ class MainTimeline extends Component {
 
 	getBookSize(bookId) {
 		return this.state.sizes[bookId]
+	}
+
+	getSelectedBookSize() {
+		return extendedWidthPercentage / 100 * this.state.viewportWidth
 	}
 
 	render() {
@@ -128,6 +133,13 @@ class MainTimeline extends Component {
 										<SummaryManager
 											calculateStartOfBook={this.calculateStartOfBook}
 											getBookSize={this.getBookSize}
+											getSelectedBookSize={this.getSelectedBookSize}
+											selecting={!!props.match}
+											selectedBookId={
+												props.match && props.match.params.bookName
+													? bookIdFromName(props.match.params.bookName)
+													: null
+											}
 										/>
 									</div>
 								</Scroller>
