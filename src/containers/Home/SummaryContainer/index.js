@@ -11,11 +11,8 @@ export default class SummaryContainer extends Component {
 				{this.props.summaries.map((summary, i) => {
 					const { offset, width, title } = summary
 					return (
-						<React.Fragment>
-							<div
-								style={{ width: offset * 2 + width, gridRow: `${i + 1} / span 1`, gridColumn: '1/2' }}
-								key={`summary_${i}`}
-							>
+						<React.Fragment key={`summary_${i}`}>
+							<div style={{ width: offset * 2 + width, gridRow: `${i + 1} / span 1`, gridColumn: '1/2' }}>
 								<div
 									style={{
 										marginLeft: offset,
