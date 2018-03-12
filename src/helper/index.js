@@ -24,6 +24,10 @@ export const oldTestament = bookData.filter(book => book.bookSection === "OT")
 export const newTestament = bookData.filter(book => book.bookSection === "NT")
 export const booksRegex = bookData.map(book => formatBook(book.bookName)).join('|')
 
-export const getChapterCountFromBookId = (bookId) => {
+export const getChapterCount = (bookId) => {
   return bookData.find(data => data.bookId === bookId).chaptersCount
+}
+
+export const getVerseCount = (bookId, chapter) => {
+  return bookData.find(data => data.bookId === bookId).chapters.find(data => data.chapter === chapter).verseCount
 }
