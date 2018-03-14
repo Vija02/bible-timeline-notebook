@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import styles from './SummaryContainer.module.css'
 
-const borderSideHeight = 20
-
 export default class SummaryContainer extends Component {
 	render() {
 		return (
@@ -14,26 +12,21 @@ export default class SummaryContainer extends Component {
 						<React.Fragment key={`summary_${i}`}>
 							<div style={{ width: offset * 2 + width, gridRow: `${i + 1} / span 1`, gridColumn: '1/2' }}>
 								<div
+									className={styles.mainGuideline}
 									style={{
 										marginLeft: offset,
-										width: width,
-										height: borderSideHeight,
-										border: '2px solid #7494ea',
-										borderTop: 'none',
+										width,
 									}}
 								/>
-								<a style={{ display: 'block', textAlign: 'center' }}>{title}</a>
+								<a className={styles.title}>{title}</a>
 							</div>
 							{i > 0 ? (
 								<div
+									className={styles.secondaryGuideline}
 									style={{
 										gridRow: `1/${i + 1}`,
-										gridColumn: `1/2`,
 										marginLeft: offset,
-										width: width,
-										height: '100%',
-										borderRight: '2px dotted #7494ea',
-										borderLeft: '2px dotted #7494ea',
+										width,
 									}}
 								/>
 							) : null}

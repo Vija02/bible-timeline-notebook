@@ -1,3 +1,5 @@
+@value borderSideHeight: 20px;
+
 .scrollerSummaryContainer {
 	display: grid;
 	grid-auto-flow: row;
@@ -6,4 +8,22 @@
 	height: 100%;
 	background-color: rgb(184, 201, 253);
 	box-shadow: inset 0px 1px 17px 0px #00000036;
+}
+
+.mainGuideline {
+	height: borderSideHeight;
+	border: 2px solid #7494ea;
+	border-top: none;
+}
+
+.secondaryGuideline {
+	height: 100%;
+	border-right: 2px dotted #7494ea;
+	border-left: 2px dotted #7494ea;
+	grid-column: 1/2;
+}
+
+.title {
+	display: block;
+	text-align: center;
 }
