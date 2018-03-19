@@ -23,8 +23,21 @@
 	grid-column: 1/2;
 }
 
+.titleContainer{
+	display: flex;
+	justify-content: center;
+}
+
 .title {
+	transition: 0.2s all ease;
 	display: block;
 	text-align: center;
 	overflow-wrap: break-word;
+	text-decoration: none;
+	color: #0035c3;
+}
+
+.title:hover {
+	transition: 0.2s all ease;
+	transform: scale(1.2);
 }

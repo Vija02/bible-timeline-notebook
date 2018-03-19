@@ -26,7 +26,7 @@ class SummaryManager extends Component {
 
 	map(calculatePosition) {
 		return verseSummary => {
-			const { title, startBookId, startChapter, startVerse, endBookId, endChapter, endVerse } = verseSummary
+			const { id, title, startBookId, startChapter, startVerse, endBookId, endChapter, endVerse } = verseSummary
 
 			const startPos = calculatePosition(startBookId, startChapter, startVerse)
 			const endPos = calculatePosition(endBookId, endChapter, endVerse)
@@ -34,7 +34,7 @@ class SummaryManager extends Component {
 			const offset = startPos
 			const width = endPos - startPos
 
-			return { title, offset, width }
+			return { id, title, offset, width }
 		}
 	}
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import styles from './SummaryContainer.module.css'
 
@@ -7,7 +8,7 @@ export default class SummaryContainer extends Component {
 		return (
 			<div className={styles.scrollerSummaryContainer}>
 				{this.props.summaries.map((summary, i) => {
-					const { offset, width, title } = summary
+					const { id, offset, width, title } = summary
 					return (
 						<React.Fragment key={`summary_${i}`}>
 							<div style={{ width: offset * 2 + width, gridRow: `${i + 1} / span 1`, gridColumn: '1/2' }}>
@@ -18,7 +19,9 @@ export default class SummaryContainer extends Component {
 										width,
 									}}
 								/>
-								<a className={styles.title}>{title}</a>
+								<div className={styles.titleContainer}>
+									<Link to={`/summary/${id}`} className={styles.title}>{title}</Link>
+								</div>
 							</div>
 							{i > 0 ? (
 								<div
