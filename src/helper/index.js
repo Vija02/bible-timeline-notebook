@@ -20,6 +20,10 @@ export const bookIdFromName = (book) => {
   return bookData.find(data => formatBook(data.bookName) === formatBook(book)).bookId
 }
 
+export const bookNameFromId = (bookId) => {
+  return bookData.find(data => data.bookId === parseInt(bookId, 10)).bookName
+}
+
 export const oldTestament = bookData.filter(book => book.bookSection === "OT")
 export const newTestament = bookData.filter(book => book.bookSection === "NT")
 export const booksRegex = bookData.map(book => formatBook(book.bookName)).join('|')
