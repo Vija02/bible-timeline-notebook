@@ -37,3 +37,28 @@ export const getChapterCount = bookId => {
 export const getVerseCount = (bookId, chapter) => {
 	return bookData.find(data => data.bookId === bookId).chapters.find(data => data.chapter === chapter).verseCount
 }
+
+export const composeReference = (startBookId, startChapter, startVerse, endBookId, endChapter, endVerse) => {
+  const startPassage = `${bookNameFromId(startBookId)} ${startChapter}:${startVerse}`
+  let endPassage = ""
+  let diff;
+  if(startBookId !== endBookId){
+    diff = "book"
+  }else if(startChapter !== endChapter){
+    diff = "chapter"
+  }else if(startChapter !== endChapter){
+    diff = "verse"
+  }
+  /* eslint-disable no-fallthrough */
+  switch(diff){
+    case "book":
+      endPassage += `${bookNameFromId(endBookId)} `
+    case "chapter":
+      endPassage += `${endChapter}:`
+    case "verse":
+      endPassage += endVerse
+    default:
+  }
+  /* eslint-enable no-fallthrough */
+  return `${startPassage}-${endPassage}`
+}
