@@ -140,6 +140,7 @@ class MainTimeline extends Component {
 													? bookIdFromName(props.match.params.bookName)
 													: null
 											}
+											{...props}
 										/>
 									</div>
 								</Scroller>

@@ -20,7 +20,7 @@ export default class SummaryContainer extends Component {
 									}}
 								/>
 								<div className={styles.titleContainer}>
-									<Link to={`/summary/${id}`} className={styles.title}>{title}</Link>
+									<Link to={`${this.props.match ? this.props.match.url : ""}/summary/${id}`} className={styles.title}>{title}</Link>
 								</div>
 							</div>
 							{i > 0 ? (

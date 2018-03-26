@@ -69,7 +69,7 @@ class SummaryManager extends Component {
 			selecting ? this.map(this.calculateSelectedPosition) : this.map(this.calculateNotSelectedPosition),
 		)
 
-		return <SummaryContainer summaries={summaries} />
+		return <SummaryContainer summaries={summaries} match={this.props.match} />
 	}
 }
 

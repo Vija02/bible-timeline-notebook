@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import Book from 'containers/Book'
+import Summary from 'containers/Summary'
 import Sidebar from 'containers/Sidebar'
 
 import MainTimeline from './MainTimeline'
@@ -17,6 +18,7 @@ export default class HomeIndex extends Component {
         <div className={styles.bottom}>
           <Switch>
             <Route path="/book" component={Book} />
+            <Route path="/summary/:id(\d+)" component={Summary} />
           </Switch>
         </div>
       </div>
