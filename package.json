@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "gzip": "gzip -k ./build/static/js/*.js && gzip -k ./build/static/css/*.css",
     "eject": "react-scripts eject"
   }
 }
