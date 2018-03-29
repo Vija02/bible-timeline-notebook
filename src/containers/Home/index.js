@@ -26,6 +26,7 @@ export default class HomeIndex extends Component {
 				</div>
 				<div className={styles.bottom}>
 					<Route path="/summary/:id(\d+)" component={Summary} />
+					<Route path="/book/:bookName/summary/:id(\d+)" component={Summary} />
 				</div>
 			</div>
 		)
