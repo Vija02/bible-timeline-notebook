@@ -1,0 +1,34 @@
+a {
+  margin: 0px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  align-items: flex-end;
+  background-color: #50576b;
+  border-radius: 5%;
+  padding: 10px 5px;
+}
+
+.icon {
+  color: #2e323d;
+  padding: 1px;
+	background-color: #ff7d4c;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.clickableAction {
+	opacity: 0.75;
+	cursor: pointer;
+	text-shadow: 0 0 1px white;
+	font-size: 0.85em;
+}
+
+.clickableAction:hover {
+	transition: 0.1s all ease;
+	opacity: 1;
+	text-decoration: underline;
+}

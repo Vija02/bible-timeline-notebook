@@ -1,18 +1,36 @@
+hr {
+	width: 100%;
+}
+
+h4 {
+	opacity: 0.9;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+a {
+	opacity: 0.8;
+	margin-bottom: 5px;
+}
+
+.text {
+	margin-bottom: 10px;
+}
+
 .bookContainer {
 	height: 100%;
-	padding: 20px;
+	padding: 20px 10px;
 	background-color: #2e323d;
 	color: white;
 	display: flex;
 	flex-direction: column;
 }
 
-.titleContainer {
-	display: flex;
-}
-
 .title {
-	margin-right: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 10px;
 }
 
 .editBookContainer {

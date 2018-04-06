@@ -6,6 +6,8 @@ import linkState from 'linkstate'
 import { bookIdFromName, unformatBook } from 'helper'
 import styles from './Book.module.css'
 
+import NoSummary from './NoSummary'
+
 class Book extends Component {
   constructor(props) {
     super(props);
@@ -31,17 +33,18 @@ class Book extends Component {
 
     return (
       <div className={styles.bookContainer}>
-        <div className={styles.titleContainer}>
-          <a className={styles.title}>{unformatBook(this.props.match.params.bookName)}</a>
-          <div onClick={() => { this.setState({ editing: !this.state.editing }) }}><i className={`fas fa-edit ${styles.editButton}`} /></div>
-        </div>
+        <a className={styles.title}>{unformatBook(this.props.match.params.bookName)}</a>
+        <h4>Overview</h4>
+        <a className={styles.text}>This is a placeholder text that will eventually be the overview of the book</a>
+        <h4>Summary</h4>
+        {!loading && !error && !this.props.data.bookSummary ? <NoSummary onAdd={() => { this.setState({ editing: !this.state.editing }) }} /> : null}
         {
           this.state.editing ?
             <div className={styles.editBookContainer}>
-              <textarea value={this.state.bookSummary} onChange={linkState(this, "bookSummary")} />
+              <textarea value={this.state.bookSummary} onChange={linkState(this, "bookSummary")} className={styles.editBox} />
               <button onClick={() => { this.onConfirm() }}>Confirm</button>
             </div> :
-            <p style={{ width: "30vw" }}>{loading || error ? "-" : this.props.data.bookSummary ? this.props.data.bookSummary.summary : "No summary"}</p>
+            loading || error ? <a>-</a> : this.props.data.bookSummary ? <a>{this.props.data.bookSummary.summary}</a> : null
           }
       </div>
     );
