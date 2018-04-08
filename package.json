@@ -26,6 +26,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "gzip": "gzip -k ./build/static/js/*.js && gzip -k ./build/static/css/*.css",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && npm run gzip && gh-pages -d build -b master-build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
