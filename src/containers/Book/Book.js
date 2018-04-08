@@ -39,7 +39,7 @@ class Book extends Component {
 
 		return (
 			<div className={styles.bookContainer}>
-				<a className={styles.title}>{unformatBook(this.props.match.params.bookName)}</a>
+				<h3 className={styles.title}>{unformatBook(this.props.match.params.bookName)}</h3>
 				<h4>Overview</h4>
 				<a className={styles.text}>
 					This is a placeholder text that will eventually be the overview of the book
