@@ -4,6 +4,8 @@ import gql from 'graphql-tag'
 
 import { composeReference } from 'helper'
 
+import styles from './Summary.module.css'
+
 class SummaryIndex extends Component {
 	render() {
 		const { loading, error } = this.props.data
@@ -21,7 +23,7 @@ class SummaryIndex extends Component {
 			title,
 		} = this.props.data.verseSummary
 		return (
-			<div>
+			<div className={styles.container}>
 				<p>
 					{title} <i>({composeReference(startBookId, startChapter, startVerse, endBookId, endChapter, endVerse)})</i>
 				</p>
