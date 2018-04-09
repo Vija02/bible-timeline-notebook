@@ -37,8 +37,20 @@ a {
 .editBookContainer {
 	display: flex;
 }
+.editBookContainer textarea {
+	width: 100%;
+}
+
+.editButtonContainer {
+	display: inline;
+}
 
 .editButton {
 	color: grey;
 	cursor: pointer;
+}
+
+.editButton:hover {
+	transition: 0.1s all ease;
+	color: rgb(206, 206, 206);
 }

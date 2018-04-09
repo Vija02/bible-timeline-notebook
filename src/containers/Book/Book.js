@@ -44,7 +44,7 @@ class Book extends Component {
 				<a className={styles.text}>
 					This is a placeholder text that will eventually be the overview of the book
 				</a>
-				<h4>Summary</h4>
+				<h4>Summary <div className={styles.editButtonContainer} onClick={() => { this.setState({ editing: !this.state.editing }) }}><i className={`fas fa-edit ${styles.editButton}`} /></div></h4>
 				{!loading && !error && !this.props.data.bookSummary ? (
 					<NoSummary
 						onAdd={() => {
