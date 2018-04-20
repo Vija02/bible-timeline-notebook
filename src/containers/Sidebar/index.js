@@ -14,9 +14,6 @@ export default class SideBarIndex extends Component {
   render() {
     return (
       <div className={`${this.props.className} ${styles.container}`}>
-        <div className={styles.sidebarTop}>
-          <a className={styles.sidebarTopText}>Welcome</a>
-        </div>
         <DropdownMenu
           iconClassName="fas fa-plus"
           title="Add Summary"
