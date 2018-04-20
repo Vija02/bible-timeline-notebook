@@ -2,6 +2,7 @@
 @value dashSideMargin: 5px;
 @value dashWidth: 50px;
 .timelineContainer {
+	box-shadow: inset 0px 10px 15px -10px  rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 }
 
@@ -13,6 +14,7 @@
 	height: 100%;
 	cursor: pointer;
 	justify-content: center;
+	box-shadow: inset 0px 10px 15px -10px  rgba(0, 0, 0, 0.2);
 }
 
 .scrollerGridContainer{

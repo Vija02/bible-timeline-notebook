@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Book from 'containers/Book'
 import Summary from 'containers/Summary'
+import Navbar from 'containers/Navbar'
 import Sidebar from 'containers/Sidebar'
 
 import MainTimeline from './MainTimeline'
@@ -19,6 +20,7 @@ export default class HomeIndex extends Component {
 						: styles.containerNoAside
 				}
 			>
+				<Navbar className={styles.navbar} />
 				<Sidebar className={styles.sidebar} />
 				<MainTimeline className={styles.main} />
 				<div className={styles.aside}>
