@@ -16,6 +16,7 @@
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.2.0",
     "react-gesture": "^0.0.5",
+    "react-google-login": "^3.2.1",
     "react-motion": "^0.5.2",
     "react-router-dom": "^4.2.2",
     "react-scripts-cssmodules": "^1.0.171",
