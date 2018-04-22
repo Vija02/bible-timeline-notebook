@@ -1,0 +1,36 @@
+@keyframes fadein {
+	from {
+    opacity: 0;
+	}
+	to {
+    opacity: 1;
+	}
+}
+@keyframes slideIn {
+	from {
+    transform: translateY(-200%);
+	}
+	to {
+    transform: translateY(0%);
+	}
+}
+
+.container {
+	animation: fadein 0.1s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBox {
+  animation: slideIn 0.2s;
+	background-color: white;
+	max-width: 500px;
+	margin: 100px auto;
+  border-radius: 5px;
+  
+  padding: 10px;
+}
