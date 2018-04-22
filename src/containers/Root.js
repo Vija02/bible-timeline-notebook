@@ -7,8 +7,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './Home'
 
-import styles from './Root.module.css'
-
 class Root extends Component {
 	createClient() {
 		const cache = new InMemoryCache({
@@ -31,7 +29,7 @@ class Root extends Component {
 						<Switch>
 							<Route path="/" component={Home} />
 						</Switch>
-						<div id="modal-root" className={styles.modalRoot}/>
+						<div id="modal-root" />
 					</div>
 				</Router>
 			</ApolloProvider>
