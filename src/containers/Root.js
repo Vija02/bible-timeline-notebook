@@ -4,6 +4,7 @@ import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import Home from './Home'
 
@@ -30,6 +31,17 @@ class Root extends Component {
 							<Route path="/" component={Home} />
 						</Switch>
 						<div id="modal-root" />
+						<ToastContainer
+							position="top-right"
+							autoClose={5000}
+							hideProgressBar={false}
+							newestOnTop
+							closeOnClick
+							rtl={false}
+							pauseOnVisibilityChange
+							draggable
+							pauseOnHover
+						/>
 					</div>
 				</Router>
 			</ApolloProvider>
