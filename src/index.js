@@ -11,7 +11,7 @@ import { version } from '../package.json'
 import sizeMe from 'react-sizeme'
 sizeMe.noPlaceholders = true
 
-if (process.env.REACT_APP_SENTRY_DSN) {
+if (process.env.REACT_APP_SENTRY_DSN && process.env.NODE_ENV === 'production') {
 	Raven.config(process.env.REACT_APP_SENTRY_DSN, {
 		release: version,
 	}).install()
