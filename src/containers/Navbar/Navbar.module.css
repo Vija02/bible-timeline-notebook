@@ -14,11 +14,13 @@ h2 {
 
 .rightContainer {
 	display: flex;
-	flex-direction: row;
+  flex-direction: row;
+  align-items: center;
 	margin-right: 25px;
 }
 
 .rightContainer > a {
+  cursor: pointer;
   color: rgb(89, 126, 230);
 	text-decoration: none;
 	margin-right: 20px;
