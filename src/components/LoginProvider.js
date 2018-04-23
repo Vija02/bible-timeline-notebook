@@ -6,6 +6,7 @@ export default class LoginProvider extends Component {
 		return {
 			onLogin: this.props.onLogin,
 			onLogout: this.props.onLogout,
+			jwt: this.props.jwt,
 		}
 	}
 	render() {
@@ -16,9 +17,11 @@ export default class LoginProvider extends Component {
 LoginProvider.childContextTypes = {
 	onLogin: PropTypes.func,
 	onLogout: PropTypes.func,
+	jwt: PropTypes.string,
 }
 
 LoginProvider.propTypes = {
 	onLogin: PropTypes.func,
 	onLogout: PropTypes.func,
+	jwt: PropTypes.string,
 }

@@ -23,15 +23,25 @@ class Root extends Component {
 	onLogin(jwt) {
 		localStorage.setItem(process.env.REACT_APP_JWT_KEY_NAME, jwt)
 		this.setState({ jwt })
+		toast.success(
+			<p>
+				<i className="far fa-check-circle" /> You are now logged in!
+			</p>,
+		)
 	}
 	onLogout() {
 		localStorage.removeItem(process.env.REACT_APP_JWT_KEY_NAME)
 		this.setState({ jwt: null })
+		toast.info(
+			<p>
+				<i className="fas fa-exclamation-circle" /> You have successfully logged out.
+			</p>,
+		)
 	}
 
 	render() {
 		return (
-			<LoginProvider onLogin={this.onLogin} onLogout={this.onLogout}>
+			<LoginProvider onLogin={this.onLogin} onLogout={this.onLogout} jwt={this.state.jwt}>
 				<ApolloProvider
 					client={getApolloClient(() => {
 						console.log('Logout due to expiry')
