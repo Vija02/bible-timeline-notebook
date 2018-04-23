@@ -1,50 +1,65 @@
 import React, { Component } from 'react'
-import ApolloClient from 'apollo-client'
-import { createHttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
+
+import getApolloClient from 'getApolloClient'
+import LoginProvider from 'components/LoginProvider'
 
 import Home from './Home'
 
 class Root extends Component {
-	createClient() {
-		const cache = new InMemoryCache({
-			dataIdFromObject: o => o.nodeId,
-		})
-		const httpLink = createHttpLink({
-			uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
-		})
-		return new ApolloClient({
-			cache: cache,
-			link: httpLink,
-			defaultOptions: { query: { notifyOnNetworkStatusChange: true } },
-		})
+	constructor(props) {
+		super(props)
+		this.state = { jwt: null }
+
+		this.onLogin = this.onLogin.bind(this)
+		this.onLogout = this.onLogout.bind(this)
 	}
+	componentWillMount() {
+		const jwt = localStorage.getItem(process.env.REACT_APP_JWT_KEY_NAME)
+		this.setState({ jwt })
+	}
+	onLogin(jwt) {
+		localStorage.setItem(process.env.REACT_APP_JWT_KEY_NAME, jwt)
+		this.setState({ jwt })
+	}
+	onLogout() {
+		localStorage.removeItem(process.env.REACT_APP_JWT_KEY_NAME)
+		this.setState({ jwt: null })
+	}
+
 	render() {
 		return (
-			<ApolloProvider client={this.createClient()}>
-				<Router>
-					<div>
-						<Switch>
-							<Route path="/" component={Home} />
-						</Switch>
-						<div id="modal-root" />
-						<ToastContainer
-							position="top-right"
-							autoClose={5000}
-							hideProgressBar={false}
-							newestOnTop
-							closeOnClick
-							rtl={false}
-							pauseOnVisibilityChange
-							draggable
-							pauseOnHover
-						/>
-					</div>
-				</Router>
-			</ApolloProvider>
+			<LoginProvider onLogin={this.onLogin} onLogout={this.onLogout}>
+				<ApolloProvider
+					client={getApolloClient(() => {
+						console.log('Logout due to expiry')
+						toast.warn('You have been logged out. Current login session expired.')
+						this.onLogout()
+					}, this.state.jwt)}
+				>
+					<Router>
+						<div>
+							<Switch>
+								<Route path="/" component={Home} />
+							</Switch>
+							<div id="modal-root" />
+							<ToastContainer
+								position="top-right"
+								autoClose={5000}
+								hideProgressBar={false}
+								newestOnTop
+								closeOnClick
+								rtl={false}
+								pauseOnVisibilityChange
+								draggable
+								pauseOnHover
+							/>
+						</div>
+					</Router>
+				</ApolloProvider>
+			</LoginProvider>
 		)
 	}
 }
