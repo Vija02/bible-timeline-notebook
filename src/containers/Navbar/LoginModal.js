@@ -13,12 +13,6 @@ export default class LoginModal extends Component {
 	onSuccess(response) {
 		const tokenId = response.tokenId
 		this.context.onLogin(tokenId)
-
-		toast.success(
-			<p>
-				<i className="far fa-check-circle" /> You are now logged in!
-			</p>,
-		)
 		this.props.onBackdropClicked()
 	}
 	onFailure(response) {
