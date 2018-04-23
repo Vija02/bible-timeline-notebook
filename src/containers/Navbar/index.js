@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import LoginModal from './LoginModal'
 
@@ -26,7 +27,11 @@ export default class NavbarIndex extends Component {
 				</h2>
 				<div className={styles.rightContainer}>
 					<Link to="/">About</Link>
-					<a onClick={this.toggleModal}>Login</a>
+					{this.context.jwt ? (
+						<a onClick={this.context.onLogout}>Logout</a>
+					) : (
+						<a onClick={this.toggleModal}>Login</a>
+					)}
 					{this.state.opened
 						? ReactDOM.createPortal(
 								<LoginModal onBackdropClicked={this.toggleModal} />,
@@ -37,4 +42,9 @@ export default class NavbarIndex extends Component {
 			</div>
 		)
 	}
+}
+
+NavbarIndex.contextTypes = {
+	jwt: PropTypes.string,
+	onLogout: PropTypes.func,
 }
