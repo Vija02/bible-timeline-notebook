@@ -3,6 +3,7 @@ import { GoogleLogin } from 'react-google-login'
 import GoogleButton from 'react-google-button'
 import { toast } from 'react-toastify'
 import Raven from 'raven-js'
+import PropTypes from 'prop-types'
 
 import Modal from 'components/Modal'
 
@@ -10,27 +11,23 @@ import styles from './LoginModal.module.css'
 
 export default class LoginModal extends Component {
 	onSuccess(response) {
-    const tokenId = response.tokenId
+		const tokenId = response.tokenId
+		this.context.onLogin(tokenId)
 
-		console.log(tokenId);
-		console.log(response);
-		
-    
-
-    toast.success(
+		toast.success(
 			<p>
 				<i className="far fa-check-circle" /> You are now logged in!
 			</p>,
 		)
-    this.props.onBackdropClicked()
+		this.props.onBackdropClicked()
 	}
 	onFailure(response) {
 		let errorMessage
 		switch (response.error) {
 			case 'idpiframe_initialization_failed':
 				errorMessage = 'Failed to initialize Google Sign In API. Please try again later.'
-        Raven.captureException(new Error(JSON.stringify(response)))
-        this.props.onBackdropClicked()
+				Raven.captureException(new Error(JSON.stringify(response)))
+				this.props.onBackdropClicked()
 				break
 			case 'popup_closed_by_user':
 				errorMessage = 'Login Failed. Popup closed'
@@ -42,9 +39,9 @@ export default class LoginModal extends Component {
 				errorMessage = ''
 				break
 			default:
-        errorMessage = 'Error occured when trying to login'
-        Raven.captureException(new Error(JSON.stringify(response)))
-        this.props.onBackdropClicked()
+				errorMessage = 'Error occured when trying to login'
+				Raven.captureException(new Error(JSON.stringify(response)))
+				this.props.onBackdropClicked()
 		}
 		console.error(response)
 		toast.error(
@@ -74,4 +71,8 @@ export default class LoginModal extends Component {
 			</Modal>
 		)
 	}
+}
+
+LoginModal.contextTypes = {
+	onLogin: PropTypes.func,
 }
