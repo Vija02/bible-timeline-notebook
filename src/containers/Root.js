@@ -29,14 +29,18 @@ class Root extends Component {
 			</p>,
 		)
 	}
-	onLogout() {
+	onLogout(showMessage = false) {
 		localStorage.removeItem(process.env.REACT_APP_JWT_KEY_NAME)
-		this.setState({ jwt: null })
-		toast.info(
-			<p>
-				<i className="fas fa-exclamation-circle" /> You have successfully logged out.
-			</p>,
-		)
+		if (this.state.jwt !== null) {
+			this.setState({ jwt: null })
+		}
+		if (showMessage) {
+			toast.info(
+				<p>
+					<i className="fas fa-exclamation-circle" /> You have successfully logged out.
+				</p>,
+			)
+		}
 	}
 
 	render() {
@@ -45,7 +49,9 @@ class Root extends Component {
 				<ApolloProvider
 					client={getApolloClient(() => {
 						console.log('Logout due to expiry')
-						toast.warn('You have been logged out. Current login session expired.')
+						if (this.state.jwt !== null) {
+							toast.warn('You have been logged out. Current login session expired.')
+						}
 						this.onLogout()
 					}, this.state.jwt)}
 				>
