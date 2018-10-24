@@ -864,13 +864,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.5.tgz#d2a90c634208173d1b1a0a6ba9f1df3de62edcf5"
   integrity sha512-DvC7bzO5797bkApgukxouHmkOdYN2D0yL5olw0RncDpXUa6n39qTVsUi/5g2QJjPgl8qn4zh+4h0sofNoWGLRg==
 
-"@types/react@*":
-  version "16.3.12"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.12.tgz#68d9146f3e9797e38ffbf22f7ed1dde91a2cfd2e"
-  integrity sha512-FfBhLC3QeXXEtjoGGLixS7cB305vzBOM1dZKtbUuXeTfjY0quzRRMxpqylC4QyUaLqdhNLdER0ZdHUGAVlGSCA==
-  dependencies:
-    csstype "^2.2.0"
-
 "@types/tapable@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
@@ -2931,11 +2924,6 @@ cssstyle@^1.0.0, cssstyle@^1.1.1:
   integrity sha512-364AI1l/M5TYcFH83JnOH/pSqgaNnKmYgKrm0didZMGKWjQB60dymwWy1rKUgL3J1ffdq9xVi2yGLHdSjjSNog==
   dependencies:
     cssom "0.3.x"
-
-csstype@^2.2.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.3.0.tgz#062e141c78345cf814da0e0b716ad777931b08af"
-  integrity sha512-+iowf+HbYUKV65+HjAhXkx4KH6IFpIxnBlO0maKsXmBIHJXEndaTRYPVL4pEwtK6+1zRvkXo+WD1tRFKygMHQg==
 
 cyclist@~0.2.2:
   version "0.2.2"
@@ -8484,21 +8472,6 @@ react-gesture@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/react-gesture/-/react-gesture-0.0.5.tgz#b978615fe3d4bf5f0e902d7204a5a11afa087496"
   integrity sha1-uXhhX+PUv18OkC1yBKWhGvoIdJY=
-
-react-google-button@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/react-google-button/-/react-google-button-0.5.3.tgz#d8c76328e51b55f2835a4ebe23817906dac6a4f8"
-  integrity sha512-2xiECMLZ2qUbMtYq7fjwi/8WEVpLI5UuZLPGJzVkpcGOq/hdY5tqx8AXWUqI7QOgb9mG48/UG67kOzTgab+NUw==
-  dependencies:
-    prop-types "^15.5.8"
-
-react-google-login@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.2.1.tgz#9ab6ac3694d0e6e2974f1e588c53cf7b903a36e6"
-  integrity sha512-9+OFbdGDr6vazlcCkLbtN92Wwfb+aG/RJ0ScypTK6Ox5g642z1aDrnmal2V5AqWl2+Ph53sBhRnk0KTvUdNXpA==
-  dependencies:
-    "@types/react" "*"
-    prop-types "^15.6.0"
 
 react-motion@^0.5.2:
   version "0.5.2"
