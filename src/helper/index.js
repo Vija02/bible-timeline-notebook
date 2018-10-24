@@ -62,3 +62,10 @@ export const composeReference = (startBookId, startChapter, startVerse, endBookI
   /* eslint-enable no-fallthrough */
   return `${startPassage}-${endPassage}`
 }
+
+export const getUserIdFromJWT = jwt => {
+  if (jwt) {
+    return JSON.parse(atob(jwt.split('.')[1])).user_id
+  }
+  return -1
+}

@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 
 import getApolloClient from 'getApolloClient'
-import LoginProvider from 'components/LoginProvider'
+import AuthProvider from 'providers/Auth'
+import { getUserIdFromJWT } from 'helper'
 
 import Home from './Home'
 
@@ -45,7 +46,14 @@ class Root extends Component {
 
 	render() {
 		return (
-			<LoginProvider onLogin={this.onLogin} onLogout={this.onLogout} jwt={this.state.jwt}>
+			<AuthProvider
+				value={{
+					onLogin: this.onLogin,
+					onLogout: this.onLogout,
+					userId: getUserIdFromJWT(this.state.jwt),
+					jwt: this.state.jwt,
+				}}
+			>
 				<ApolloProvider
 					client={getApolloClient(() => {
 						console.log('Logout due to expiry')
@@ -75,7 +83,7 @@ class Root extends Component {
 						</div>
 					</Router>
 				</ApolloProvider>
-			</LoginProvider>
+			</AuthProvider>
 		)
 	}
 }
