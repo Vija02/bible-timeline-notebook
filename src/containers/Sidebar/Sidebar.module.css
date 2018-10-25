@@ -1,13 +1,5 @@
+@value boldThemeColor from "sharedStyles/colors.css";
 .container {
-  background-color: #2e323d;
+  background-color: boldThemeColor;
   color: white;
-}
-
-.sidebarTop {
-  background-color: #444a5a;
-  padding: 10px;
-  text-align: center;
-}
-.sidebarTopText {
-  font-size: 2em;
 }

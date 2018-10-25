@@ -1,8 +1,9 @@
+@value themeColor from "sharedStyles/colors.css";
 @value scrollerSidePadding: 40px;
 @value dashSideMargin: 5px;
 @value dashWidth: 50px;
 .timelineContainer {
-	box-shadow: inset 0px 10px 15px -10px  rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 10px 15px -10px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 }
 
@@ -14,21 +15,21 @@
 	height: 100%;
 	cursor: pointer;
 	justify-content: center;
-	box-shadow: inset 0px 10px 15px -10px  rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 10px 15px -10px rgba(0, 0, 0, 0.2);
 }
 
-.scrollerGridContainer{
-  display: grid;
-  margin-left: scrollerSidePadding;
+.scrollerGridContainer {
+	display: grid;
+	margin-left: scrollerSidePadding;
 	grid-template-rows: 200px auto;
 }
 
 .scrollTitleContainer {
-  grid-row: 1/2;
+	grid-row: 1/2;
 }
 
 .scrollerBodyContainer {
-  grid-row: 2/3;
+	grid-row: 2/3;
 	padding-left: scrollerSidePadding;
 	display: inline-flex;
 	align-items: center;
@@ -37,12 +38,12 @@
 }
 
 .dashedLine {
-  grid-row: 2/3;
+	grid-row: 2/3;
 	margin: auto dashSideMargin;
 	width: dashWidth;
 	border: 0px;
 	border-top: dashed 1px;
-	color: #7494ea;
+	color: themeColor;
 }
 
 .fullSize {

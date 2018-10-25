@@ -1,15 +1,15 @@
+@value themeColor, selectedThemeColor from "sharedStyles/colors.css";
 @value padding: 10px;
-.bookContainer,
-.selectedBookContainer {
-  transition: all 0.1s ease;
-	background-color: #7494ea;
+.bookContainer, .selectedBookContainer {
+	transition: all 0.1s ease;
+	background-color: themeColor;
 	grid-row: 2/3;
 }
 
 .bookSelector {
 	transition: all 0.1s ease;
 	margin: padding;
-	background-color: #7494ea;
+	background-color: themeColor;
 	cursor: pointer;
 	color: white;
 	font-size: 1.3em;
@@ -20,11 +20,12 @@
 .bookContainer:hover {
 	transition: all 0.2s ease;
 	transform: scale(1.1);
-	background-color: rgb(86, 124, 230);
+	background-color: selectedThemeColor;
 }
+
 .bookContainer:hover .bookSelector {
 	transition: all 0.2s ease;
-	background-color: rgb(86, 124, 230);
+	background-color: selectedThemeColor;
 }
 
 .bookArrayContainer {
@@ -47,6 +48,7 @@
 	transition: all 0.1s ease;
 	background-color: rgba(0, 0, 0, 0.466);
 }
+
 .bookSection:hover .bookNumber {
 	transition: all 0.05s ease;
 	opacity: 1;
