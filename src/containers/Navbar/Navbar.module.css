@@ -1,35 +1,40 @@
 .container {
 	background-color: white;
 	color: #6b8ce4;
-
 	display: flex;
 	justify-content: space-between;
-  align-items: center;
+	align-items: center;
+}
+
+.container>a, .container>a:visited {
+	text-decoration: none;
+	color: inherit;
+	opacity: 1;
 }
 
 h2 {
-  margin-left: 20px;
-  font-size: 1.5em;
+	margin-left: 20px;
+	font-size: 1.5em;
 }
 
 .rightContainer {
 	display: flex;
-  flex-direction: row;
-  align-items: center;
+	flex-direction: row;
+	align-items: center;
 	margin-right: 25px;
 }
 
-.rightContainer > a {
-  cursor: pointer;
-  color: rgb(89, 126, 230);
+.rightContainer>a {
+	cursor: pointer;
+	color: rgb(89, 126, 230);
 	text-decoration: none;
 	margin-right: 20px;
 }
 
-.rightContainer > a:last-child {
+.rightContainer>a:last-child {
 	margin-right: 0px;
 }
 
-.rightContainer > a:hover {
+.rightContainer>a:hover {
 	color: #1643be;
 }

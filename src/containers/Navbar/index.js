@@ -22,9 +22,11 @@ export default class NavbarIndex extends Component {
 	render() {
 		return (
 			<div className={`${this.props.className} ${styles.container}`}>
-				<h2>
-					OverRise <i className="fa fa-arrow-up" />
-				</h2>
+				<Link to="/">
+					<h2>
+						OverRise <i className="fa fa-arrow-up" />
+					</h2>
+				</Link>
 				<div className={styles.rightContainer}>
 					<Link to="/">About</Link>
 					{this.context.jwt ? (
