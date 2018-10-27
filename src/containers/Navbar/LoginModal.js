@@ -1,49 +1,71 @@
 import React, { Component } from 'react'
-import { GoogleLogin } from 'react-google-login'
-import GoogleButton from 'react-google-button'
+import axios from 'axios'
 import { toast } from 'react-toastify'
 import Raven from 'raven-js'
-import PropTypes from 'prop-types'
+import { Formik } from 'formik'
+import * as Yup from 'yup'
 
 import Modal from 'components/Modal'
+
+import { AuthConsumer } from 'providers/Auth'
 
 import styles from './LoginModal.module.css'
 
 export default class LoginModal extends Component {
-	onSuccess(response) {
-		const tokenId = response.tokenId
-		this.context.onLogin(tokenId)
-		this.props.onBackdropClicked()
+	constructor(props) {
+		super(props)
+		this.state = {}
+
+		this.validationSchema = Yup.object().shape({
+			email: Yup.string()
+				.email('Invalid Email')
+				.required('Email cannot be empty'),
+			password: Yup.string()
+				.min(4, 'Password length at least 4')
+				.required('Password cannot be empty'),
+		})
+
+		this.login = this.login.bind(this)
 	}
-	onFailure(response) {
-		let errorMessage
-		switch (response.error) {
-			case 'idpiframe_initialization_failed':
-				errorMessage = 'Failed to initialize Google Sign In API. Please try again later.'
-				Raven.captureException(new Error(JSON.stringify(response)))
-				this.props.onBackdropClicked()
-				break
-			case 'popup_closed_by_user':
-				errorMessage = 'Login Failed. Popup closed'
-				break
-			case 'access_denied':
-				errorMessage = 'Login Failed. Access denied'
-				break
-			case 'immediate_failed':
-				errorMessage = ''
-				break
-			default:
-				errorMessage = 'Error occured when trying to login'
-				Raven.captureException(new Error(JSON.stringify(response)))
-				this.props.onBackdropClicked()
+
+	login(onLogin) {
+		return ({ email, password }) => {
+			return axios
+				.post(process.env.REACT_APP_API_ENDPOINT + '/login', {
+					email,
+					password,
+				})
+				.then(res => {
+					return res.data.jwt
+				})
+				.then(onLogin)
+				.catch(err => {
+					console.error(err)
+
+					if (err.response) {
+						switch (err.response.status) {
+							case 400:
+								toast.error('Bad request sent. Please check your email and password')
+								break
+							case 401:
+								toast.error('Invalid email or password. Please check your email or password')
+								break
+							case 500:
+							default:
+								toast.error('Something went wrong. Please try again later')
+						}
+					} else if (err.request) {
+						Raven.captureException(new Error(JSON.stringify(err)))
+						toast.error("Server didn't respond in time. Please try again later")
+					} else {
+						Raven.captureException(new Error(JSON.stringify(err)))
+						toast.error('An unknown error occured')
+					}
+					throw new Error()
+				})
 		}
-		console.error(response)
-		toast.error(
-			<p>
-				<i className="fa fa-exclamation-triangle" /> {errorMessage}
-			</p>,
-		)
 	}
+
 	render() {
 		return (
 			<Modal
@@ -51,22 +73,80 @@ export default class LoginModal extends Component {
 					this.props.onBackdropClicked()
 				}}
 			>
-				<div className={styles.modalContainer}>
-					<h3>Login</h3>
-					<p>Only Google login currently available</p>
-					<GoogleLogin
-						clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-						buttonText="Login"
-						onSuccess={this.onSuccess.bind(this)}
-						onFailure={this.onFailure.bind(this)}
-						render={renderProps => <GoogleButton {...renderProps} />}
-					/>
-				</div>
+				<AuthConsumer>
+					{({ onLogin }) => (
+						<Formik
+							initialValues={{ email: '', password: '' }}
+							validationSchema={this.validationSchema}
+							onSubmit={(val, { setSubmitting }) => {
+								const data = this.validationSchema.cast(val)
+
+								this.login(onLogin)(data)
+									.then(() => {
+										setSubmitting(false)
+										this.props.onBackdropClicked()
+									})
+									.catch(() => {
+										setSubmitting(false)
+									})
+							}}
+						>
+							{props => {
+								const {
+									values,
+									touched,
+									errors,
+									isSubmitting,
+									handleChange,
+									handleBlur,
+									handleSubmit,
+								} = props
+								return (
+									<form onSubmit={handleSubmit}>
+										<div className={styles.modalContainer}>
+											<div className={styles.formGroup}>
+												<label>Email</label>
+												<input
+													id="email"
+													type="text"
+													className="form-control"
+													value={values.email}
+													onChange={handleChange}
+													onBlur={handleBlur}
+												/>
+												{errors.email &&
+													touched.email && (
+														<div className="input-feedback">{errors.email}</div>
+													)}
+											</div>
+											<div className={styles.formGroup}>
+												<label>Password</label>
+												<input
+													id="password"
+													type="password"
+													className="form-control"
+													value={values.password}
+													onChange={handleChange}
+													onBlur={handleBlur}
+												/>
+												{errors.password &&
+													touched.password && (
+														<div className="input-feedback">{errors.password}</div>
+													)}
+											</div>
+											<div className="mb20">
+												<button type="submit" className="btn" disabled={isSubmitting}>
+													Sign In
+												</button>
+											</div>
+										</div>
+									</form>
+								)
+							}}
+						</Formik>
+					)}
+				</AuthConsumer>
 			</Modal>
 		)
 	}
-}
-
-LoginModal.contextTypes = {
-	onLogin: PropTypes.func,
 }
