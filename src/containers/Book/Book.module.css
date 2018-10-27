@@ -1,18 +1,3 @@
-hr {
-	width: 100%;
-}
-
-h4 {
-	opacity: 0.9;
-	margin: 0px;
-	margin-bottom: 5px;
-}
-
-a {
-	opacity: 0.8;
-	margin-bottom: 5px;
-}
-
 .text {
 	margin-bottom: 10px;
 }
@@ -26,6 +11,21 @@ a {
 	flex-direction: column;
 }
 
+.bookContainer hr {
+	width: 100%;
+}
+
+.bookContainer h4 {
+	opacity: 0.9;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+.bookContainer a {
+	opacity: 0.8;
+	margin-bottom: 5px;
+}
+
 .title {
 	text-align: center;
 	font-weight: bold;
@@ -37,6 +37,7 @@ a {
 .editBookContainer {
 	display: flex;
 }
+
 .editBookContainer textarea {
 	width: 100%;
 }

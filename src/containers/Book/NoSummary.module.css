@@ -1,20 +1,20 @@
-a {
-  margin: 0px;
-}
-
 .container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-  align-items: flex-end;
-  background-color: #50576b;
-  border-radius: 5%;
-  padding: 10px 5px;
+	align-items: flex-end;
+	background-color: #50576b;
+	border-radius: 5%;
+	padding: 10px 5px;
+}
+
+.container a {
+	margin: 0px;
 }
 
 .icon {
-  color: #2e323d;
-  padding: 1px;
+	color: #2e323d;
+	padding: 1px;
 	background-color: #ff7d4c;
 	border-radius: 50%;
 	margin-right: 5px;
