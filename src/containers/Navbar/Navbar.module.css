@@ -24,17 +24,18 @@ h2 {
 	margin-right: 25px;
 }
 
-.rightContainer>a {
+.rightContainer>a, .rightContainer>span {
+	opacity: 0.8;
 	cursor: pointer;
 	color: rgb(89, 126, 230);
 	text-decoration: none;
 	margin-right: 20px;
 }
 
-.rightContainer>a:last-child {
+.rightContainer>a:last-child, .rightContainer>span:last-child {
 	margin-right: 0px;
 }
 
-.rightContainer>a:hover {
+.rightContainer>a:hover, .rightContainer>span:hover {
 	color: #1643be;
 }

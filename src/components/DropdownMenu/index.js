@@ -11,7 +11,7 @@ export default class DropdownMenuIndex extends Component {
 					onClick={this.props.onClick}
 				>
 					<i className={this.props.iconClassName} />
-					<a className={`${styles.title} ${this.props.opened ? styles.titleOpen : ''}`}>{this.props.title}</a>
+					<span className={`${styles.title} ${this.props.opened ? styles.titleOpen : ''}`}>{this.props.title}</span>
 				</div>
 				<div className={this.props.opened ? styles.body : styles.closedBody}>
 					{this.props.opened ? React.cloneElement(this.props.children) : null}

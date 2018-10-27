@@ -30,9 +30,9 @@ export default class NavbarIndex extends Component {
 				<div className={styles.rightContainer}>
 					<Link to="/">About</Link>
 					{this.context.jwt ? (
-						<a onClick={this.context.onLogout}>Logout</a>
+						<span onClick={this.context.onLogout}>Logout</span>
 					) : (
-						<a onClick={this.toggleModal}>Login</a>
+						<span onClick={this.toggleModal}>Login</span>
 					)}
 					{this.state.opened
 						? ReactDOM.createPortal(

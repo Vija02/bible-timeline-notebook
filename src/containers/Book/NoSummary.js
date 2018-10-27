@@ -9,9 +9,9 @@ export default class NoSummary extends Component {
 				<div className={styles.container}>
 					<div>
 						<i className={`fa fa-exclamation-circle ${styles.icon}`} />
-						<a>Empty summary</a>
+						<span>Empty summary</span>
 					</div>
-					<a className={styles.clickableAction} onClick={this.props.onAdd}>Add now</a>
+					<span className={styles.clickableAction} onClick={this.props.onAdd}>Add now</span>
 				</div>
 				<br />
 			</React.Fragment>

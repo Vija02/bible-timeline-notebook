@@ -41,9 +41,9 @@ class Book extends Component {
 			<div className={styles.bookContainer}>
 				<h3 className={styles.title}>{unformatBook(this.props.match.params.bookName)}</h3>
 				<h4>Overview</h4>
-				<a className={styles.text}>
+				<span className={styles.text}>
 					This is a placeholder text that will eventually be the overview of the book
-				</a>
+				</span>
 				<h4>Summary <div className={styles.editButtonContainer} onClick={() => { this.setState({ editing: !this.state.editing }) }}><i className={`fas fa-edit ${styles.editButton}`} /></div></h4>
 				{!loading && !error && !this.props.data.bookSummary ? (
 					<NoSummary
@@ -68,9 +68,9 @@ class Book extends Component {
 						</button>
 					</div>
 				) : loading || error ? (
-					<a>-</a>
+					<span>-</span>
 				) : this.props.data.bookSummary ? (
-					<a>{this.props.data.bookSummary.summary}</a>
+					<span>{this.props.data.bookSummary.summary}</span>
 				) : null}
 			</div>
 		)

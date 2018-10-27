@@ -45,9 +45,9 @@ class AddSummaryIndex extends Component {
 		return (
 			<div style={{ display: 'flex', flexDirection: 'column', marginBottom: 30 }}>
 				<div style={{ display: 'flex', flexDirection: 'column' }}>
-					<a>From</a>
+					<span>From</span>
 					<BibleVerseSelector onChange={linkState(this, 'verse1')} />
-					<a>To</a>
+					<span>To</span>
 					<BibleVerseSelector onChange={linkState(this, 'verse2')} />
 				</div>
 				<p>Title</p>
