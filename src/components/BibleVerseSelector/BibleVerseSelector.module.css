@@ -1,3 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapterVerseContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .numberInput {
   width: 50px;
 }
