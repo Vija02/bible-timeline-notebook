@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
 import linkState from 'linkstate'
 import { toast } from 'react-toastify'
 
+import Mutation from 'components/Mutation'
 import BibleVerseSelector from 'components/BibleVerseSelector'
+
+import { CREATE_VERSES_SUMMARY } from './queries'
 
 class AddSummaryIndex extends Component {
 	constructor(props) {
@@ -18,11 +19,11 @@ class AddSummaryIndex extends Component {
 		this.state = { ...this.initState }
 	}
 
-	addSummary() {
+	addSummary(createVersesSummary) {
 		const { verse1, verse2, title, summary } = this.state
 
-		this.props
-			.createVersesSummary({
+		createVersesSummary({
+			variables: {
 				startBookId: verse1.book,
 				startChapter: verse1.chapter,
 				startVerse: verse1.verse,
@@ -31,7 +32,8 @@ class AddSummaryIndex extends Component {
 				endVerse: verse2.verse,
 				title,
 				summary,
-			})
+			},
+		})
 			.then(() => {
 				toast.success(
 					<p>
@@ -63,86 +65,22 @@ class AddSummaryIndex extends Component {
 					value={this.state.summary}
 					onChange={linkState(this, 'summary')}
 				/>
-				<button
-					style={{ width: '50px' }}
-					disabled={!this.state.verse1 || !this.state.verse2}
-					onClick={() => {
-						this.addSummary()
-					}}
-				>
-					Add
-				</button>
+				<Mutation mutation={CREATE_VERSES_SUMMARY}>
+					{createVersesSummary => (
+						<button
+							style={{ width: '50px' }}
+							disabled={!this.state.verse1 || !this.state.verse2}
+							onClick={() => {
+								this.addSummary(createVersesSummary)
+							}}
+						>
+							Add
+						</button>
+					)}
+				</Mutation>
 			</div>
 		)
 	}
 }
 
-export default graphql(
-	gql`
-		mutation(
-			$startBookId: Int!
-			$startChapter: Int!
-			$startVerse: Int!
-			$endBookId: Int!
-			$endChapter: Int!
-			$endVerse: Int!
-			$title: String!
-			$summary: String!
-		) {
-			createVersesSummary(
-				input: {
-					versesSummary: {
-						userId: 1
-						startBookId: $startBookId
-						startChapter: $startChapter
-						startVerse: $startVerse
-						endBookId: $endBookId
-						endChapter: $endChapter
-						endVerse: $endVerse
-						title: $title
-						summary: $summary
-					}
-				}
-			) {
-				versesSummary {
-					nodeId
-					id
-					startBookId
-					startChapter
-					startVerse
-					endBookId
-					endChapter
-					endVerse
-					title
-					summary
-				}
-			}
-		}
-	`,
-	{
-		props: ({ mutate }) => ({
-			createVersesSummary: ({
-				startBookId,
-				startChapter,
-				startVerse,
-				endBookId,
-				endChapter,
-				endVerse,
-				title,
-				summary,
-			}) =>
-				mutate({
-					variables: {
-						startBookId,
-						startChapter,
-						startVerse,
-						endBookId,
-						endChapter,
-						endVerse,
-						title,
-						summary,
-					},
-				}),
-		}),
-	},
-)(AddSummaryIndex)
+export default AddSummaryIndex
