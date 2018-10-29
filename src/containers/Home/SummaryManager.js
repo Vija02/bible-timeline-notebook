@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
+
+import Query from 'components/Query'
+import { AuthConsumer } from 'providers/Auth'
 
 import SummaryContainer from './SummaryContainer'
 
 import { getChapterCount, getVerseCount } from 'helper'
+
+import { ALL_VERSES_SUMMARIES } from './queries'
 
 class SummaryManager extends Component {
 	constructor(props) {
@@ -43,7 +46,7 @@ class SummaryManager extends Component {
 		return (
 			this.props.calculateStartOfBook(bookId) +
 			chapterSize * (chapter - 1) +
-			chapterSize / getVerseCount(bookId, chapter) * (verse - 1)
+			(chapterSize / getVerseCount(bookId, chapter)) * (verse - 1)
 		)
 	}
 	calculateNotSelectedPosition(bookId, chapter, verse) {
@@ -56,38 +59,38 @@ class SummaryManager extends Component {
 	}
 
 	render() {
-		const { loading, error } = this.props.data
-		const { selecting, selectedBookId } = this.props
+		return (
+			<AuthConsumer>
+				{({ userId }) => (
+					<React.Fragment>
+						{userId >= 0 ? (
+							<Query query={ALL_VERSES_SUMMARIES} variables={{ userId }}>
+								{({ loading, data }) => {
+									const { selecting, selectedBookId } = this.props
 
-		if (loading || error) {
-			return <SummaryContainer summaries={[]} />
-		}
+									if (loading) {
+										return <SummaryContainer summaries={[]} />
+									}
 
-		const summaries = this.formatSummaries(
-			this.props.data.versesSummaries.nodes,
-			selecting ? this.selectedFilter(selectedBookId) : this.notSelectedFilter(),
-			selecting ? this.map(this.calculateSelectedPosition) : this.map(this.calculateNotSelectedPosition),
+									const summaries = this.formatSummaries(
+										data.versesSummaries.nodes,
+										selecting ? this.selectedFilter(selectedBookId) : this.notSelectedFilter(),
+										selecting
+											? this.map(this.calculateSelectedPosition)
+											: this.map(this.calculateNotSelectedPosition),
+									)
+
+									return <SummaryContainer summaries={summaries} match={this.props.match} />
+								}}
+							</Query>
+						) : (
+							<SummaryContainer summaries={[]} />
+						)}
+					</React.Fragment>
+				)}
+			</AuthConsumer>
 		)
-
-		return <SummaryContainer summaries={summaries} match={this.props.match} />
 	}
 }
 
-export default graphql(gql`
-	{
-		versesSummaries: allVersesSummaries(condition: { userId: 1 }) {
-			nodes {
-				nodeId
-				id
-				startBookId
-				startChapter
-				startVerse
-				endBookId
-				endChapter
-				endVerse
-				summary
-				title
-			}
-		}
-	}
-`)(SummaryManager)
+export default SummaryManager
