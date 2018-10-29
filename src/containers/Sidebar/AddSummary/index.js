@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import linkState from 'linkstate'
-import toast from 'react-toastify'
+import { toast } from 'react-toastify'
 
 import BibleVerseSelector from 'components/BibleVerseSelector'
 
