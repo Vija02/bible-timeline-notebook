@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import linkState from 'linkstate'
+import toast from 'react-toastify'
 
 import BibleVerseSelector from 'components/BibleVerseSelector'
 
@@ -32,12 +33,16 @@ class AddSummaryIndex extends Component {
 				summary,
 			})
 			.then(() => {
-				alert('Successfully created summary!')
+				toast.success(
+					<p>
+						<i className="far fa-check-circle" /> Successfully created summary!
+					</p>,
+				)
 				this.setState({ ...this.initState })
 			})
 			.catch(err => {
-				console.log(err)
-				alert('Error when updating summary. Please try again later.')
+				console.error(err)
+				toast.error('Error when updating summary. Please try again later.')
 			})
 	}
 
