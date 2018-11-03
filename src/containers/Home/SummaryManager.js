@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import Query from 'components/Query'
-import { AuthConsumer } from 'providers/Auth'
 
 import SummaryContainer from './SummaryContainer'
 
@@ -60,35 +59,27 @@ class SummaryManager extends Component {
 
 	render() {
 		return (
-			<AuthConsumer>
-				{({ userId }) => (
-					<React.Fragment>
-						{userId >= 0 ? (
-							<Query query={ALL_VERSES_SUMMARIES} variables={{ userId }}>
-								{({ loading, data }) => {
-									const { selecting, selectedBookId } = this.props
+			<React.Fragment>
+				<Query query={ALL_VERSES_SUMMARIES}>
+					{({ loading, data }) => {
+						const { selecting, selectedBookId } = this.props
 
-									if (loading) {
-										return <SummaryContainer summaries={[]} />
-									}
+						if (loading || !data.versesSummaries) {
+							return <SummaryContainer summaries={[]} />
+						}
 
-									const summaries = this.formatSummaries(
-										data.versesSummaries.nodes,
-										selecting ? this.selectedFilter(selectedBookId) : this.notSelectedFilter(),
-										selecting
-											? this.map(this.calculateSelectedPosition)
-											: this.map(this.calculateNotSelectedPosition),
-									)
+						const summaries = this.formatSummaries(
+							data.versesSummaries.nodes,
+							selecting ? this.selectedFilter(selectedBookId) : this.notSelectedFilter(),
+							selecting
+								? this.map(this.calculateSelectedPosition)
+								: this.map(this.calculateNotSelectedPosition),
+						)
 
-									return <SummaryContainer summaries={summaries} match={this.props.match} />
-								}}
-							</Query>
-						) : (
-							<SummaryContainer summaries={[]} />
-						)}
-					</React.Fragment>
-				)}
-			</AuthConsumer>
+						return <SummaryContainer summaries={summaries} match={this.props.match} />
+					}}
+				</Query>
+			</React.Fragment>
 		)
 	}
 }

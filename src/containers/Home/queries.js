@@ -1,20 +1,16 @@
 import gql from 'graphql-tag'
 
+import { VERSE_SUMMARY_FRAGMENT } from 'sharedQueries/fragments'
+
 export const ALL_VERSES_SUMMARIES = gql`
-	query($userId: Int!) {
-		versesSummaries: allVersesSummaries(condition: { userId: $userId }) {
-			nodes {
-				nodeId
-				id
-				startBookId
-				startChapter
-				startVerse
-				endBookId
-				endChapter
-				endVerse
-				summary
-				title
+	{
+		viewer {
+			versesSummaries: versesSummariesByUserId {
+				nodes {
+					...verseSummaryFragment
+				}
 			}
 		}
 	}
+	${VERSE_SUMMARY_FRAGMENT}
 `
