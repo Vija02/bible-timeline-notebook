@@ -4,6 +4,7 @@ import { VERSE_SUMMARY_FRAGMENT } from 'sharedQueries/fragments'
 
 export const CREATE_VERSES_SUMMARY = gql`
 	mutation(
+		$userId: Int!
 		$startBookId: Int!
 		$startChapter: Int!
 		$startVerse: Int!
@@ -16,7 +17,7 @@ export const CREATE_VERSES_SUMMARY = gql`
 		createVersesSummary(
 			input: {
 				versesSummary: {
-					userId: 1
+					userId: $userId
 					startBookId: $startBookId
 					startChapter: $startChapter
 					startVerse: $startVerse

@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 import Mutation from 'components/Mutation'
 import BibleVerseSelector from 'components/BibleVerseSelector'
 
+import { AuthConsumer } from 'providers/Auth'
+
 import { CREATE_VERSES_SUMMARY } from './queries'
 import { ALL_VERSES_SUMMARIES } from 'containers/Home/queries'
 
@@ -20,11 +22,12 @@ class AddSummaryIndex extends Component {
 		this.state = { ...this.initState }
 	}
 
-	addSummary(createVersesSummary) {
+	addSummary(createVersesSummary, userId) {
 		const { verse1, verse2, title, summary } = this.state
 
 		createVersesSummary({
 			variables: {
+				userId,
 				startBookId: verse1.book,
 				startChapter: verse1.chapter,
 				startVerse: verse1.verse,
@@ -93,19 +96,22 @@ class AddSummaryIndex extends Component {
 					value={this.state.summary}
 					onChange={linkState(this, 'summary')}
 				/>
-				<Mutation mutation={CREATE_VERSES_SUMMARY}>
-					{createVersesSummary => (
-						<button
-							// style={{ width: '50px' }}
-							disabled={!this.state.verse1 || !this.state.verse2}
-							onClick={() => {
-								this.addSummary(createVersesSummary)
-							}}
-						>
-							Add
-						</button>
+				<AuthConsumer>
+					{({ userId }) => (
+						<Mutation mutation={CREATE_VERSES_SUMMARY}>
+							{createVersesSummary => (
+								<button
+									disabled={!this.state.verse1 || !this.state.verse2}
+									onClick={() => {
+										this.addSummary(createVersesSummary, userId)
+									}}
+								>
+									Add
+								</button>
+							)}
+						</Mutation>
 					)}
-				</Mutation>
+				</AuthConsumer>
 			</div>
 		)
 	}
