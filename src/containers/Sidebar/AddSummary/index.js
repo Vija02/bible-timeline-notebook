@@ -68,7 +68,7 @@ class AddSummaryIndex extends Component {
 				<Mutation mutation={CREATE_VERSES_SUMMARY}>
 					{createVersesSummary => (
 						<button
-							style={{ width: '50px' }}
+							// style={{ width: '50px' }}
 							disabled={!this.state.verse1 || !this.state.verse2}
 							onClick={() => {
 								this.addSummary(createVersesSummary)
