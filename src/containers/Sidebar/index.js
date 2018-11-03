@@ -36,7 +36,7 @@ export default class SideBarIndex extends Component {
 					rel="noopener noreferrer"
 					className={styles.bottomContainer}
 				>
-					View on Github <i class="fab fa-github" />
+					View on Github <i className="fab fa-github" />
 				</a>
 			</div>
 		)
