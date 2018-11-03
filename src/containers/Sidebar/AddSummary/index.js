@@ -6,6 +6,7 @@ import Mutation from 'components/Mutation'
 import BibleVerseSelector from 'components/BibleVerseSelector'
 
 import { CREATE_VERSES_SUMMARY } from './queries'
+import { ALL_VERSES_SUMMARIES } from 'containers/Home/queries'
 
 class AddSummaryIndex extends Component {
 	constructor(props) {
@@ -32,6 +33,33 @@ class AddSummaryIndex extends Component {
 				endVerse: verse2.verse,
 				title,
 				summary,
+			},
+			update: (proxy, res) => {
+				const versesSummary = res.data.createVersesSummary.versesSummary
+
+				let updatedData = proxy.readQuery({ query: ALL_VERSES_SUMMARIES })
+
+				updatedData = {
+					...updatedData,
+					viewer: {
+						...updatedData.viewer,
+						versesSummaries: {
+							...updatedData.viewer.versesSummaries,
+							nodes: [
+								// Avoid duplication
+								...updatedData.viewer.versesSummaries.nodes.filter(
+									val => val.nodeId !== versesSummary.nodeId,
+								),
+								versesSummary,
+							],
+						},
+					},
+				}
+
+				proxy.writeQuery({
+					query: ALL_VERSES_SUMMARIES,
+					data: updatedData,
+				})
 			},
 		})
 			.then(() => {

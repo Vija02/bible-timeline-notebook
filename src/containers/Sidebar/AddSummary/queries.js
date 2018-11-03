@@ -1,5 +1,7 @@
 import gql from 'graphql-tag'
 
+import { VERSE_SUMMARY_FRAGMENT } from 'sharedQueries/fragments'
+
 export const CREATE_VERSES_SUMMARY = gql`
 	mutation(
 		$startBookId: Int!
@@ -27,17 +29,9 @@ export const CREATE_VERSES_SUMMARY = gql`
 			}
 		) {
 			versesSummary {
-				nodeId
-				id
-				startBookId
-				startChapter
-				startVerse
-				endBookId
-				endChapter
-				endVerse
-				title
-				summary
+				...verseSummaryFragment
 			}
 		}
 	}
+	${VERSE_SUMMARY_FRAGMENT}
 `
