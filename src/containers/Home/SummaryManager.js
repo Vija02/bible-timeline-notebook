@@ -64,12 +64,12 @@ class SummaryManager extends Component {
 					{({ loading, data }) => {
 						const { selecting, selectedBookId } = this.props
 
-						if (loading || !data.versesSummaries) {
+						if (loading || !data.viewer.versesSummaries) {
 							return <SummaryContainer summaries={[]} />
 						}
 
 						const summaries = this.formatSummaries(
-							data.versesSummaries.nodes,
+							data.viewer.versesSummaries.nodes,
 							selecting ? this.selectedFilter(selectedBookId) : this.notSelectedFilter(),
 							selecting
 								? this.map(this.calculateSelectedPosition)
