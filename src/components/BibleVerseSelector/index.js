@@ -90,7 +90,6 @@ export default class BibleVerseSelector extends Component {
 					shouldItemRender={(item, value) => item.bookName.toLowerCase().indexOf(value.toLowerCase()) > -1}
 					renderItem={this.renderItem}
 					renderMenu={(items, value, style) => {
-						console.log(items)
 						return <div style={style} className={styles.menu} children={items} />
 					}}
 					renderInput={props => <input type="text" placeholder="Book" {...props} />}
