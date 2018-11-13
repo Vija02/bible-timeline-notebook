@@ -12,6 +12,14 @@ Look at the server for this project [here](https://github.com/OverRiseApp/overri
 1. `yarn`
 2. `yarn start`
 
+## Environment Variables
+To run this web app, you need to provide some environment variables. The full list of required variables can be found in `.env.production`.  
+Do not modify the variables in this file as those will be replaced by the production server before serving to user.
+
+Refer to `.env.development` to see what kind of variable is expected.
+> When adding new environment variables, add a new entry to both `.env.production` and `.env.development`
+
+
 ## Deploying through Docker
 1. `docker run -p 80:3000 overrise/overrise-web`
 
