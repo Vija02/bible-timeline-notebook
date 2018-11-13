@@ -8,21 +8,49 @@ Click [here](https://github.com/facebookincubator/create-react-app/blob/master/p
 
 Look at the server for this project [here](https://github.com/OverRiseApp/overrise-server)
 
+# Development
+
 ## Get started
+Clone this repo, then:
 1. `yarn`
 2. `yarn start`
 
+> Alternatively, use `npm` instead of `yarn`.
+
+### Backend
+In addition to this, you'll need to run [overrise-server](https://github.com/OverRiseApp/overrise-server). The steps required to run it can be found [in the repo](https://github.com/OverRiseApp/overrise-server).
+
 ## Environment Variables
-To run this web app, you need to provide some environment variables. The full list of required variables can be found in `.env.production`.  
+By default, the environment variables on development shouldn't need to be changed. However, you can create `.env.local` or any combination found [here](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables) to override the variables as necessary.  
+
+The full list of required variables can be found in `.env.production`.  
 Do not modify the variables in this file as those will be replaced by the production server before serving to user.
 
 Refer to `.env.development` to see what kind of variable is expected.
 > When adding new environment variables, add a new entry to both `.env.production` and `.env.development`
 
-
-## Deploying through Docker
-1. `docker run -p 80:3000 overrise/overrise-web`
-
-## Development 
+## Docker
+You can build and push the docker image using the following command:
 1. `docker build -t overrise/overrise-web .`
 2. `docker push overrise/overrise-web`
+
+# Production
+
+## Deploying through Docker
+Here's a sample `docker-compose.yml` file.
+```yml
+version: '2'
+services:
+  ...
+  overrise-web:
+    image: overrise/overrise-web
+    container_name: "overrise_web"
+    restart: always
+    ports:
+     - '80:80'
+    environment:
+     - REACT_APP_GRAPHQL_ENDPOINT=http://api.overrise.co.uk/api/graphql
+     - REACT_APP_API_ENDPOINT=http://api.overrise.co.uk/api
+     - REACT_APP_SENTRY_DSN=
+  ...
+```
