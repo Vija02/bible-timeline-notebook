@@ -1,0 +1,13 @@
+.container {}
+
+.formGroup {
+  margin-top: 10px;
+}
+
+.formGroup>input {
+  box-sizing: border-box;
+}
+
+.inputFeedback {
+  color: orangered;
+}

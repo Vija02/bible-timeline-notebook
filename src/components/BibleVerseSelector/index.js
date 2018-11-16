@@ -7,70 +7,11 @@ import { oldTestament } from 'helper'
 import styles from './BibleVerseSelector.module.css'
 
 export default class BibleVerseSelector extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			book: '',
-			chapter: '',
-			verse: '', // Input state
-			chapterCount: null,
-			verseCount: null, // To show placeholder limit
-			chapterDisabled: true,
-			verseDisabled: true,
-			lastValue: undefined, // Used to send onChange only when different value
+	handleChange(valObj) {
+		const newVal = { ...this.props.value, ...valObj }
+		if (!deepEqual(newVal, this.props.value)) {
+			this.props.onChange(newVal)
 		}
-	}
-
-	validate(stateName, value) {
-		const placeholderCount = { chapterCount: null, verseCount: null }
-		const nextState = { ...this.state, ...placeholderCount, chapterDisabled: true, verseDisabled: true }
-		// Update input
-		nextState[stateName] = value
-
-		const book = oldTestament.find(el => el.bookName.toLowerCase() === nextState.book.toLowerCase())
-		if (book) {
-			nextState.chapterDisabled = false
-
-			const chapter = parseInt(nextState.chapter, 10)
-			const chapterCount = book.chaptersCount
-			const chapterValid = chapter > 0 && chapter < chapterCount + 1
-
-			nextState.chapterCount = chapterCount
-
-			if (chapterValid) {
-				nextState.verseDisabled = false
-
-				const verse = parseInt(nextState.verse, 10)
-				const verseCount = book.chapters.find(
-					chap => parseInt(chap.chapter, 10) === parseInt(nextState.chapter, 10),
-				).verseCount
-				const verseValid = verse > 0 && verse < verseCount + 1
-
-				nextState.verseCount = verseCount
-
-				if (verseValid) {
-					this.setState(nextState)
-					this.onComplete(book.bookId, chapter, verse)
-					return
-				}
-			}
-		}
-		this.setState(nextState)
-		this.onIncomplete()
-	}
-
-	onChange(val) {
-		if (!deepEqual(val, this.state.lastValue)) {
-			this.props.onChange(val)
-			this.setState({ lastValue: val })
-		}
-	}
-
-	onComplete(book, chapter, verse) {
-		this.onChange({ book, chapter, verse })
-	}
-	onIncomplete() {
-		this.onChange(null)
 	}
 
 	renderItem(item, highlighted) {
@@ -80,7 +21,25 @@ export default class BibleVerseSelector extends Component {
 			</div>
 		)
 	}
+
 	render() {
+		const value = { book: null, chapter: null, verse: null, ...this.props.value }
+
+		let chapterCount = null
+		let verseCount = null
+
+		const book = value.book ? oldTestament.find(el => el.bookName.toLowerCase() === value.book.toLowerCase()) : null
+		if (book) {
+			chapterCount = book.chaptersCount
+
+			const chapter = parseInt(value.chapter, 10)
+			const chapterValid = chapter > 0 && chapter < chapterCount + 1
+
+			if (chapterValid) {
+				verseCount = book.chapters.find(chap => parseInt(chap.chapter, 10) === chapter).verseCount
+			}
+		}
+
 		return (
 			<div className={styles.container}>
 				<Autocomplete
@@ -93,12 +52,12 @@ export default class BibleVerseSelector extends Component {
 						return <div style={style} className={styles.menu} children={items} />
 					}}
 					renderInput={props => <input type="text" placeholder="Book" {...props} />}
-					value={this.state.book}
+					value={this.props.value.book || ''}
 					onChange={e => {
-						this.validate('book', e.target.value)
+						this.handleChange({ book: e.target.value, chapter: null, verse: null })
 					}}
 					onSelect={val => {
-						this.validate('book', val)
+						this.handleChange({ book: val, chapter: null, verse: null })
 					}}
 					wrapperStyle={{ display: 'contents' }}
 				/>{' '}
@@ -107,11 +66,11 @@ export default class BibleVerseSelector extends Component {
 						data-testid="chapter"
 						className={styles.numberInput}
 						type="text"
-						placeholder={this.state.chapterDisabled ? 'Chapter' : `1-${this.state.chapterCount}`}
-						disabled={this.state.chapterDisabled}
-						value={this.state.chapter}
+						placeholder={!chapterCount ? 'Chapter' : `1-${chapterCount}`}
+						disabled={!chapterCount}
+						value={this.props.value.chapter || ''}
 						onChange={e => {
-							this.validate('chapter', e.target.value)
+							this.handleChange({ chapter: parseInt(e.target.value, 10), verse: null })
 						}}
 					/>
 					:
@@ -119,11 +78,12 @@ export default class BibleVerseSelector extends Component {
 						data-testid="verse"
 						className={styles.numberInput}
 						type="text"
-						placeholder={this.state.verseDisabled ? 'Verse' : `1-${this.state.verseCount}`}
-						disabled={this.state.verseDisabled}
-						value={this.state.verse}
+						placeholder={!verseCount ? 'Verse' : `1-${verseCount}`}
+						disabled={!verseCount}
+						value={this.props.value.verse || ''}
+						onBlur={this.props.onBlur}
 						onChange={e => {
-							this.validate('verse', e.target.value)
+							this.handleChange({ verse: parseInt(e.target.value, 10) })
 						}}
 					/>
 				</div>
@@ -132,4 +92,4 @@ export default class BibleVerseSelector extends Component {
 	}
 }
 
-BibleVerseSelector.defaultProps = { onChange: () => {} }
+BibleVerseSelector.defaultProps = { value: { book: null, chapter: null, verse: null }, onChange: () => {} }
