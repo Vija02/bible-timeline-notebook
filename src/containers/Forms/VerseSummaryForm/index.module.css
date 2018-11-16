@@ -4,6 +4,10 @@
   margin-top: 10px;
 }
 
+.formGroup>label {
+  display: block;
+}
+
 .formGroup>input {
   box-sizing: border-box;
 }
