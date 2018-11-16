@@ -24,7 +24,7 @@ export default class VerseSummaryFormIndex extends Component {
 	render() {
 		return (
 			<Formik
-				initialValues={{ verse1: {}, verse2: {}, title: '', summary: '' }}
+				initialValues={this.props.initialValues}
 				validationSchema={this.validationSchema}
 				onSubmit={(val, { setSubmitting, resetForm }) => {
 					const data = this.validationSchema.cast(val)
@@ -133,4 +133,8 @@ export default class VerseSummaryFormIndex extends Component {
 	}
 }
 
-VerseSummaryFormIndex.defaultProps = { submitLabel: 'Submit', onSubmit: Promise.resolve() }
+VerseSummaryFormIndex.defaultProps = {
+	initialValues: { verse1: {}, verse2: {}, title: '', summary: '' },
+	submitLabel: 'Submit',
+	onSubmit: Promise.resolve(),
+}
