@@ -27,33 +27,6 @@ export default class SummaryEditModal extends Component {
 				title,
 				summary,
 			},
-			update: (proxy, res) => {
-				const versesSummary = res.data.updateVerseSummary.versesSummary
-
-				let updatedData = proxy.readQuery({ query: ALL_VERSES_SUMMARIES })
-
-				updatedData = {
-					...updatedData,
-					viewer: {
-						...updatedData.viewer,
-						versesSummaries: {
-							...updatedData.viewer.versesSummaries,
-							nodes: [
-								// Avoid duplication
-								...updatedData.viewer.versesSummaries.nodes.filter(
-									val => val.nodeId !== versesSummary.nodeId,
-								),
-								versesSummary,
-							],
-						},
-					},
-				}
-
-				proxy.writeQuery({
-					query: ALL_VERSES_SUMMARIES,
-					data: updatedData,
-				})
-			},
 		})
 			.then(() => {
 				toast.success(
