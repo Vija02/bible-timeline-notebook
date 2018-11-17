@@ -7,7 +7,8 @@ import SummaryManager from './SummaryManager'
 
 import GetSize from 'components/GetSize'
 
-import { oldTestament, booksRegex, bookIdFromName, clampValue, unformatBook } from 'helper'
+import { booksRegex, bookIdFromName, clampValue, unformatBook } from 'helper'
+import bookData from 'assets/book_metadata.json'
 import styles from './MainTimeline.module.css'
 
 // Width in % when the book selector is expanded
@@ -47,7 +48,7 @@ class MainTimeline extends Component {
 	}
 
 	getSelectedBookSize() {
-		return extendedWidthPercentage / 100 * this.state.viewportWidth
+		return (extendedWidthPercentage / 100) * this.state.viewportWidth
 	}
 
 	render() {
@@ -67,7 +68,7 @@ class MainTimeline extends Component {
 							centerBookPos = clampValue(
 								startOfBook -
 									(this.state.viewportWidth -
-										extendedWidthPercentage / 100 * this.state.viewportWidth) /
+										(extendedWidthPercentage / 100) * this.state.viewportWidth) /
 										2,
 								0,
 								-xEnd,
@@ -94,7 +95,7 @@ class MainTimeline extends Component {
 									<div className={styles.scrollerContainer}>
 										<div className={styles.scrollerGridContainer}>
 											<div className={styles.scrollerTitleContainer} />
-											{oldTestament.map((book, i) => [
+											{bookData.map((book, i) => [
 												<BookContainer
 													{...props}
 													key={`book_${i}`}

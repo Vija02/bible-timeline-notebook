@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
 import deepEqual from 'deep-equal'
 
-import { oldTestament } from 'helper'
+import bookData from 'assets/book_metadata.json'
 
 import styles from './BibleVerseSelector.module.css'
 
@@ -28,7 +28,7 @@ export default class BibleVerseSelector extends Component {
 		let chapterCount = null
 		let verseCount = null
 
-		const book = value.book ? oldTestament.find(el => el.bookName.toLowerCase() === value.book.toLowerCase()) : null
+		const book = value.book ? bookData.find(el => el.bookName.toLowerCase() === value.book.toLowerCase()) : null
 		if (book) {
 			chapterCount = book.chaptersCount
 
@@ -44,7 +44,7 @@ export default class BibleVerseSelector extends Component {
 			<div className={styles.container}>
 				<Autocomplete
 					data-testid="book"
-					items={oldTestament}
+					items={bookData}
 					getItemValue={item => item.bookName}
 					shouldItemRender={(item, value) => item.bookName.toLowerCase().indexOf(value.toLowerCase()) > -1}
 					renderItem={this.renderItem}
