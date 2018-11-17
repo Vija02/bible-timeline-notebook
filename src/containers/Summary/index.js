@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { Redirect } from 'react-router-dom'
 
+import EditModal from './EditModal'
+
 import Query from 'components/Query'
-import { composeReference } from 'helper'
+import { composeReference, bookNameFromId } from 'helper'
 
 import styles from './Summary.module.css'
 import { GET_VERSES_SUMMARY } from './queries'
 
 class SummaryIndex extends Component {
+	constructor(props) {
+		super(props)
+		this.state = { editModalOpened: false }
+
+		this.toggleModal = this.toggleModal.bind(this)
+	}
+
+	toggleModal() {
+		this.setState({ editModalOpened: !this.state.editModalOpened })
+	}
+
 	render() {
 		return (
 			<Query query={GET_VERSES_SUMMARY} variables={{ id: parseInt(this.props.match.params.id, 10) }}>
@@ -21,6 +35,7 @@ class SummaryIndex extends Component {
 					}
 
 					const {
+						id,
 						startBookId,
 						startChapter,
 						startVerse,
@@ -33,7 +48,7 @@ class SummaryIndex extends Component {
 					return (
 						<div className={styles.container}>
 							<p>
-								{title}{' '}
+								{title}
 								<i>
 									(
 									{composeReference(
@@ -46,8 +61,32 @@ class SummaryIndex extends Component {
 									)}
 									)
 								</i>
+								<button onClick={this.toggleModal}>Edit</button>
 							</p>
 							<p>{summary}</p>
+							{this.state.editModalOpened
+								? ReactDOM.createPortal(
+										<EditModal
+											id={id}
+											onBackdropClicked={this.toggleModal}
+											initialValues={{
+												verse1: {
+													book: bookNameFromId(startBookId),
+													chapter: startChapter,
+													verse: startVerse,
+												},
+												verse2: {
+													book: bookNameFromId(endBookId),
+													chapter: endChapter,
+													verse: endVerse,
+												},
+												title,
+												summary,
+											}}
+										/>,
+										document.getElementById('modal-root'),
+								  )
+								: null}
 						</div>
 					)
 				}}
