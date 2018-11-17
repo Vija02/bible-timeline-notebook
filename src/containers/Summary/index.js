@@ -69,6 +69,11 @@ class SummaryIndex extends Component {
 										<EditModal
 											id={id}
 											onBackdropClicked={this.toggleModal}
+											onDelete={() => {
+												this.props.history.replace(
+													this.props.history.location.pathname.split('summary')[0],
+												)
+											}}
 											initialValues={{
 												verse1: {
 													book: bookNameFromId(startBookId),

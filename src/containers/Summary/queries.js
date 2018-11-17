@@ -52,5 +52,4 @@ export const DELETE_VERSE_SUMMARY = gql`
 			deletedVersesSummaryId
 		}
 	}
-	${VERSE_SUMMARY_FRAGMENT}
 `
