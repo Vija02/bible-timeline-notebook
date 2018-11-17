@@ -1,0 +1,266 @@
+[
+	{
+		"bookId": 1,
+		"overview": "Describes the creation; gives the history of the old world, and of the steps taken by God toward the formation of theocracy. "
+	},
+	{
+		"bookId": 2,
+		"overview": "The history of Israel's departure from Egypt; the giving of the law; the tabernacle. "
+	},
+	{
+		"bookId": 3,
+		"overview": "The ceremonial law. "
+	},
+	{
+		"bookId": 4,
+		"overview": "The census of the people; the story of the wanderings in the wilderness. "
+	},
+	{
+		"bookId": 5,
+		"overview": "The law rehearsed; the death of Moses. "
+	},
+	{
+		"bookId": 6,
+		"overview": "The story of the conquest and partition of Canaan. "
+	},
+	{
+		"bookId": 7,
+		"overview": "The history of the nation from Joshua to Samson. "
+	},
+	{
+		"bookId": 8,
+		"overview": "The story of the ancestors of the royal family of Judah. "
+	},
+	{
+		"bookId": 9,
+		"overview": "The story of the nation during the judgeship of Samuel and the reign of Saul. "
+	},
+	{
+		"bookId": 10,
+		"overview": "Story of the reign of David. "
+	},
+	{
+		"bookId": 11,
+		"overview": "History of the nation from David's death and Solomon's accession to the destruction of the kingdom of Judah and the desolation of Jerusalem, with a supplemental notice of the liberation of Jehoiachin from his prison at Babylon, twenty-six years later; they comprehend the whole time of the Israelitish monarchy, exclusive of the reigns of Saul and David. "
+	},
+	{
+		"bookId": 12,
+		"overview": "History of the nation from David's death and Solomon's accession to the destruction of the kingdom of Judah and the desolation of Jerusalem, with a supplemental notice of the liberation of Jehoiachin from his prison at Babylon, twenty-six years later; they comprehend the whole time of the Israelitish monarchy, exclusive of the reigns of Saul and David. "
+	},
+	{
+		"bookId": 13,
+		"overview": "So called as being the record made by the appointed historiographers of the kingdoms of Judah and Israel; they are the official histories of those kingdoms. "
+	},
+	{
+		"bookId": 14,
+		"overview": "So called as being the record made by the appointed historiographers of the kingdoms of Judah and Israel; they are the official histories of those kingdoms. "
+	},
+	{
+		"bookId": 15,
+		"overview": "The story of the return of the Jews from the Babylonish captivity, and of the rebuilding of the temple. "
+	},
+	{
+		"bookId": 16,
+		"overview": "A further account of the rebuilding of the temple and city, and of the obstacles encountered and overcome. "
+	},
+	{
+		"bookId": 17,
+		"overview": "The story of a Jewess who becomes queen of Persia and saves the Jewish people from destruction. "
+	},
+	{
+		"bookId": 18,
+		"overview": "The story of the trials and patience of a holy man of Edom. "
+	},
+	{
+		"bookId": 19,
+		"overview": "A collection of sacred poems intended for use in the worship of Jehovah. Chiefly the productions of David. "
+	},
+	{
+		"bookId": 20,
+		"overview": "The wise sayings of Solomon. "
+	},
+	{
+		"bookId": 21,
+		"overview": "A poem respecting the vanity of earthly things. "
+	},
+	{
+		"bookId": 22,
+		"overview": "An allegory relating to the church. "
+	},
+	{
+		"bookId": 23,
+		"overview": "Prophecies respecting Christ and his kingdom. "
+	},
+	{
+		"bookId": 24,
+		"overview": "Prophecies announcing the captivity of Judah, its sufferings, and the final overthrow of its enemies. "
+	},
+	{
+		"bookId": 25,
+		"overview": "The utterance of Jeremiah's sorrow upon the capture of Jerusalem and the destruction of the temple. "
+	},
+	{
+		"bookId": 26,
+		"overview": "Messages of warning and comfort to the Jews in their captivity. "
+	},
+	{
+		"bookId": 27,
+		"overview": "A narrative of some of the occurrences of the captivity, and a series of prophecies concerning Christ. "
+	},
+	{
+		"bookId": 28,
+		"overview": "Prophecies relating to Christ and the latter days. "
+	},
+	{
+		"bookId": 29,
+		"overview": "Prediction of woes upon Judah, and of the favor with which God will receive the penitent people. "
+	},
+	{
+		"bookId": 30,
+		"overview": "Prediction that Israel and other neighboring nations will be punished by conquerors from the north, and of the fulfillment of the Messiah's kingdom. "
+	},
+	{
+		"bookId": 31,
+		"overview": "Prediction of the desolation of Edom. "
+	},
+	{
+		"bookId": 32,
+		"overview": "Prophecies relating to Nineveh. "
+	},
+	{
+		"bookId": 33,
+		"overview": "Predictions relating to the invasions of Shalmaneser and Sennacherib, the Babylonish captivity, the establishment of a theocratic kingdom in Jerusalem, and the birth of the Messiah in Bethlehem. "
+	},
+	{
+		"bookId": 34,
+		"overview": "Prediction of the downfall of Assyria. "
+	},
+	{
+		"bookId": 35,
+		"overview": "A prediction of the doom of the Chaldeans. "
+	},
+	{
+		"bookId": 36,
+		"overview": "A prediction of the overthrow of Judah for its idolatry and wickedness. "
+	},
+	{
+		"bookId": 37,
+		"overview": "Prophecies concerning the rebuilding of the temple."
+	},
+	{
+		"bookId": 38,
+		"overview": "Prophecies relating to the rebuilding of the temple and the Messiah. "
+	},
+	{
+		"bookId": 39,
+		"overview": "Prophecies relating to the calling of the Gentiles and the coming of Christ. "
+	},
+	{
+		"bookId": 40,
+		"overview": "A brief history of the life of Christ. "
+	},
+	{
+		"bookId": 41,
+		"overview": "A brief history of the life of Christ, supplying some incidents omitted by St. Matthew. "
+	},
+	{
+		"bookId": 42,
+		"overview": "The history of the life of Christ, with especial reference to his most important acts and discourses. "
+	},
+	{
+		"bookId": 43,
+		"overview": "The life of Christ, giving important discourses not related by the other evangelists. "
+	},
+	{
+		"bookId": 44,
+		"overview": "The history of the labors of the apostles and of the foundation of the Christian Church. "
+	},
+	{
+		"bookId": 45,
+		"overview": "A treatise by St. Paul on the doctrine of justification by Christ. "
+	},
+	{
+		"bookId": 46,
+		"overview": "A letter from St. Paul to the Corinthians, correcting errors into which they had fallen. "
+	},
+	{
+		"bookId": 47,
+		"overview": "St. Paul confirms his disciples in their faith, and vindicates his own character. "
+	},
+	{
+		"bookId": 48,
+		"overview": "St. Paul maintains that we are justified by faith, and not by rites. "
+	},
+	{
+		"bookId": 49,
+		"overview": "A treatise by St. Paul on the power of divine grace. "
+	},
+	{
+		"bookId": 50,
+		"overview": "St. Paul sets forth the beauty of Christian kindness. "
+	},
+	{
+		"bookId": 51,
+		"overview": "St. Paul warns his disciples against errors, and exhorts to certain duties. "
+	},
+	{
+		"bookId": 52,
+		"overview": "St. Paul exhorts his disciples to continue in the faith and in holy conversation. "
+	},
+	{
+		"bookId": 53,
+		"overview": "St. Paul corrects an error concerning the speedy coming of Christ the second time. "
+	},
+	{
+		"bookId": 54,
+		"overview": "St. Paul instructs Timothy in the duty of a pastor, and encourages him in the work of the ministry. "
+	},
+	{
+		"bookId": 55,
+		"overview": "St. Paul instructs Timothy in the duty of a pastor, and encourages him in the work of the ministry. "
+	},
+	{
+		"bookId": 56,
+		"overview": "Epistle to Titus. St. Paul encourages Titus in the performance of his ministerial duties. "
+	},
+	{
+		"bookId": 57,
+		"overview": "An appeal to a converted master to receive a converted escaped slave with kindness. "
+	},
+	{
+		"bookId": 58,
+		"overview": "St. Paul maintains that Christ is the substance of the ceremonial law. "
+	},
+	{
+		"bookId": 59,
+		"overview": "A treatise on the efficacy of faith united with good works. "
+	},
+	{
+		"bookId": 60,
+		"overview": "Exhortations to a Christian life, with various warnings and predictions. "
+	},
+	{
+		"bookId": 61,
+		"overview": "Exhortations to a Christian life, with various warnings and predictions. "
+	},
+	{
+		"bookId": 62,
+		"overview": "Respecting the person of our Lord, and an exhortation to Christian love and conduct. "
+	},
+	{
+		"bookId": 63,
+		"overview": "St. John warns a converted lady against false teachers. "
+	},
+	{
+		"bookId": 64,
+		"overview": "A letter to Gaius, praising him for his hospitality. "
+	},
+	{
+		"bookId": 65,
+		"overview": "Warnings against deceivers. "
+	},
+	{
+		"bookId": 66,
+		"overview": "The future of the Church foretold. "
+	}
+]

@@ -8,6 +8,8 @@ import styles from './Book.module.css'
 
 import NoSummary from './NoSummary'
 
+import bookOverview from 'assets/book_overview.json'
+
 class Book extends Component {
 	constructor(props) {
 		super(props)
@@ -42,9 +44,22 @@ class Book extends Component {
 				<h3 className={styles.title}>{unformatBook(this.props.match.params.bookName)}</h3>
 				<h4>Overview</h4>
 				<span className={styles.text}>
-					This is a placeholder text that will eventually be the overview of the book
+					{
+						bookOverview.find(data => data.bookId === bookIdFromName(this.props.match.params.bookName))
+							.overview
+					}
 				</span>
-				<h4>Summary <div className={styles.editButtonContainer} onClick={() => { this.setState({ editing: !this.state.editing }) }}><i className={`fas fa-edit ${styles.editButton}`} /></div></h4>
+				<h4>
+					Summary{' '}
+					<div
+						className={styles.editButtonContainer}
+						onClick={() => {
+							this.setState({ editing: !this.state.editing })
+						}}
+					>
+						<i className={`fas fa-edit ${styles.editButton}`} />
+					</div>
+				</h4>
 				{!loading && !error && !this.props.data.bookSummary ? (
 					<NoSummary
 						onAdd={() => {
