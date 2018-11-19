@@ -119,8 +119,8 @@ export default class VerseSummaryFormIndex extends Component {
 										touched.summary && <div className={styles.inputFeedback}>{errors.summary}</div>}
 								</div>
 
-								<div className="mb20">
-									<button type="submit" className="btn" disabled={isSubmitting}>
+								<div>
+									<button type="submit" disabled={isSubmitting}>
 										{this.props.submitLabel}
 									</button>
 								</div>
