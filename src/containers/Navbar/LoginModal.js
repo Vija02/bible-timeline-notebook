@@ -2,28 +2,17 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import Raven from 'raven-js'
-import { Formik } from 'formik'
-import * as Yup from 'yup'
 
 import Modal from 'components/Modal'
 
-import { AuthConsumer } from 'providers/Auth'
+import LoginForm from 'containers/Forms/LoginForm'
 
-import styles from './LoginModal.module.css'
+import { AuthConsumer } from 'providers/Auth'
 
 export default class LoginModal extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
-
-		this.validationSchema = Yup.object().shape({
-			email: Yup.string()
-				.email('Invalid Email')
-				.required('Email cannot be empty'),
-			password: Yup.string()
-				.min(4, 'Password length at least 4')
-				.required('Password cannot be empty'),
-		})
 
 		this.login = this.login.bind(this)
 	}
@@ -75,75 +64,13 @@ export default class LoginModal extends Component {
 			>
 				<AuthConsumer>
 					{({ onLogin }) => (
-						<Formik
-							initialValues={{ email: '', password: '' }}
-							validationSchema={this.validationSchema}
-							onSubmit={(val, { setSubmitting }) => {
-								const data = this.validationSchema.cast(val)
-
-								this.login(onLogin)(data)
-									.then(() => {
-										setSubmitting(false)
-										this.props.onBackdropClicked()
-									})
-									.catch(() => {
-										setSubmitting(false)
-									})
+						<LoginForm
+							onSubmit={data => {
+								return this.login(onLogin)(data).then(() => {
+									this.props.onBackdropClicked()
+								})
 							}}
-						>
-							{props => {
-								const {
-									values,
-									touched,
-									errors,
-									isSubmitting,
-									handleChange,
-									handleBlur,
-									handleSubmit,
-								} = props
-								return (
-									<form onSubmit={handleSubmit}>
-										<div className={styles.modalContainer}>
-											<div className={styles.formGroup}>
-												<label>Email</label>
-												<input
-													id="email"
-													type="text"
-													className="form-control"
-													value={values.email}
-													onChange={handleChange}
-													onBlur={handleBlur}
-												/>
-												{errors.email &&
-													touched.email && (
-														<div className="input-feedback">{errors.email}</div>
-													)}
-											</div>
-											<div className={styles.formGroup}>
-												<label>Password</label>
-												<input
-													id="password"
-													type="password"
-													className="form-control"
-													value={values.password}
-													onChange={handleChange}
-													onBlur={handleBlur}
-												/>
-												{errors.password &&
-													touched.password && (
-														<div className="input-feedback">{errors.password}</div>
-													)}
-											</div>
-											<div className="mb20">
-												<button type="submit" className="btn" disabled={isSubmitting}>
-													Sign In
-												</button>
-											</div>
-										</div>
-									</form>
-								)
-							}}
-						</Formik>
+						/>
 					)}
 				</AuthConsumer>
 			</Modal>
