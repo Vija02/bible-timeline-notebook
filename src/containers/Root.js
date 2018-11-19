@@ -7,6 +7,7 @@ import getApolloClient from 'getApolloClient'
 import AuthProvider from 'providers/Auth'
 import { getUserIdFromJWT } from 'helper'
 
+import About from './About'
 import Home from './Home'
 
 class Root extends Component {
@@ -66,6 +67,7 @@ class Root extends Component {
 					<Router>
 						<div>
 							<Switch>
+								<Route path="/about" component={About} />
 								<Route path="/" component={Home} />
 							</Switch>
 							<div id="modal-root" />
