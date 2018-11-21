@@ -22,7 +22,7 @@ export default class LoginFormIndex extends Component {
 	render() {
 		return (
 			<Formik
-				initialValues={{ email: '', password: '' }}
+				initialValues={this.props.initialValues}
 				validationSchema={this.validationSchema}
 				onSubmit={(val, { setSubmitting }) => {
 					const data = this.validationSchema.cast(val)
