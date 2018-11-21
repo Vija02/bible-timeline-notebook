@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 
 import styles from './index.module.css'
 
-export default class VerseSummaryFormIndex extends Component {
+export default class LoginFormIndex extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
@@ -82,7 +82,7 @@ export default class VerseSummaryFormIndex extends Component {
 	}
 }
 
-VerseSummaryFormIndex.defaultProps = {
+LoginFormIndex.defaultProps = {
 	initialValues: { email: '', password: '' },
 	submitLabel: 'Sign In',
 	onSubmit: Promise.resolve(),
