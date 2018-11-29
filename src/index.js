@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Raven from 'raven-js'
 import './index.css'
 import 'react-toastify/dist/ReactToastify.css'
+import 'react-tabs/style/react-tabs.css'
 import Root from 'containers/Root'
 // import registerServiceWorker from './registerServiceWorker'
 
