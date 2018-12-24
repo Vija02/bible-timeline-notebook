@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ApolloProvider } from 'react-apollo'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 
 import getApolloClient from 'getApolloClient'
