@@ -12,15 +12,18 @@ export default class AboutIndex extends Component {
 				<div className={styles.gradient}>
 					<Navbar />
 					<div className={styles.headerContainer}>
-						<h1>Discover, Explore, and Note down your life lessons.</h1>
-						<h3>Save your thoughts and the lessons learned the scripture. Never forget it ever again!</h3>
+						<h2 className={styles.scripture}>
+							<i>
+								"My son, do NOT forget my teaching, but keep my commands in your heart, for they will
+								prolong your life many years and bring you peace and prosperity."
+							</i>{' '}
+							Proverbs 3:1-2(NIV)
+						</h2>
 						<div className={styles.buttonsContainer}>
-							<Link to="/">
-								Start Now
-							</Link>
-							<Link to="/">
-								Test Demo
-							</Link>
+							<h1>Face it, everyone forgets</h1>
+							<h3>Let's change that now</h3>
+							<Link to="/">Start Now</Link>
+							<Link to="/">Test Demo</Link>
 						</div>
 					</div>
 				</div>
