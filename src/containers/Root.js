@@ -68,6 +68,8 @@ class Root extends Component {
 						<div>
 							<Switch>
 								<Route path="/about" component={About} />
+								{/* Only allow past here if logged in */}
+								{!this.state.jwt ? <Redirect to="/about" /> : null}
 								<Route path="/" component={Home} />
 							</Switch>
 							<div id="modal-root" />
