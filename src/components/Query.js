@@ -19,7 +19,7 @@ export default class Query extends Component {
 		return (
 			<GQLQuery {...this.props} fetchPolicy="network-only" notifyOnNetworkStatusChange>
 				{result => {
-					if (result.error) {
+					if (result.error && this.props.throwError) {
 						throw new Error(result.error)
 					}
 					return this.props.children(result)
@@ -27,4 +27,8 @@ export default class Query extends Component {
 			</GQLQuery>
 		)
 	}
+}
+
+Query.defaultProps = {
+	throwError: true,
 }
