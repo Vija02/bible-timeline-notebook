@@ -3,30 +3,160 @@ import { Link } from 'react-router-dom'
 
 import Navbar from 'containers/Navbar'
 
+import esv from 'assets/esv.json'
+import { randomChapter, bookNameFromId } from 'helper'
+
 import styles from './index.module.css'
 
 export default class AboutIndex extends Component {
 	render() {
+		const theChapter = randomChapter()
+
+		const esvChaptersObject = esv[bookNameFromId(theChapter.bookId)][theChapter.chapter]
+
+		const slicedChapter = Object.entries(esvChaptersObject)
+			.sort(([aKey], [bKey]) => {
+				if (parseInt(aKey, 10) < parseInt(bKey, 10)) {
+					return -1
+				} else if (parseInt(aKey, 10) > parseInt(bKey, 10)) {
+					return 1
+				} else {
+					return 0
+				}
+			})
+			.reduce((acc, val) => {
+				// Get the current length in the acc
+				const currentLength = acc.reduce((a, v) => {
+					return a + v[1].length
+				}, 0)
+
+				if (currentLength < 300) {
+					return [...acc, [val[0], val[1].slice(0, 300 - currentLength)]]
+				} else {
+					return acc
+				}
+			}, [])
+
 		return (
-			<div className={styles.container}>
-				<div className={styles.gradient}>
-					<Navbar />
-					<div className={styles.headerContainer}>
-						<h2 className={styles.scripture}>
-							<i>
-								"My son, do NOT forget my teaching, but keep my commands in your heart, for they will
-								prolong your life many years and bring you peace and prosperity."
-							</i>{' '}
-							Proverbs 3:1-2(NIV)
-						</h2>
-						<div className={styles.buttonsContainer}>
-							<h1>Face it, everyone forgets</h1>
-							<h3>Let's change that now</h3>
-							<Link to="/">Start Now</Link>
-							<Link to="/">Test Demo</Link>
-						</div>
+			<div>
+				<Navbar />
+				<div className={styles.bodyContainer}>
+					<div className={styles.cardContainer}>
+						<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
+						<h3 className={styles.chapterTitle}>
+							{bookNameFromId(theChapter.bookId)} {theChapter.chapter} (ESV)
+						</h3>
+						<p className={styles.verses}>
+							{slicedChapter.map(([verseNum, content]) => {
+								return (
+									<>
+										<sup className={styles.verseNumber}>{verseNum}</sup>
+										<span>{content}</span>
+									</>
+								)
+							})}
+							...
+						</p>
+						<Link to="/about" className={styles.readMore}>
+							Read more...
+						</Link>
 					</div>
+					<div className={styles.cardContainer}>
+						<h2 className={styles.cardTitle}>Resources</h2>
+						<p className={styles.text}>
+							If you haven't, it is strongly recommended that you finish reading the bible at least once.
+							This allows you to understand the bigger picture of the bible. There are <i>a lot</i> of
+							excellent reading plans readily available on the internet. Pick any of them and stick to it.
+							It gets easier over time!
+							<br />
+							<br />
+							Here are some to get you started:
+						</p>
+
+						<ResourcesRow
+							title="YouVersion/Bible.com"
+							content="A collection of reading plans from various sources, some which are also listed below."
+							link="https://www.bible.com/reading-plans-collection/1921-whole"
+						/>
+
+						<ResourcesRow
+							title="BibleGateway"
+							content="Another collection of reading plans with a more standard approach."
+							link="https://www.biblegateway.com/reading-plans/"
+						/>
+
+						<ResourcesRow
+							title="The Bible Project"
+							content="A 1-year reading plan accompanied by great animated video explanations."
+							link="https://thebibleproject.com/other-resources/other/"
+						/>
+
+						<p className={styles.muchMoreText}>
+							And much more!{' '}
+							<Link className={styles.link} to="/contact-me">
+								Contact me
+							</Link>{' '}
+							if you want to suggest a website to be listed here,
+						</p>
+					</div>
+					<div className={styles.cardContainer}>
+						<h2 className={styles.cardTitle}>Using this website</h2>
+						<p className={styles.text}>
+							If you are here, you probably want to know the bible better. First, read the whole bible!
+							Look at the resources above if you haven't. <br />
+							Once you're done with that, there are always other reading plans to follow. If one catches
+							your attention, great! If not, that's fine too.
+							<br />
+							<br />
+							You might be more familiar with "verse of the day". The reason why we focus on a single{' '}
+							<b>chapter</b> is to allow readers to extract information that matters to them. If there are
+							any specific topic that resonates with you, we encourage that you take some time to research
+							more into the book.
+						</p>
+					</div>
+					{/* <div className={styles.cardContainer}>Previous chapter of the day</div> */}
 				</div>
+				<div className={styles.footerContainer}>
+					<div>
+						<h4 className={styles.footerTitle}>OTHER LINKS</h4>
+						<p>
+							<Link className={styles.footerLink} to="/">
+								Home
+							</Link>
+						</p>
+						<p>
+							<Link className={styles.footerLink} to="/contact-me">
+								Contact Me
+							</Link>
+						</p>
+						<p>
+							<a className={styles.footerLink} href="https://github.com/overriseapp/overrise-web">
+								Github
+							</a>
+						</p>
+					</div>
+					<span className={styles.footerCopyright}>©{new Date().getFullYear()} OverRise</span>
+				</div>
+			</div>
+		)
+	}
+}
+
+class ResourcesRow extends Component {
+	render() {
+		const { title, content, link } = this.props
+
+		return (
+			<div>
+				<h4 className={styles.resourcesTitle}>
+					<a className={styles.resourcesTitle} href={link}>
+						{title}
+					</a>
+				</h4>
+				<p className={styles.resourcesContent}>{content}</p>
+				<a className={styles.resourcesLink} href={link}>
+					Link to site
+				</a>
 			</div>
 		)
 	}

@@ -19,6 +19,19 @@ export const unformatBook = book => {
 	return toTitleCase(book.replace(/_/g, ' '))
 }
 
+export const randomChapter = () => {
+	// [[{bookId, chapter, verseCount}, {bookId, chapter, verseCount}], [], ...]
+	const chaptersPerBookArray = bookData.map(book =>
+		book.chapters.map(chapter => ({ ...chapter, bookId: book.bookId })),
+	)
+	// We want to flatten that
+	const listOfChapters = chaptersPerBookArray.reduce((acc, val) => {
+		return [...acc, ...val]
+	}, [])
+
+	return listOfChapters[Math.floor(Math.random() * listOfChapters.length)]
+}
+
 export const bookIdFromName = book => {
 	return bookData.find(data => formatBook(data.bookName) === formatBook(book)).bookId
 }
