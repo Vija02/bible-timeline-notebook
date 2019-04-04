@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import { ApolloProvider } from 'react-apollo'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 
+import AbsoluteAnimatedSwitch from 'components/AbsoluteAnimatedSwitch'
 import getApolloClient from 'getApolloClient'
 import AuthProvider from 'providers/Auth'
 import { getUserIdFromJWT } from 'helper'
 
 import About from './About'
 import Home from './Home'
+import ContactMe from './ContactMe'
+import Navbar from './Navbar'
 
 class Root extends Component {
 	constructor(props) {
@@ -66,12 +69,16 @@ class Root extends Component {
 				>
 					<Router>
 						<div>
-							<Switch>
-								<Route path="/about" component={About} />
-								{/* Only allow past here if logged in */}
-								{!this.state.jwt ? <Redirect to="/about" /> : null}
-								<Route path="/" component={Home} />
-							</Switch>
+							<div>
+								<Navbar />
+								<AbsoluteAnimatedSwitch>
+									<Route path="/about" component={About} />
+									<Route path="/contact-me" component={ContactMe} />
+									{/* Only allow past here if logged in */}
+									{!this.state.jwt ? <Redirect to="/about" /> : null}
+									<Route path="/" component={Home} />
+								</AbsoluteAnimatedSwitch>
+							</div>
 							<div id="modal-root" />
 							<ToastContainer
 								position="top-right"

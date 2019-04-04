@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import Navbar from 'containers/Navbar'
-
 import ChapterOfTheDay from './ChapterOfTheDay'
 import styles from './index.module.css'
 
 export default class AboutIndex extends Component {
 	render() {
 		return (
-			<div>
-				<Navbar />
+			<>
 				<div className={styles.bodyContainer}>
 					<ChapterOfTheDay />
 					<div className={styles.cardContainer}>
@@ -78,7 +75,7 @@ export default class AboutIndex extends Component {
 						</p>
 						<p>
 							<Link className={styles.footerLink} to="/contact-me">
-								Contact Me
+								Contact Me/Feedback
 							</Link>
 						</p>
 						<p>
@@ -89,7 +86,7 @@ export default class AboutIndex extends Component {
 					</div>
 					<span className={styles.footerCopyright}>©{new Date().getFullYear()} OverRise</span>
 				</div>
-			</div>
+			</>
 		)
 	}
 }
