@@ -48,7 +48,7 @@ export default class AboutIndex extends Component {
 							<Link className={styles.link} to="/contact-me">
 								Contact me
 							</Link>{' '}
-							if you want to suggest a website to be listed here,
+							if you want to suggest a website to be listed here.
 						</p>
 					</div>
 					<div className={styles.cardContainer}>
