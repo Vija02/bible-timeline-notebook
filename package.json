@@ -1,50 +1,45 @@
 {
-  "name": "bible-timeline-notebook",
-  "version": "0.1.0",
-  "dependencies": {
-    "apollo-cache-inmemory": "^1.1.5",
-    "apollo-client": "^2.2.0",
-    "apollo-link-context": "^1.0.8",
-    "apollo-link-error": "^1.0.9",
-    "apollo-link-http": "^1.3.2",
-    "axios": "^0.18.0",
-    "deep-equal": "^1.0.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "formik": "^1.3.1",
-    "graphql": "^0.12.3",
-    "graphql-tag": "^2.6.1",
-    "linkstate": "^1.1.0",
-    "prop-types": "^15.6.1",
-    "raven-js": "^3.24.2",
-    "react": "^16.6.0",
-    "react-apollo": "^2.2.4",
-    "react-autocomplete": "^1.8.1",
-    "react-dom": "^16.6.0",
-    "react-gesture": "^0.0.5",
-    "react-motion": "^0.5.2",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "2.0.5",
-    "react-sizeme": "^2.3.6",
-    "react-tabs": "^2.3.0",
-    "react-toastify": "^4.4.0",
-    "yup": "^0.26.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "gzip": "gzip -k ./build/static/js/*.js && gzip -k ./build/static/css/*.css",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && npm run gzip && gh-pages -d build -b master-build"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "bible-timeline-notebook",
+	"version": "0.1.0",
+	"dependencies": {
+		"apollo-cache-inmemory": "^1.1.5",
+		"apollo-client": "^2.2.0",
+		"apollo-link-context": "^1.0.8",
+		"apollo-link-error": "^1.0.9",
+		"apollo-link-http": "^1.3.2",
+		"axios": "^0.18.0",
+		"deep-equal": "^1.0.1",
+		"enzyme": "^3.3.0",
+		"enzyme-adapter-react-16": "^1.1.1",
+		"formik": "^1.3.1",
+		"graphql": "^0.12.3",
+		"graphql-tag": "^2.6.1",
+		"linkstate": "^1.1.0",
+		"prop-types": "^15.6.1",
+		"raven-js": "^3.24.2",
+		"react": "^16.8.6",
+		"react-apollo": "^2.2.4",
+		"react-autocomplete": "^1.8.1",
+		"react-dom": "^16.8.6",
+		"react-gesture": "^0.0.5",
+		"react-motion": "^0.5.2",
+		"react-router-dom": "^4.2.2",
+		"react-scripts": "2.1.8",
+		"react-sizeme": "^2.3.6",
+		"react-tabs": "^2.3.0",
+		"react-toastify": "^4.4.0",
+		"yup": "^0.26.6"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"gzip": "gzip -k ./build/static/js/*.js && gzip -k ./build/static/css/*.css",
+		"eject": "react-scripts eject",
+		"deploy": "npm run build && npm run gzip && gh-pages -d build -b master-build"
+	},
+	"devDependencies": {
+		"gh-pages": "^1.1.0"
+	},
+	"browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
