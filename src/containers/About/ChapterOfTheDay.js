@@ -55,10 +55,10 @@ const ChapterContent = ({ bookId, chapter }) => {
 			<p className={styles.verses}>
 				{slicedChapter.map(([verseNum, content]) => {
 					return (
-						<>
+						<React.Fragment key={verseNum}>
 							<sup className={styles.verseNumber}>{verseNum}</sup>
 							<span>{content}</span>
-						</>
+						</React.Fragment>
 					)
 				})}
 				...
