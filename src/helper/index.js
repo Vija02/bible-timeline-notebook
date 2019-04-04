@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 import bookData from 'assets/book_metadata.json'
+import esv from 'assets/esv.json'
 
 export const clampValue = (val, min, max) => {
 	return Math.min(Math.max(val, min), max)
@@ -30,6 +31,33 @@ export const randomChapter = () => {
 	}, [])
 
 	return listOfChapters[Math.floor(Math.random() * listOfChapters.length)]
+}
+
+export const getSlicedChapter = (bookId, chapter) => {
+	const esvChaptersObject = esv[bookNameFromId(bookId)][chapter]
+
+	return Object.entries(esvChaptersObject)
+		.sort(([aKey], [bKey]) => {
+			if (parseInt(aKey, 10) < parseInt(bKey, 10)) {
+				return -1
+			} else if (parseInt(aKey, 10) > parseInt(bKey, 10)) {
+				return 1
+			} else {
+				return 0
+			}
+		})
+		.reduce((acc, val) => {
+			// Get the current length in the acc
+			const currentLength = acc.reduce((a, v) => {
+				return a + v[1].length
+			}, 0)
+
+			if (currentLength < 300) {
+				return [...acc, [val[0], val[1].slice(0, 300 - currentLength)]]
+			} else {
+				return acc
+			}
+		}, [])
 }
 
 export const bookIdFromName = book => {
