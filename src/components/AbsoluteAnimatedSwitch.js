@@ -21,6 +21,9 @@ export default props => {
 					position: styles.foo <= 1 ? 'relative' : 'absolute',
 					width: '100%',
 					height: '100%',
+					flex: 1,
+					display: 'flex',
+					flexDirection: 'column',
 					opacity: styles.opacity,
 				}
 			}}

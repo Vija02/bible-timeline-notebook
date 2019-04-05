@@ -1,7 +1,8 @@
 .bodyContainer {
 	background-color: #f2f2f2;
 	padding: 20px;
-	height: 100%;
+	padding-bottom: 0;
+	flex: 1;
 }
 
 .cardContainer {
