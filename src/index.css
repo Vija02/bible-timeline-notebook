@@ -16,6 +16,14 @@ body {
   flex-direction: column;
 }
 
+.input-feedback {
+  color: red;
+}
+
+.input-feedback::before {
+  content: '*';
+}
+
 /* button:disabled{
   transition: all 0.1s linear;
   opacity: 0.7;
