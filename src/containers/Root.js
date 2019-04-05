@@ -12,6 +12,7 @@ import About from './About'
 import Home from './Home'
 import ContactMe from './ContactMe'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 class Root extends Component {
 	constructor(props) {
@@ -68,17 +69,16 @@ class Root extends Component {
 					}, this.state.jwt)}
 				>
 					<Router>
-						<div>
-							<div>
-								<Navbar />
-								<AbsoluteAnimatedSwitch>
-									<Route path="/about" component={About} />
-									<Route path="/contact-me" component={ContactMe} />
-									{/* Only allow past here if logged in */}
-									{!this.state.jwt ? <Redirect to="/about" /> : null}
-									<Route path="/" component={Home} />
-								</AbsoluteAnimatedSwitch>
-							</div>
+						<>
+							<Navbar />
+							<AbsoluteAnimatedSwitch className="flex">
+								<Route path="/about" component={About} />
+								<Route path="/contact-me" component={ContactMe} />
+								{/* Only allow past here if logged in */}
+								{!this.state.jwt ? <Redirect to="/about" /> : null}
+								<Route path="/" component={Home} />
+							</AbsoluteAnimatedSwitch>
+							<Footer />
 							<div id="modal-root" />
 							<ToastContainer
 								position="top-right"
@@ -91,7 +91,7 @@ class Root extends Component {
 								draggable
 								pauseOnHover
 							/>
-						</div>
+						</>
 					</Router>
 				</ApolloProvider>
 			</AuthProvider>

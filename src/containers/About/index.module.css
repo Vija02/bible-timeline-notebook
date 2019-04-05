@@ -1,6 +1,7 @@
 .bodyContainer {
 	background-color: #f2f2f2;
 	padding: 20px;
+	height: 100%;
 }
 
 .cardContainer {
@@ -75,38 +76,7 @@
 	color: #515151;
 }
 
-.footerContainer {
-	background-color: #0a0e1a;
-	color: white;
-	padding: 40px;
-	padding-bottom: 10px;
-}
-
-.footerContainer div {
-	max-width: 900px;
-	margin: auto;
-}
-
-.footerTitle {
-	color: #999;
-}
-
 .resourcesLink, .readMore, .link {
 	color: #515151;
 	text-decoration: underline;
-	/* display: block; */
-	/* padding-top: 10px; */
-}
-
-.footerLink {
-	text-decoration: none;
-	color: white;
-}
-
-.footerCopyright {
-	display: block;
-	text-align: center;
-	font-size: 0.8em;
-	color: grey;
-	margin-top: 70px;
 }

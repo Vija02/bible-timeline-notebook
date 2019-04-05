@@ -4,6 +4,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  flex: 1;
+}
+
 /* button:disabled{
   transition: all 0.1s linear;
   opacity: 0.7;
