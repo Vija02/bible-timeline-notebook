@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import { ApolloProvider } from 'react-apollo'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 
 import AbsoluteAnimatedSwitch from 'components/AbsoluteAnimatedSwitch'
@@ -69,7 +69,7 @@ class Root extends Component {
 					}, this.state.jwt)}
 				>
 					<Router>
-						<>
+						<ScrollToTop>
 							<Navbar />
 							<AbsoluteAnimatedSwitch className="flex">
 								<Route path="/about" component={About} />
@@ -91,7 +91,7 @@ class Root extends Component {
 								draggable
 								pauseOnHover
 							/>
-						</>
+						</ScrollToTop>
 					</Router>
 				</ApolloProvider>
 			</AuthProvider>
@@ -100,3 +100,11 @@ class Root extends Component {
 }
 
 export default Root
+
+const ScrollToTop = withRouter(props => {
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [props.location.pathname])
+
+	return props.children
+})
