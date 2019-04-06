@@ -34,6 +34,10 @@ You can build and push the docker image using the following command:
 1. `docker build -t overrise/overrise-web .`
 2. `docker push overrise/overrise-web`
 
+```
+docker build -t overrise/overrise-web . && docker push overrise/overrise-web
+```
+
 # Production
 
 ## Deploying through Docker
