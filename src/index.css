@@ -24,7 +24,12 @@ body {
   content: '*';
 }
 
-/* button:disabled{
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
   transition: all 0.1s linear;
   opacity: 0.7;
-} */
+}
