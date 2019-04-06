@@ -1,6 +1,9 @@
 import React from 'react'
+import { toast } from 'react-toastify'
 
 import ContactForm from 'containers/Forms/ContactForm'
+
+import sendMail from 'helper/sendMail'
 
 import styles from './index.module.css'
 
@@ -25,7 +28,26 @@ export default () => {
 						</div>
 						<div className={styles.sendMessageContainer}>
 							<h3>SEND ME A MESSAGE</h3>
-							<ContactForm onSubmit={() => {}} />
+							<ContactForm
+								onSubmit={data => {
+									const body = data.message.replace(/(?:\r\n|\r|\n)/g, '<br>')
+
+									return sendMail({
+										Subject: `Overrise Contact Form: ${data.subject}`,
+										Body: `Name: ${data.name}<br>Email: ${data.email}<br>Message: ${body}`,
+									})
+										.then(() => {
+											toast.success(
+												'Message successfully sent! I will be in touch as soon as possible, Thank you.',
+											)
+										})
+										.catch(() => {
+											toast.error(
+												'Failed to send message. If this continues, please contact me through email or other medium.',
+											)
+										})
+								}}
+							/>
 						</div>
 					</div>
 				</div>
