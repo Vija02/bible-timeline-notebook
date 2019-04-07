@@ -1,16 +1,10 @@
 import gql from 'graphql-tag'
 
-import { VERSE_SUMMARY_FRAGMENT } from 'sharedQueries/fragments'
-
-export const ALL_VERSES_SUMMARIES = gql`
-	{
-		viewer {
-			versesSummaries: versesSummariesByUserId {
-				nodes {
-					...verseSummaryFragment
-				}
-			}
+export const GET_CHAPTER_OF_THE_DAY = gql`
+	query {
+		getChapterOfTheDay {
+			bookId
+			chapter
 		}
 	}
-	${VERSE_SUMMARY_FRAGMENT}
 `

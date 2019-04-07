@@ -8,8 +8,8 @@ import getApolloClient from 'getApolloClient'
 import AuthProvider from 'providers/Auth'
 import { getUserIdFromJWT } from 'helper'
 
-import About from './About'
 import Home from './Home'
+import Timeline from './Timeline'
 import ContactMe from './ContactMe'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -72,11 +72,11 @@ class Root extends Component {
 						<ScrollToTop>
 							<Navbar />
 							<AbsoluteAnimatedSwitch className="flex">
-								<Route path="/about" component={About} />
-								<Route path="/contact-me" component={ContactMe} />
+								<Route exact path="/contact-me" component={ContactMe} />
+								<Route exact path="/" component={Home} />
 								{/* Only allow past here if logged in */}
-								{!this.state.jwt ? <Redirect to="/about" /> : null}
-								<Route path="/" component={Home} />
+								{!this.state.jwt ? <Redirect to="/" /> : null}
+								<Route path="/timeline" component={Timeline} />
 							</AbsoluteAnimatedSwitch>
 							<Footer />
 							<div id="modal-root" />

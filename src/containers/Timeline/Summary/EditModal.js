@@ -9,7 +9,7 @@ import VerseSummaryForm from 'containers/Forms/VerseSummaryForm'
 import { bookIdFromName } from 'helper'
 
 import { UPDATE_VERSE_SUMMARY, DELETE_VERSE_SUMMARY } from './queries'
-import { ALL_VERSES_SUMMARIES } from 'containers/Home/queries'
+import { ALL_VERSES_SUMMARIES } from '../queries'
 
 export default class SummaryEditModal extends Component {
 	editSummary(updateVerseSummary, data) {

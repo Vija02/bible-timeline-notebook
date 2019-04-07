@@ -31,7 +31,7 @@ export default class NavbarIndex extends Component {
 				<AuthConsumer>
 					{({ onLogout, userId }) => (
 						<div className={styles.rightContainer}>
-							<Link to="/about">About</Link>
+							{/* <Link to="/about">About</Link> */}
 							{userId >= 0 ? (
 								<span onClick={onLogout}>Logout</span>
 							) : (

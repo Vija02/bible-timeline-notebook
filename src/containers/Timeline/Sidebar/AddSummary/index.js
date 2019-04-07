@@ -10,7 +10,7 @@ import { AuthConsumer } from 'providers/Auth'
 import { bookIdFromName } from 'helper'
 
 import { CREATE_VERSES_SUMMARY } from './queries'
-import { ALL_VERSES_SUMMARIES } from 'containers/Home/queries'
+import { ALL_VERSES_SUMMARIES } from 'containers/Timeline/queries'
 
 class AddSummaryIndex extends Component {
 	addSummary(createVersesSummary, userId, data) {
