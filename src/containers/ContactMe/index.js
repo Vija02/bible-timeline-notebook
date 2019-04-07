@@ -10,8 +10,8 @@ import styles from './index.module.css'
 export default () => {
 	return (
 		<>
-			<div className={styles.bodyContainer}>
-				<div className={styles.cardContainer}>
+			<div className="bodyContainer">
+				<div className="cardContainer">
 					<div className={styles.cardBodyFlex}>
 						<div className={styles.contactMeContainer}>
 							<h1>Contact Me</h1>

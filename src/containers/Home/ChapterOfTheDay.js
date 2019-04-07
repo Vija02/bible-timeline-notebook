@@ -14,7 +14,7 @@ import styles from './index.module.css'
 export default class ChapterOfTheDay extends Component {
 	render() {
 		return (
-			<div className={styles.cardContainer}>
+			<div className="cardContainer">
 				<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
 				<Query query={GET_CHAPTER_OF_THE_DAY} throwError={false}>
 					{({ loading, data, error }) => {

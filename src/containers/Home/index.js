@@ -8,9 +8,9 @@ export default class AboutIndex extends Component {
 	render() {
 		return (
 			<>
-				<div className={styles.bodyContainer}>
+				<div className="bodyContainer">
 					<ChapterOfTheDay />
-					<div className={styles.cardContainer}>
+					<div className="cardContainer">
 						<h2 className={styles.cardTitle}>Resources</h2>
 						<p className={styles.text}>
 							If you haven't, it is strongly recommended that you finish reading the bible at least once.
@@ -48,7 +48,7 @@ export default class AboutIndex extends Component {
 							if you want to suggest a website to be listed here.
 						</p>
 					</div>
-					<div className={styles.cardContainer}>
+					<div className="cardContainer">
 						<h2 className={styles.cardTitle}>Using this website</h2>
 						<p className={styles.text}>
 							If you are here, you probably want to know the bible better. First, read the whole bible!
@@ -63,7 +63,7 @@ export default class AboutIndex extends Component {
 							more into the book.
 						</p>
 					</div>
-					{/* <div className={styles.cardContainer}>Previous chapter of the day</div> */}
+					{/* <div className="cardContainer">Previous chapter of the day</div> */}
 				</div>
 			</>
 		)
