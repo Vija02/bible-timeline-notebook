@@ -29,11 +29,8 @@
 .buttonContainer button {
   background-color: rgb(107, 140, 228);
   color: white;
-  /* border: 2px solid rgb(107, 140, 228); */
   border: 0;
-  float: right;
   padding: 10px;
-  /* text-transform: uppercase; */
   font-weight: bold;
   font-size: 1.1em;
 }

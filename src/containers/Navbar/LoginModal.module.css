@@ -1,6 +1,5 @@
-.modalContainer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.title {
+  color: rgb(107, 140, 228);
+  font-size: 2em;
+  margin: 0px;
 }
