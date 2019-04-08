@@ -27,6 +27,7 @@ export default props => {
 					opacity: styles.opacity,
 				}
 			}}
+			className="animated-switch"
 			{...props}
 		>
 			{props.children}

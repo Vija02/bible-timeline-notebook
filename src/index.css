@@ -24,6 +24,10 @@ body {
   content: '*';
 }
 
+.animated-switch {
+  position: relative;
+}
+
 button {
   cursor: pointer;
 }
