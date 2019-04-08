@@ -1,0 +1,21 @@
+.chapterTitle {
+  color: #6b8ce4;
+  margin-bottom: 0px;
+}
+
+.verses {
+  color: black;
+  /* color: #515151; */
+  margin-top: 13px;
+  line-height: 24px;
+}
+
+.verseNumber {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.copyRight {
+  color: #6477aa;
+  font-size: 12px;
+}

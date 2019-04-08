@@ -6,11 +6,12 @@ import { ToastContainer, toast } from 'react-toastify'
 import AbsoluteAnimatedSwitch from 'components/AbsoluteAnimatedSwitch'
 import getApolloClient from 'getApolloClient'
 import AuthProvider from 'providers/Auth'
-import { getUserIdFromJWT } from 'helper'
+import { getUserIdFromJWT, booksRegex } from 'helper'
 
 import Home from './Home'
 import Timeline from './Timeline'
 import ContactMe from './ContactMe'
+import ChapterDetail from './ChapterDetail'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
@@ -73,6 +74,7 @@ class Root extends Component {
 							<Navbar />
 							<AbsoluteAnimatedSwitch className="flex">
 								<Route exact path="/contact-me" component={ContactMe} />
+								<Route exact path={`/:bookName(${booksRegex})/:chapter`} component={ChapterDetail} />
 								<Route exact path="/" component={Home} />
 								{/* Only allow past here if logged in */}
 								{!this.state.jwt ? <Redirect to="/" /> : null}

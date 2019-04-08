@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom'
 import Query from 'components/Query'
 import AbsoluteAnimatedSwitch from 'components/AbsoluteAnimatedSwitch'
 
-import { randomChapter, bookNameFromId, getSlicedChapter } from 'helper'
+import { randomChapter, bookNameFromId, getSlicedChapter, formatBook } from 'helper'
 
 import { GET_CHAPTER_OF_THE_DAY } from './queries'
 import styles from './index.module.css'
@@ -47,10 +47,12 @@ export default class ChapterOfTheDay extends Component {
 const ChapterContent = ({ bookId, chapter }) => {
 	const slicedChapter = getSlicedChapter(bookId, chapter)
 
+	const bookName = bookNameFromId(bookId)
+
 	return (
 		<>
 			<h3 className={styles.chapterTitle}>
-				{bookNameFromId(bookId)} {chapter} (ESV)
+				{bookName} {chapter} (ESV)
 			</h3>
 			<p className={styles.verses}>
 				{slicedChapter.map(([verseNum, content]) => {
@@ -63,7 +65,7 @@ const ChapterContent = ({ bookId, chapter }) => {
 				})}
 				...
 			</p>
-			<Link to="/about" className={styles.readMore}>
+			<Link to={`/${formatBook(bookName)}/${chapter}`} className={styles.readMore}>
 				Read more...
 			</Link>
 		</>
