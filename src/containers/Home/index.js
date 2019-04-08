@@ -11,7 +11,7 @@ export default class AboutIndex extends Component {
 				<div className="bodyContainer">
 					<ChapterOfTheDay />
 					<div className="cardContainer">
-						<h2 className={styles.cardTitle}>Resources</h2>
+						<h2 className="cardTitle">Resources</h2>
 						<p className={styles.text}>
 							If you haven't, it is strongly recommended that you finish reading the bible at least once.
 							This allows you to understand the bigger picture of the bible. There are <i>a lot</i> of
@@ -49,7 +49,7 @@ export default class AboutIndex extends Component {
 						</p>
 					</div>
 					<div className="cardContainer">
-						<h2 className={styles.cardTitle}>Using this website</h2>
+						<h2 className="cardTitle">Using this website</h2>
 						<p className={styles.text}>
 							If you are here, you probably want to know the bible better. First, read the whole bible!
 							Look at the resources above if you haven't. <br />
