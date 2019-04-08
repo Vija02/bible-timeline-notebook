@@ -53,8 +53,9 @@ export default class RegisterFormIndex extends Component {
 										onChange={handleChange}
 										onBlur={handleBlur}
 									/>
-									{errors.email &&
-										touched.email && <div className="input-feedback">{errors.email}</div>}
+									{errors.email && touched.email && (
+										<div className="input-feedback">{errors.email}</div>
+									)}
 								</div>
 								<div className={styles.formGroup}>
 									<label>Password</label>
@@ -66,8 +67,9 @@ export default class RegisterFormIndex extends Component {
 										onChange={handleChange}
 										onBlur={handleBlur}
 									/>
-									{errors.password &&
-										touched.password && <div className="input-feedback">{errors.password}</div>}
+									{errors.password && touched.password && (
+										<div className="input-feedback">{errors.password}</div>
+									)}
 								</div>
 								<div className={styles.formGroup}>
 									<label>Confirm Password</label>
@@ -79,12 +81,14 @@ export default class RegisterFormIndex extends Component {
 										onChange={handleChange}
 										onBlur={handleBlur}
 									/>
-									{errors.confirmPassword &&
-										touched.confirmPassword && (
-											<div className="input-feedback">{errors.confirmPassword}</div>
-										)}
+									{errors.confirmPassword && touched.confirmPassword && (
+										<div className="input-feedback">{errors.confirmPassword}</div>
+									)}
 								</div>
-								<div>
+								<p className={styles.toggleLogin} onClick={() => this.props.loginPage()}>
+									Already registered? <span>Login now!</span>
+								</p>
+								<div className={styles.buttonContainer}>
 									<button type="submit" className="btn" disabled={isSubmitting}>
 										{this.props.submitLabel}
 									</button>
@@ -102,4 +106,5 @@ RegisterFormIndex.defaultProps = {
 	initialValues: { email: '', password: '', confirmPassword: '' },
 	submitLabel: 'Register',
 	onSubmit: Promise.resolve(),
+	loginPage: () => {},
 }

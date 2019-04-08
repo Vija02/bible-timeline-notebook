@@ -52,8 +52,9 @@ export default class LoginFormIndex extends Component {
 										onChange={handleChange}
 										onBlur={handleBlur}
 									/>
-									{errors.email &&
-										touched.email && <div className="input-feedback">{errors.email}</div>}
+									{errors.email && touched.email && (
+										<div className="input-feedback">{errors.email}</div>
+									)}
 								</div>
 								<div className={styles.formGroup}>
 									<label>Password</label>
@@ -65,10 +66,14 @@ export default class LoginFormIndex extends Component {
 										onChange={handleChange}
 										onBlur={handleBlur}
 									/>
-									{errors.password &&
-										touched.password && <div className="input-feedback">{errors.password}</div>}
+									{errors.password && touched.password && (
+										<div className="input-feedback">{errors.password}</div>
+									)}
 								</div>
-								<div>
+								<p className={styles.toggleLogin} onClick={() => this.props.registerPage()}>
+									Don't have an account? <span>Register now!</span>
+								</p>
+								<div className={styles.buttonContainer}>
 									<button type="submit" className="btn" disabled={isSubmitting}>
 										{this.props.submitLabel}
 									</button>
@@ -86,4 +91,5 @@ LoginFormIndex.defaultProps = {
 	initialValues: { email: '', password: '' },
 	submitLabel: 'Sign In',
 	onSubmit: Promise.resolve(),
+	registerPage: () => {},
 }
