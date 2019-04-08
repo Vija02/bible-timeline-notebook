@@ -1,12 +1,18 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
-import { getChapter, bookIdFromName, unformatBook } from 'helper'
+import { getChapter, bookIdFromName, unformatBook, getChapterCount } from 'helper'
 
 import styles from './index.module.css'
 
 export default props => {
 	const bookId = bookIdFromName(props.match.params.bookName)
 	const chapter = parseInt(props.match.params.chapter, 10)
+
+	// Validate chapter
+	if (chapter < 1 || chapter > getChapterCount(bookId)) {
+		return <Redirect to="/" />
+	}
 
 	const bookName = unformatBook(props.match.params.bookName)
 
@@ -18,7 +24,7 @@ export default props => {
 				<h3 className={styles.chapterTitle}>
 					{bookName} {chapter} (ESV)
 				</h3>
-				<p className={styles.verses}>
+				<span className={styles.verses}>
 					{allChapter.map(([verseNum, content]) => {
 						return (
 							<React.Fragment key={verseNum}>
@@ -29,8 +35,8 @@ export default props => {
 							</React.Fragment>
 						)
 					})}
-				</p>
-				<hr/>
+				</span>
+				<hr />
 				<p className={styles.copyRight}>
 					Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), copyright
 					© 2001 by Crossway, a publishing ministry of Good News Publishers.
