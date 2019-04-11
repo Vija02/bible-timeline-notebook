@@ -20,6 +20,7 @@
 		"react": "^16.8.6",
 		"react-apollo": "^2.2.4",
 		"react-autocomplete": "^1.8.1",
+		"react-collapsible": "^2.6.0",
 		"react-content-loader": "^4.2.1",
 		"react-dom": "^16.8.6",
 		"react-gesture": "^0.0.5",
