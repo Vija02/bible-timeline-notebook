@@ -5,6 +5,9 @@ import './index.css'
 import './sharedStyles/index.css'
 import 'react-toastify/dist/ReactToastify.css'
 import Root from 'containers/Root'
+
+import { AuthProvider } from 'providers/Auth'
+
 // import registerServiceWorker from './registerServiceWorker'
 
 import { version } from '../package.json'
@@ -18,5 +21,10 @@ if (process.env.REACT_APP_SENTRY_DSN && process.env.NODE_ENV === 'production') {
 	}).install()
 }
 
-ReactDOM.render(<Root />, document.getElementById('root'))
+ReactDOM.render(
+	<AuthProvider>
+		<Root />
+	</AuthProvider>,
+	document.getElementById('root'),
+)
 // registerServiceWorker()
