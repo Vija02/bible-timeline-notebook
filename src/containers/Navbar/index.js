@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 
-import LoginModal from './LoginModal'
+import LoginModalToggler from './LoginModalToggler'
 
 import { AuthConsumer } from 'providers/Auth'
 
@@ -35,14 +35,10 @@ export default class NavbarIndex extends Component {
 							{userId >= 0 ? (
 								<span onClick={onLogout}>Logout</span>
 							) : (
-								<span onClick={this.toggleModal}>Login</span>
+								<LoginModalToggler>
+									<span>Login</span>
+								</LoginModalToggler>
 							)}
-							{this.state.opened
-								? ReactDOM.createPortal(
-										<LoginModal onBackdropClicked={this.toggleModal} />,
-										document.getElementById('modal-root'),
-								  )
-								: null}
 						</div>
 					)}
 				</AuthConsumer>
