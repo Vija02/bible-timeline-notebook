@@ -1,0 +1,55 @@
+.formGroup {
+  margin-top: 10px;
+}
+
+.formGroup label {
+  display: block;
+  color: rgb(107, 140, 228);
+  text-transform: uppercase;
+}
+
+.formGroup input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  border: 2px solid rgb(107, 140, 228);
+}
+
+.formGroup textarea {
+  min-height: 110px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.buttonContainer p {
+  color: #686969;
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.buttonContainer button {
+  background-color: rgb(107, 140, 228);
+  color: white;
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.helpContainer {
+  margin-top: 5px;
+  background-color: #f6f8fa;
+  padding: 10px;
+}
+
+.helpContainer span {
+  color: #4f5050;
+  font-size: 14px;
+}
