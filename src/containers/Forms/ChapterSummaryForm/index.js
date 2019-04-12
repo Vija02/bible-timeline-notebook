@@ -20,13 +20,14 @@ export default class ChapterSummaryFormIndex extends Component {
 			<Formik
 				initialValues={this.props.initialValues}
 				validationSchema={this.validationSchema}
-				onSubmit={(val, { setSubmitting }) => {
+				onSubmit={(val, { setSubmitting, resetForm }) => {
 					const data = this.validationSchema.cast(val)
 
 					this.props
 						.onSubmit(data)
 						.then(() => {
 							setSubmitting(false)
+							resetForm()
 						})
 						.catch(() => {
 							setSubmitting(false)
