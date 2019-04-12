@@ -20,7 +20,7 @@ export default props => {
 
 	return (
 		<div className="bodyContainer">
-			<div className="cardContainer">
+			<div className="padContainer">
 				<h3 className={styles.chapterTitle}>
 					{bookName} {chapter} (ESV)
 				</h3>

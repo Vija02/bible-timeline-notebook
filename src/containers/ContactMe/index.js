@@ -11,7 +11,7 @@ export default () => {
 	return (
 		<>
 			<div className="bodyContainer">
-				<div className="cardContainer">
+				<div className="padContainer">
 					<div className={styles.cardBodyFlex}>
 						<div className={styles.contactMeContainer}>
 							<h1>Contact Me</h1>

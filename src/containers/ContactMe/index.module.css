@@ -1,6 +1,7 @@
 .cardBodyFlex {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .contactMeContainer {
@@ -23,17 +24,17 @@
   color: rgb(107, 140, 228);
 }
 
-.cardContainer h3 {
+.cardBodyFlex h3 {
   color: rgb(107, 140, 228);
   margin-bottom: 0;
 }
 
-.cardContainer a {
+.cardBodyFlex a {
   margin-top: 0;
   text-decoration: underline;
   color: black;
 }
 
-.cardContainer p {
+.cardBodyFlex p {
   margin-top: 0;
 }

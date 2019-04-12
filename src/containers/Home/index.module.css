@@ -1,3 +1,13 @@
+.cotdContainer {
+	padding-top: 20px;
+	background-color: rgb(231, 235, 255);
+}
+
+.cotdInnerContainer {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
 .chapterOfTheDayTitle {
 	position: absolute;
 	top: -15px;
@@ -36,6 +46,7 @@
 .resourcesTitle {
 	color: #175ae4;
 	margin-bottom: 0;
+	margin-top: 0;
 	text-decoration: none;
 }
 
@@ -57,7 +68,9 @@
 	color: #515151;
 }
 
-.resourcesLink, .readMore, .link {
+.resourcesLink,
+.readMore,
+.link {
 	color: #515151;
 	text-decoration: underline;
 }

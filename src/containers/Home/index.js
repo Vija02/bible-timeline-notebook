@@ -8,9 +8,11 @@ export default class AboutIndex extends Component {
 	render() {
 		return (
 			<>
-				<div className="bodyContainer">
+				<div id="cotd" className={styles.cotdContainer}>
 					<ChapterOfTheDay />
-					<div className="cardContainer">
+				</div>
+				<div className="bodyContainer">
+					<div id="resources" className="padContainer">
 						<h2 className="cardTitle">Resources</h2>
 						<p className={styles.text}>
 							If you haven't already done so, it is strongly recommended that you finish reading the bible
@@ -39,7 +41,6 @@ export default class AboutIndex extends Component {
 							content="A 1-year reading plan accompanied by great animated video explanations."
 							link="https://thebibleproject.com/other-resources/other/"
 						/>
-						<hr />
 						<p className={styles.muchMoreText}>
 							And much more!{' '}
 							<Link className={styles.link} to="/contact-me">
@@ -48,13 +49,17 @@ export default class AboutIndex extends Component {
 							if you want to suggest a website to be listed here.
 						</p>
 					</div>
-					<div className="cardContainer">
+					<div className="padContainer">
 						<h2 className="cardTitle">Using this website</h2>
 						<p className={styles.text}>
 							If you are here, you probably want to know the bible better.
 							<br />
 							<br />
-							First, <b>read the whole bible!</b> Look at the resources above if you haven't. <br />
+							First,{' '}
+							<a href="#resources" className={styles.link}>
+								read the whole bible!
+							</a>{' '}
+							Look at the resources above if you haven't. <br />
 							Once you're done with that, there are always other reading plans to follow. If one catches
 							your attention, great! If not, that's fine too.
 							<br />
@@ -62,7 +67,10 @@ export default class AboutIndex extends Component {
 							You might be more familiar with "verse of the day". The reason why we focus on a single{' '}
 							<b>chapter</b> is to allow readers to extract information that matters to them. If there are
 							any specific topic that resonates with you, we encourage that you take some time to research
-							more into the book.
+							more into the book.{' '}
+							<a href="#cotd" className={styles.link}>
+								Look at the today's <i>Chapter of the Day</i>
+							</a>
 						</p>
 					</div>
 					{/* <div className="cardContainer">Previous chapter of the day</div> */}
@@ -77,17 +85,15 @@ class ResourcesRow extends Component {
 		const { title, content, link } = this.props
 
 		return (
-			<div>
-				<h4 className={styles.resourcesTitle}>
-					<a className={styles.resourcesTitle} href={link}>
-						{title}
-					</a>
-				</h4>
-				<p className={styles.resourcesContent}>{content}</p>
-				<a className={styles.resourcesLink} href={link}>
-					Link to site
-				</a>
-			</div>
+			<a href={link} style={{ textDecoration: 'none' }}>
+				<div className="cardContainer">
+					<h4 className={styles.resourcesTitle}>
+						<span className={styles.resourcesTitle}>{title}</span>
+					</h4>
+					<p className={styles.resourcesContent}>{content}</p>
+					<span className={styles.resourcesLink}>Go to site</span>
+				</div>
+			</a>
 		)
 	}
 }

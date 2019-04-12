@@ -14,31 +14,36 @@ import styles from './index.module.css'
 export default class ChapterOfTheDay extends Component {
 	render() {
 		return (
-			<div className="cardContainer">
-				<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
-				<Query query={GET_CHAPTER_OF_THE_DAY} throwError={false}>
-					{({ loading, data, error }) => {
-						return (
-							<AbsoluteAnimatedSwitch location={{ pathname: loading ? '/loading' : '/' }}>
-								<Route
-									path="/loading"
-									exact
-									render={() => <Code height={80} width={700} style={{ marginTop: 40 }} />}
-								/>
-								<Route
-									path="/"
-									render={() => {
-										const theChapter = error ? randomChapter() : data.getChapterOfTheDay
+			<div className={styles.cotdInnerContainer}>
+				<div className="cardContainer">
+					<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
+					<Query query={GET_CHAPTER_OF_THE_DAY} throwError={false}>
+						{({ loading, data, error }) => {
+							return (
+								<AbsoluteAnimatedSwitch location={{ pathname: loading ? '/loading' : '/' }}>
+									<Route
+										path="/loading"
+										exact
+										render={() => <Code height={80} width={700} style={{ marginTop: 40 }} />}
+									/>
+									<Route
+										path="/"
+										render={() => {
+											const theChapter = error ? randomChapter() : data.getChapterOfTheDay
 
-										return (
-											<ChapterContent bookId={theChapter.bookId} chapter={theChapter.chapter} />
-										)
-									}}
-								/>
-							</AbsoluteAnimatedSwitch>
-						)
-					}}
-				</Query>
+											return (
+												<ChapterContent
+													bookId={theChapter.bookId}
+													chapter={theChapter.chapter}
+												/>
+											)
+										}}
+									/>
+								</AbsoluteAnimatedSwitch>
+							)
+						}}
+					</Query>
+				</div>
 			</div>
 		)
 	}
