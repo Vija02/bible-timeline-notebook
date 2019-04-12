@@ -20,6 +20,26 @@ export const unformatBook = book => {
 	return toTitleCase(book.replace(/_/g, ' '))
 }
 
+export const getPreviousChapter = (bookId, chapter) => {
+	if (chapter > 1) {
+		return { bookId, chapter: chapter - 1 }
+	} else if (bookId > 1) {
+		return { bookId: bookId - 1, chapter: getChapterCount(bookId - 1) }
+	} else {
+		return null
+	}
+}
+
+export const getNextChapter = (bookId, chapter) => {
+	if (chapter < getChapterCount(bookId)) {
+		return { bookId, chapter: chapter + 1 }
+	} else if (bookId < 66) {
+		return { bookId: bookId + 1, chapter: 1 }
+	} else {
+		return null
+	}
+}
+
 export const randomChapter = () => {
 	// [[{bookId, chapter, verseCount}, {bookId, chapter, verseCount}], [], ...]
 	const chaptersPerBookArray = bookData.map(book =>

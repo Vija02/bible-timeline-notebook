@@ -1,10 +1,19 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 import OwnSummary from './OwnSummary'
 import AllChapterSummaries from './AllChapterSummaries'
 
-import { getChapter, bookIdFromName, unformatBook, getChapterCount } from 'helper'
+import {
+	getPreviousChapter,
+	getNextChapter,
+	getChapter,
+	bookIdFromName,
+	bookNameFromId,
+	unformatBook,
+	formatBook,
+	getChapterCount,
+} from 'helper'
 
 import styles from './index.module.css'
 
@@ -39,6 +48,32 @@ export default props => {
 						)
 					})}
 				</span>
+				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+					{!!getPreviousChapter(bookId, chapter) ? (
+						<Link
+							to={`/${formatBook(bookNameFromId(getPreviousChapter(bookId, chapter).bookId))}/${
+								getPreviousChapter(bookId, chapter).chapter
+							}`}
+							className="link"
+						>
+							Previous Chapter
+						</Link>
+					) : (
+						<div />
+					)}
+					{!!getNextChapter(bookId, chapter) ? (
+						<Link
+							to={`/${formatBook(bookNameFromId(getNextChapter(bookId, chapter).bookId))}/${
+								getNextChapter(bookId, chapter).chapter
+							}`}
+							className="link"
+						>
+							Next Chapter
+						</Link>
+					) : (
+						<div />
+					)}
+				</div>
 				<hr />
 				<p className={styles.copyRight}>
 					Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), copyright
