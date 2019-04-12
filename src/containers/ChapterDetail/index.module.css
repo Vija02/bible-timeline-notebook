@@ -22,3 +22,19 @@
 	color: #6477aa;
 	font-size: 12px;
 }
+
+.thoughtsTitle {
+	color: #6b8ce4;
+	margin: 0;
+}
+
+.summaryTitle {
+	margin-bottom: 0;
+	font-weight: 500;
+	color: #6b8ce4;
+}
+
+.summaryContent {
+	margin-bottom: 0;
+	margin-top: 2px;
+}
