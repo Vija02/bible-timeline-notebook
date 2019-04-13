@@ -83,7 +83,7 @@ export default props => {
 			<div className="padContainer">
 				<h4 className={styles.thoughtsTitle}>Thoughts</h4>
 
-				<OwnSummary />
+				<OwnSummary bookId={bookId} chapter={chapter} />
 
 				<AllChapterSummaries bookId={bookId} chapter={chapter} />
 			</div>
