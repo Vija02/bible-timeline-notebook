@@ -19,10 +19,17 @@ export default ({ bookId, chapter }) => {
 					return 'An error occured'
 				}
 
+				// TODO: Limit the vertical length of post and add read more button
+
 				return data.allChapterSummaries.nodes.map((summary, i) => (
 					<div key={i} className={styles.container}>
 						<p className={styles.summaryTitle}>{summary.user.emailAddress}</p>
-						<p className={styles.summaryContent}>{summary.summary}</p>
+						<p className={styles.summaryContent}>
+							{summary.summary
+								.replace(/\n/g, '<br />')
+								.split(/(<br \/>)/g)
+								.map(text => (text === '<br />' ? <br /> : text))}
+						</p>
 					</div>
 				))
 			}}
