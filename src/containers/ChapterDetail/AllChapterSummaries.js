@@ -1,6 +1,8 @@
 import React from 'react'
 import Query from 'components/Query'
 
+import { formatStringLineBreak } from 'helper'
+
 import { ALL_CHAPTER_SUMMARIES } from './queries'
 import styles from './index.module.css'
 
@@ -24,12 +26,7 @@ export default ({ bookId, chapter }) => {
 				return data.allChapterSummaries.nodes.map((summary, i) => (
 					<div key={i} className={styles.container}>
 						<p className={styles.summaryTitle}>{summary.user.emailAddress}</p>
-						<p className={styles.summaryContent}>
-							{summary.summary
-								.replace(/\n/g, '<br />')
-								.split(/(<br \/>)/g)
-								.map(text => (text === '<br />' ? <br /> : text))}
-						</p>
+						<p className={styles.summaryContent}>{formatStringLineBreak(summary.summary)}</p>
 					</div>
 				))
 			}}

@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Yup from 'yup'
 import bookData from 'assets/book_metadata.json'
 import esv from 'assets/esv.json'
@@ -132,6 +133,13 @@ export const getUserIdFromJWT = jwt => {
 		return JSON.parse(atob(jwt.split('.')[1])).user_id
 	}
 	return -1
+}
+
+export const formatStringLineBreak = str => {
+	return str
+		.replace(/\n/g, '<br />')
+		.split(/(<br \/>)/g)
+		.map(text => (text === '<br />' ? <br /> : text))
 }
 
 // Validate chapter
