@@ -1,6 +1,18 @@
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
 .chapterTitle {
 	color: #6b8ce4;
 	margin-bottom: 0px;
+}
+
+.hamburgerBar {
+	cursor: pointer;
+	padding: 15px;
+	color: #6b6b6b;
 }
 
 .verses {

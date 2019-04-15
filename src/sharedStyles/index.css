@@ -34,3 +34,9 @@
 	color: #515151;
 	text-decoration: underline;
 }
+
+.plainLink {
+	cursor: pointer;
+	color: #515151;
+	text-decoration: none;
+}
