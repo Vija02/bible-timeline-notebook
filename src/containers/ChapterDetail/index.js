@@ -111,7 +111,7 @@ const DropdownSelector = ({ bookName, chapter }) => {
 	return (
 		<div>
 			<div onClick={handleClick} className={styles.hamburgerBar}>
-				<i className="fas fa-bars" />
+				<i className="fas fa-ellipsis-v " />
 			</div>
 			<Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
 				<a
