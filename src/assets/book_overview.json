@@ -1,266 +1,1488 @@
 [
 	{
 		"bookId": 1,
-		"overview": "Describes the creation; gives the history of the old world, and of the steps taken by God toward the formation of theocracy. "
+		"data": [
+			{
+				"type": "title",
+				"data": "God makes a good world and commissions humans to rule it, and then they give in to evil and ruin everything."
+			},
+			{
+				"type": "subtitle",
+				"data": "God makes a good world and installs humans as its rulers. Humanity rebels and ends up ruling the world in a destructive way, leading to violence, death, and the founding of the city of Babylon. God’s response is to set in motion a plan to rescue and bless the whole world through the family of Abraham."
+			},
+			{
+				"type": "video",
+				"data": "KOUV7mWDI34"
+			},
+			{
+				"type": "info",
+				"data": "Translated as 'origin' from the Greek word, the Book of Genesis tells us how everything began from humanity's history to the world we know today. One could call this the 'problem statement' for humanity, one the rest of the Bible will be answering.\n\nIt reveals a dramatic prologue of God's love for us, the tragedies of sin and the human race, and God initiating a brilliant plan to win us back from the clutches of darkness. He does this by passing down a covenant blessing through Abraham and his family, including Isaac, Jacob, and other individuals, in order to bless all the families of the earth.\n\nThese descendants will become the foundation for the Nation of Israel and Jesus the Messiah who will bring salvation for all of humanity."
+			},
+			{
+				"type": "video",
+				"data": "GQI72THyO5I"
+			},
+			{
+				"type": "title",
+				"data": "God promises to bless rebellious humanity through the family of Abraham, despite their constant failure and folly."
+			},
+			{
+				"type": "subtitle",
+				"data": "God makes a promise that He will bless all nations through Abraham's family. But with aging husbands, impatient matriarchs, blessing-stealing children, and jealous siblings who keep mucking things up, how will God's promise prevail?"
+			},
+			{
+				"type": "video",
+				"data": "VpbWbyx1008"
+			},
+			{
+				"type": "info",
+				"data": "While Chapters 1 through 11 describe God's relationship with the entire world in the Book of Genesis, Chapters 12 through 50 transition to God's focus with one particular family.\n\nAs Abraham and Sarah learn to trust in God and believe His promises, their lineage brings about the Nation of Israel, Jesus Christ, and the Church many centuries later, ushering in a heavenly kingdom that is established by faith and love.\n\nPlenty of mistakes and wrong choices are made along the way, but God continually delivers them through His grace and kindness in the Book of Genesis. Note the importance of God's covenant with Abraham, a special contract sealed by blood that comes full circle with the Messiah's sacrifice on the cross."
+			},
+			{
+				"type": "video",
+				"data": "F4isSyennFo"
+			}
+		]
 	},
 	{
 		"bookId": 2,
-		"overview": "The history of Israel's departure from Egypt; the giving of the law; the tabernacle. "
+		"data": [
+			{
+				"type": "title",
+				"data": "God rescues the Israelites from slavery in Egypt and confronts the evil and injustice of Pharaoh."
+			},
+			{
+				"type": "subtitle",
+				"data": "The first part of Exodus recounts how Abraham’s family ends up enslaved in Egypt. God raises up a deliverer to confront the evil of Pharaoh and to liberate the Israelites. From Egypt, they set out into the wilderness on the way to Mt. Sinai."
+			},
+			{
+				"type": "video",
+				"data": "0uf-PgW7rqE"
+			},
+			{
+				"type": "info",
+				"data": "Filled with memorable miracles, Chapters 1-18 in the Book of Exodus hold much more purpose than simple entertainment. They contain historical accounts with tangible truths that still apply to the present. The story begins in Egypt where Genesis leaves off but reveals a much darker picture: Abraham's descendants have indeed grown as numerous as the stars, but are now oppressed in slavery by a Pharaoh who has forgotten the kindness his predecessor showed to Joseph's family.\n\nHearing their prayers, God confronts Pharaoh's stubbornness and delivers the Israelites from bondage. He sends Moses and Aaron to Pharaoh as agents that usher in a multitude of signs and wonders, and display God's glory in a land of idols. God also establishes the first Passover, a turnkey event for the founding of Israel and Christ's sacrifice. Themes of redemption, rebellion and The Blessing continue to play out for individuals and nations in this section."
+			},
+			{
+				"type": "video",
+				"data": "jH_aojNJM3E"
+			},
+			{
+				"type": "title",
+				"data": "God invites the Israelites into a covenant and comes to live among them in the Tabernacle, but Israel rebels and ruins the relationship."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Israelites come to Mt. Sinai, where God invites them into a covenant relationship. He wants to make them his representatives to all the nations and come to personally live in their midst. But Israel rebels by making an idol of the golden calf, which is just a really bad idea."
+			},
+			{
+				"type": "video",
+				"data": "b0GhR-2kPKI"
+			},
+			{
+				"type": "info",
+				"data": "After God delivers the Israelites from slavery in Egypt, He leads them through the wilderness back to Mt. Sinai where Moses first met Him in the second half of the Book of Exodus. There, the Israelites prepare themselves for a miraculous encounter with the Lord - God Himself will come down to the top of the mountain, where He will fellowship and establish Abraham's covenant with them!\n\nMoses spends 40 days with Him on the mountain, but the Israelites are afraid and stay at the bottom. The story takes a tragic twist when Aaron helps the Israelites fashion a golden idol and worship it - right at the foot of the mountain - while Moses is away. God considers wiping them out for the atrocity and making a new nation from Moses instead, but changes His mind when Moses intercedes and reminds Him of Abraham's Covenant, further showing us God's character of love and justice."
+			},
+			{
+				"type": "video",
+				"data": "oNpTha80yyE"
+			}
+		]
 	},
 	{
 		"bookId": 3,
-		"overview": "The ceremonial law. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Israel’s holy God invites them to live in His presence despite their sin, through a series of rituals and sacred institutions."
+			},
+			{
+				"type": "subtitle",
+				"data": "God invites Israel to live in close proximity to His holy presence. Which seems awesome, but it’s actually dangerous. This book explores how the sacrificial rituals and purity practices cleared the way for morally corrupt Israelites to become God’s covenant partners."
+			},
+			{
+				"type": "video",
+				"data": "WmvyrLXoQio"
+			},
+			{
+				"type": "info",
+				"data": "In order to heal the damage from Israel's rebellion against His instructions, God established a way for people's sins to be covered through a system of sacrifices in the laws of the covenant. These laws described in the Book of Leviticus serve a three-fold purpose: forgive acts of sin and spare people's lives, show the world that Israel was God's holy ambassador to the earth, and define standards of right and wrong that will fortify immense value to Christ's sacrifice for humanity.\n\nSince God's nature is absolutely good, no evil can ever be present near him - including humans tainted with the sin of Adam's fall. Unfortunately, some individuals learn this the hard way as the Israelites adjust themselves to correctly performing these laws. Still, God blesses them in His continual mercy as Abraham's descendants of The Blessing."
+			},
+			{
+				"type": "video",
+				"data": "IJ-FekWUZzE"
+			}
+		]
 	},
 	{
 		"bookId": 4,
-		"overview": "The census of the people; the story of the wanderings in the wilderness. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Israel travels through the wilderness on the way to the land promised to Abraham. Their repeated rebellion is met by God’s justice and mercy."
+			},
+			{
+				"type": "subtitle",
+				"data": "A road-trip gone bad. Israel leaves Mt. Sinai only to rebel against God at every step. God responds with short-term severity and long-term generosity as He leads them into the promised land."
+			},
+			{
+				"type": "video",
+				"data": "zebxH-5o-SQ"
+			},
+			{
+				"type": "info",
+				"data": "After centuries of living in foreign lands, the time comes for the Israelites to return to the land God had promised to Abraham. But soon after they set out for Canaan, Israel perpetually complains, sins, and even incites rebellion against Moses and Aaron in God's presence. Eleven days of travel in the wilderness become 40 years as a result of their unbelief, and only their children can enter the Promised Land. Tired and frustrated, Moses strikes a rock to resolve yet another complaint from the Israelites, but sadly disobeys God's instruction to speak to it. He too is prevented from entering the Promised Land.\n\nEven in all this, God still displays His amazing faithfulness and patience. A few individuals, such as Joshua and Caleb, remain faithful and will lead Israel's next generation. Many scriptures use Israel's wilderness stories in the Book of Numbers as examples for us to believe God and trust Him with our lives."
+			},
+			{
+				"type": "video",
+				"data": "tp5MIrMZFqo"
+			}
+		]
 	},
 	{
 		"bookId": 5,
-		"overview": "The law rehearsed; the death of Moses. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Moses gives final words of wisdom and warning before the Israelites enter the promised land, challenging them to be faithful to God."
+			},
+			{
+				"type": "subtitle",
+				"data": "Moses delivers his final words of warning and wisdom to the Israelites before they enter the promised land. This is the epic conclusion of the Torah! And, spoiler alert: Moses dies."
+			},
+			{
+				"type": "video",
+				"data": "NMhmDPWeftw"
+			},
+			{
+				"type": "info",
+				"data": "After 40 years of rebellion and frustration in the wilderness, the next generation of Israel is finally old enough in the Book of Deuteronomy to inherit the land of Canaan that God promised them. Wise and full of years, Moses knows that this generation will disobey like their parents did, but he is hopeful that they will repent and God will continue to guide them.\n\nHe reviews with them everything that happened in the Books of Exodus, Leviticus, and Numbers from Egypt to Mt. Sinai to the wilderness, as well as the laws of the covenant. He urges them to love God and be faithful, and He will bless them in return. Joshua is appointed as the next leader, and Moses dies. Even though he can't enter it, God allows him to see a marvelous view of the Promised Land from a mountaintop during his final hours, demonstrating His love for His people."
+			},
+			{
+				"type": "video",
+				"data": "q5QEH9bH8AU"
+			}
+		]
 	},
 	{
 		"bookId": 6,
-		"overview": "The story of the conquest and partition of Canaan. "
+		"data": [
+			{
+				"type": "title",
+				"data": "After Moses' death, Joshua leads Israel and they settle in the promised land currently occupied by Canaanites."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Joshua picks up right after Moses dies and shows how God had been faithful to the covenant he made with Abraham by bringing them into the land. It recounts the battles and barriers the Israelites experience in their entering of the Promised Land. God is faithful, and while not all the territory is conquered, the Israelites have safely settled in the land promised to Abraham."
+			},
+			{
+				"type": "video",
+				"data": "JqOqJlFF_eU"
+			},
+			{
+				"type": "info",
+				"data": "Near the end of the book, Joshua calls on Israel to remember the covenant it made with God. Like with Moses in Deuteronomy, Israel is reminded of the choice it must make – be faithful and obey leading to life and blessing or prove unfaithful leading to all the judgments that befell the Canaanites."
+			}
+		]
 	},
 	{
 		"bookId": 7,
-		"overview": "The history of the nation from Joshua to Samson. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The Israelites turn away from God and face the consequences. God raises judges in cycles of rebellion, repentance, and restoration."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Judges tells the story of Israel's total failure after the death of Joshua. Judges were tribal chieftains, and their story can be quite disturbing. It serves as a tragic tale of how Israel's leaders became increasingly corrupt and no better than the Canaanite tribes they had overthrown. Though sad, this is also a story of hope for the future."
+			},
+			{
+				"type": "video",
+				"data": "kOYy8iCfIJ4"
+			},
+			{
+				"type": "info",
+				"data": "Judges illustrates the vicious cycle of apostasy, oppression, and deliverance. Yahweh repeatedly raises up “judges” (rulers who were military and judicial leaders) to deliver the people following a period of foreign oppression. However, the increasing corrupt leadership and populace led to some of the most violent events recounted in the Bible. The theme of this book is summarized in Judges 21:25, \"In those days Israel had no king; all the people did whatever seemed right in their own eyes.\""
+			}
+		]
 	},
 	{
 		"bookId": 8,
-		"overview": "The story of the ancestors of the royal family of Judah. "
+		"data": [
+			{
+				"type": "title",
+				"data": "An Israelite family faces tragic loss, and God uses the faithfulness of a non-Israelite woman to bring restoration into the family of David."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Ruth begins by highlighting the Judges theme of Israel needing a king and exploring the misery and emptiness a singular family might experience during these dark times."
+			},
+			{
+				"type": "video",
+				"data": "0h1eoBeR4Jk"
+			},
+			{
+				"type": "info",
+				"data": "This is not simply a love story.\n\nIt's a story about God and how he restores those who look to him with hope. It's about God's covenant faithfulness and it contributes to the overall covenant storyline that unifies the entire Bible. The author has gone to great care to honor Ruth, Naomi, and Boaz through the development of their characters in the story.\n\nThey are character studies of how God works in mundane, everyday events in the lives of his people (and what human covenant faithfulness looks like in return)."
+			}
+		]
 	},
 	{
 		"bookId": 9,
-		"overview": "The story of the nation during the judgeship of Samuel and the reign of Saul. "
+		"data": [
+			{
+				"type": "title",
+				"data": "God reluctantly raises up kings to rule the Israelites. The first is a failure, and the second, David, is a faithful replacement."
+			},
+			{
+				"type": "subtitle",
+				"data": "Samuel is an exciting Book in the Bible. It's split into two parts due to its large size. The Book of 1 Samuel focuses on the characters Samuel, Saul, and David and their roles in shaping God's growing nation Israel. "
+			},
+			{
+				"type": "video",
+				"data": "QJOju5Dw0V0"
+			},
+			{
+				"type": "info",
+				"data": "When reading 1 Samuel, note the realistic depictions of real people in history. Each one has their own strengths, weaknesses, and goals just like we do.\n\nTake special note of the recurring themes of pride and humility throughout its chapters, starting with Hannah's story in Chapters 1-2. In Chapter 2, she sings a song about God opposing the proud and giving grace to the humble, which is exactly what happens in the matters of Saul and David. Their story reminds us of humility and trusting God with our own lives."
+			}
+		]
 	},
 	{
 		"bookId": 10,
-		"overview": "Story of the reign of David. "
+		"data": [
+			{
+				"type": "title",
+				"data": "David becomes God's most faithful king, but then rebels, resulting in the slow destruction of his family and kingdom."
+			},
+			{
+				"type": "subtitle",
+				"data": "As the Book of 2 Samuel Bible picks up where 1 Samuel left off, the themes of humility and pride continue as David mourns for the loss of Saul and Jonathan. His faithfulness to God ushers in a united Israel that finally defeats the surrounding Philistines and establishes a kingdom in the land."
+			},
+			{
+				"type": "video",
+				"data": "YvoWDXNDJgs"
+			},
+			{
+				"type": "info",
+				"data": "David captures Jerusalem and claims the city as its capital. Peace is achieved around all of its borders. Instead of hiding in caves, David can finally rest in a cedar palace. And yet, all he thinks about is building a house for his God, so he expresses his desire to do that for Him. Touched by his faith, God makes a covenant with David in return: Jesus Christ, the Messiah, will Himself come from David's house of descendants. And, despite David's failures, God ensures that promise remains even after his death."
+			}
+		]
 	},
 	{
 		"bookId": 11,
-		"overview": "History of the nation from David's death and Solomon's accession to the destruction of the kingdom of Judah and the desolation of Jerusalem, with a supplemental notice of the liberation of Jehoiachin from his prison at Babylon, twenty-six years later; they comprehend the whole time of the Israelitish monarchy, exclusive of the reigns of Saul and David. "
+		"data": [
+			{
+				"type": "title",
+				"data": "David’s son Solomon leads Israel to greatness, only to fail and lead Israel to a civil war and ultimately towards destruction and exile."
+			},
+			{
+				"type": "subtitle",
+				"data": "After centuries of sojourning, struggles, and conquest, God's promise to Abraham appears to finally be tangible - David and Solomon unite the Israelites into a single kingdom with descendants as \"numerous as the stars.\""
+			},
+			{
+				"type": "video",
+				"data": "bVFW3wbi9pk"
+			},
+			{
+				"type": "info",
+				"data": "Known as Kings 1 and 2 in English Bibles, The Book of Kings is originally a single book that recounts the rule of Israel's kings from David's son Solomon up until the time of Israel's exile, the final result of Israel's disobedience.\n\nWill God's promised Messiah come to pass in spite of Israel's failures? Read more to find out! Note how the book's perspective gives the reader a bird's-eye view of the nation as a whole compared to the interpersonal focus of key individuals in the Book of Samuel. Some notable people in Kings, like Elijah and Jezebel, will also become symbolic representatives for certain themes in the New Testament. Watch closely."
+			}
+		]
 	},
 	{
 		"bookId": 12,
-		"overview": "History of the nation from David's death and Solomon's accession to the destruction of the kingdom of Judah and the desolation of Jerusalem, with a supplemental notice of the liberation of Jehoiachin from his prison at Babylon, twenty-six years later; they comprehend the whole time of the Israelitish monarchy, exclusive of the reigns of Saul and David. "
+		"data": [
+			{
+				"type": "title",
+				"data": "David’s son Solomon leads Israel to greatness, only to fail and lead Israel to a civil war and ultimately towards destruction and exile."
+			},
+			{
+				"type": "subtitle",
+				"data": "After centuries of sojourning, struggles, and conquest, God's promise to Abraham appears to finally be tangible - David and Solomon unite the Israelites into a single kingdom with descendants as \"numerous as the stars.\""
+			},
+			{
+				"type": "video",
+				"data": "bVFW3wbi9pk"
+			},
+			{
+				"type": "info",
+				"data": "Known as Kings 1 and 2 in English Bibles, The Book of Kings is originally a single book that recounts the rule of Israel's kings from David's son Solomon up until the time of Israel's exile, the final result of Israel's disobedience.\n\nWill God's promised Messiah come to pass in spite of Israel's failures? Read more to find out! Note how the book's perspective gives the reader a bird's-eye view of the nation as a whole compared to the interpersonal focus of key individuals in the Book of Samuel. Some notable people in Kings, like Elijah and Jezebel, will also become symbolic representatives for certain themes in the New Testament. Watch closely."
+			}
+		]
 	},
 	{
 		"bookId": 13,
-		"overview": "So called as being the record made by the appointed historiographers of the kingdoms of Judah and Israel; they are the official histories of those kingdoms. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Chronicles retells the entire Old Testament story, highlighting the future hope of the messianic king and a restore temple."
+			},
+			{
+				"type": "subtitle",
+				"data": "Like the Books of Samuel and Kings, 1 and 2 Chronicles was also written as the single Book of Chronicles in the Hebrew Bible. Many readers today, however, skip reading it when they find that it repeats much of the material from its previous books. But is Chronicles necessary to read? Yes, it is!"
+			},
+			{
+				"type": "video",
+				"data": "HR7xaHv3Ias"
+			},
+			{
+				"type": "info",
+				"data": "Chronicles is the last Book in the Hebrew Bible as it summarizes the continued relationship between God and Israel through the Blessing of Abraham. The arrangement of the content in Chronicles invites the reader to explore the stories of each section and reveal interesting details about David, Solomon, God's temple, the kings of Judah, and how they work together. Chronicles is also an excellent historical reference for those studying specific facts in the Scriptures.\n\nTime to pull up your sleeves and embark on a treasure hunt to dig up the \"gems\" in God's Word!"
+			}
+		]
 	},
 	{
 		"bookId": 14,
-		"overview": "So called as being the record made by the appointed historiographers of the kingdoms of Judah and Israel; they are the official histories of those kingdoms. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Chronicles retells the entire Old Testament story, highlighting the future hope of the messianic king and a restore temple."
+			},
+			{
+				"type": "subtitle",
+				"data": "Like the Books of Samuel and Kings, 1 and 2 Chronicles was also written as the single Book of Chronicles in the Hebrew Bible. Many readers today, however, skip reading it when they find that it repeats much of the material from its previous books. But is Chronicles necessary to read? Yes, it is!"
+			},
+			{
+				"type": "video",
+				"data": "HR7xaHv3Ias"
+			},
+			{
+				"type": "info",
+				"data": "Chronicles is the last Book in the Hebrew Bible as it summarizes the continued relationship between God and Israel through the Blessing of Abraham. The arrangement of the content in Chronicles invites the reader to explore the stories of each section and reveal interesting details about David, Solomon, God's temple, the kings of Judah, and how they work together. Chronicles is also an excellent historical reference for those studying specific facts in the Scriptures.\n\nTime to pull up your sleeves and embark on a treasure hunt to dig up the \"gems\" in God's Word!"
+			}
+		]
 	},
 	{
 		"bookId": 15,
-		"overview": "The story of the return of the Jews from the Babylonish captivity, and of the rebuilding of the temple. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Many Israelites return to Jerusalem after the exile, and face some success alongside many spiritual and moral failures."
+			},
+			{
+				"type": "subtitle",
+				"data": "Originally written together as a single book in the Jewish Scriptures, Ezra and Nehemiah document the fulfillment of God's promise that Israel will return home after 70 years of exile in Babylon and restore their ruined dwellings again."
+			},
+			{
+				"type": "video",
+				"data": "MkETkRv9tG8"
+			},
+			{
+				"type": "info",
+				"data": "Zerubbabel and Nehemiah both play a part in restoring God's Temple, while Zerubbabel takes charge over governing affairs, and Nehemiah rebuilds the Walls of Jerusalem. Ezra, a descendant of Aaron, arrives in Jerusalem later and instills God's laws to the post-Exile Jewish generation.\n\nNote how the people received revelation and responded after they listened to the Word of God that was being taught to them. This response is remarkably similar to Jesus' teachings about God's Kingdom centuries later, and His often-repeated phrase, \"He who has an ear, let him hear...\" The takeaway? Whether it's ancient Israel or our worship today, we all must receive a new heart from God and listen to Him."
+			}
+		]
 	},
 	{
 		"bookId": 16,
-		"overview": "A further account of the rebuilding of the temple and city, and of the obstacles encountered and overcome. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Many Israelites return to Jerusalem after the exile, and face some success alongside many spiritual and moral failures."
+			},
+			{
+				"type": "subtitle",
+				"data": "Originally written together as a single book in the Jewish Scriptures, Ezra and Nehemiah document the fulfillment of God's promise that Israel will return home after 70 years of exile in Babylon and restore their ruined dwellings again."
+			},
+			{
+				"type": "video",
+				"data": "MkETkRv9tG8"
+			},
+			{
+				"type": "info",
+				"data": "Zerubbabel and Nehemiah both play a part in restoring God's Temple, while Zerubbabel takes charge over governing affairs, and Nehemiah rebuilds the Walls of Jerusalem. Ezra, a descendant of Aaron, arrives in Jerusalem later and instills God's laws to the post-Exile Jewish generation.\n\nNote how the people received revelation and responded after they listened to the Word of God that was being taught to them. This response is remarkably similar to Jesus' teachings about God's Kingdom centuries later, and His often-repeated phrase, \"He who has an ear, let him hear...\" The takeaway? Whether it's ancient Israel or our worship today, we all must receive a new heart from God and listen to Him."
+			}
+		]
 	},
 	{
 		"bookId": 17,
-		"overview": "The story of a Jewess who becomes queen of Persia and saves the Jewish people from destruction. "
+		"data": [
+			{
+				"type": "title",
+				"data": "God providentially uses two exiled Israelites to rescue His people from certain doom, without any explicit mention of God or His activity!"
+			},
+			{
+				"type": "subtitle",
+				"data": "A classic story of good versus evil, the Book of Esther is a unique account in the Bible. It gives us a glimpse of the Jews who remained outside their homeland after the Exile, particularly the Jews living in the Persian Empire."
+			},
+			{
+				"type": "video",
+				"data": "JydNSlufRIs"
+			},
+			{
+				"type": "info",
+				"data": "Here we see that the author chose a fascinating literary choice - never once is God mentioned in the entire Book. This behind-the-scenes take of God at work is brilliantly displayed throughout Esther's chapters through \"coincidences\" and \"happen chances\" that help to save the Jews from Haman's wicked plot to destroy them.\n\nEven today Jewish people celebrate Purim each year by reading Esther, enjoying fun traditions, and giving gifts as described in Esther Chapter 9:20-32. Christians, too, can benefit from reading Esther as it reminds us that even though it appears God is absent, He is still at work in our lives and will not abandon His promises while we are living in a murky and ambiguous world."
+			}
+		]
 	},
 	{
 		"bookId": 18,
-		"overview": "The story of the trials and patience of a holy man of Edom. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Job explores the difficult question of God's relationship to human suffering, and invites us to trust God's wisdom and character."
+			},
+			{
+				"type": "subtitle",
+				"data": "Set in Uz, an obscure land far from Israel, during an unknown time period, the book of Job focuses on questions about God's justice and why good people suffer. At the same time, it also asks the question we rarely think to ask, why do good people prosper?"
+			},
+			{
+				"type": "video",
+				"data": "GswSg2ohqmA"
+			},
+			{
+				"type": "info",
+				"data": "Throughout the book, Job, his wife, and his friends speculate on why he, an upright man, suffers. Job accuses God of being unjust and not operating the world according to principles of justice, and his friends believe that Job's sin caused his suffering. Job decides to talk directly to God.\n\nGod reminds him that the world has order and beauty but is also wild and dangerous. While we do not always know why we suffer, we can bring our pain and grief to God and trust that He is wise and knows what He's doing."
+			}
+		]
 	},
 	{
 		"bookId": 19,
-		"overview": "A collection of sacred poems intended for use in the worship of Jehovah. Chiefly the productions of David. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The book of Psalms has been designed to be the prayer book of God's people as they wait for the Messiah and his coming kingdom."
+			},
+			{
+				"type": "subtitle",
+				"data": "Written to join the Hebrew Torah, or the first five books of the Old Testament, the Book of Psalms is a remarkable collection of poems from David, Moses, and other Jewish writers."
+			},
+			{
+				"type": "video",
+				"data": "j9phNEaPrv8"
+			},
+			{
+				"type": "info",
+				"data": "Take one look at Psalms makes it clear that it is much more than enlightening literature: it too is God's Word with equal importance like the Torah. The Psalms also carry an excellent order throughout its chapters and is separated into five main books. Each book carries a specific theme complete with its own introduction, key points, and endnotes.\n\nThrough the Psalms, we learn about the importance of prayer and the acknowledgment of pain, as well as the power of praise and fulfillment of prophecy. Note how the Psalms correspond particularly well with Isaiah, Zechariah, and God's covenant with David in Chapter 7 of 2 Samuel."
+			}
+		]
 	},
 	{
 		"bookId": 20,
-		"overview": "The wise sayings of Solomon. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The book of Proverbs invites people to live with wisdom and in the fear of the Lord in order to experience the good life."
+			},
+			{
+				"type": "subtitle",
+				"data": "Proverbs offers human words or human wisdom as a vehicle for the divine Word. The two voices we hear in Proverbs 1-9 have been fused together to help us understand that in the observations and sayings of Israel’s human elders, we will hear echoes of the divine, transcendental wisdom."
+			},
+			{
+				"type": "video",
+				"data": "Gab04dPs_uA"
+			},
+			{
+				"type": "info",
+				"data": "Linked to Solomon and other wise men, the book of Proverbs includes hundreds of short, clever sayings designed to teach every person how to live and act wisely. Each saying touches on a common area of life and shows us what kind of world we live in and what it looks like to live well before God and toward others.\n\nThe wisdom in Proverbs is often described as a lady, but it's not an impersonal force. It's an attribute of God Himself. By fearing or respecting God and reading and obeying the wise, practical counsel found in this book, we develop the important skills and moral mindset we need to live successful, good and goodly lives in God's world."
+			},
+			{
+				"type": "video",
+				"data": "AzmYV8GNAIM"
+			}
+		]
 	},
 	{
 		"bookId": 21,
-		"overview": "A poem respecting the vanity of earthly things. "
+		"data": [
+			{
+				"type": "title",
+				"data": "This book forces us to face death and random chance, and the challenges they pose to a naive belief in God’s goodness."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Ecclesiastes is the critic's response to Proverbs, which states we live a good life when we fear God and follow wisdom."
+			},
+			{
+				"type": "video",
+				"data": "VeUiuSK81-0"
+			},
+			{
+				"type": "info",
+				"data": "This book's author and the teacher believe that life is hevel, temporary and fleeting like smoke or vapor. We all try to build meaning and purpose in life apart from God, investing in pursuits and things that have no lasting meaning, but time marches on, we all die and bad things happen to good people.\n\nIn the end, the key to contentment comes from wisdom, accepting hevel, fearing God, keeping His commandments and putting our trust in Him. We remain puzzled by life's mysteries, but He will bring true justice that fuels our ability to live lives of honesty and integrity."
+			},
+			{
+				"type": "video",
+				"data": "lrsQ1tc-2wk"
+			}
+		]
 	},
 	{
 		"bookId": 22,
-		"overview": "An allegory relating to the church. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The Song of Songs is a collection of ancient Israelite love poems that celebrates the beauty and power of God's gift of love and sexual desire."
+			},
+			{
+				"type": "subtitle",
+				"data": "A peculiar book in the Bible, the Song of Songs, also known as the Song of Solomon, is not technically a book. It's a love song between two lovers! But according to ancient Hebrew writings, this song is considered the Song of Songs in the same way Jesus Christ is the King of Kings. What makes this song greater than any other love song? And what is it doing in the Bible?"
+			},
+			{
+				"type": "video",
+				"data": "4KC7xE4fgOw"
+			},
+			{
+				"type": "info",
+				"data": "Read further to discover there's more than meets the eye. Several themes begin to take shape within the poetry of this song, along with pearls of wisdom strung through its text about handling the fiery passions of sexual desire. Allegories of God's love for His people are also woven through the poem's tapestry, creating a beautiful picture of what God intended love to be since Adam and Eve in the Garden of Eden. We can enjoy this same gift today with obedience."
+			}
+		]
 	},
 	{
 		"bookId": 23,
-		"overview": "Prophecies respecting Christ and his kingdom. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Isaiah announces that God’s judgment will purify Israel and prepare his people to the coming messianic king and new Jerusalem."
+			},
+			{
+				"type": "subtitle",
+				"data": "Like Elijah, Jeremiah, and the other Prophets, Isaiah was called by God to deliver His messages to Israel for its welfare in the Book of Isaiah. But along with warnings against Israel's sin and rebellious ways came a message of hope in a new depth that would carry on for centuries after Isaiah's passing."
+			},
+			{
+				"type": "video",
+				"data": "d0A6Uchb1F8"
+			},
+			{
+				"type": "info",
+				"data": "This hope would be embodied through God's Servant known as \"Immanuel,\" who will one day establish a new Israel and God's Kingdom on the earth. Remarkably, Jesus does precisely that in His lifetime, fulfilling over 300 prophecies in Scripture that include intricate details of His death and resurrection foretold in Isaiah chapters 50 through 53.\n\nThroughout the test of time, Isaiah's words have encouraged thousands of people who have suffered the drudgeries in this life while waiting for the Messiah to come in His first and second appearances everyone is counting on."
+			}
+		]
 	},
 	{
 		"bookId": 24,
-		"overview": "Prophecies announcing the captivity of Judah, its sufferings, and the final overthrow of its enemies. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jeremiah announces that God will judge Israel’s sins with an exile to Babylon. And then, he lives through the horror of his predictions."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Jeremiah holds a graphic but important picture showing us how disobedience leads to destruction."
+			},
+			{
+				"type": "video",
+				"data": "RSK36cHbrk0"
+			},
+			{
+				"type": "info",
+				"data": "The people of Israel repeatedly refused to listen to the Lord's instructions and followed too many evil desires to count. And yet, even though they had broken the terms of their Covenant with God, He was still willing to bless them if they repented.\n\nJustice can only allow evil to go so far. In one final act, God chooses Jeremiah to give the people of Israel's southern kingdom of Judah one more chance: turn from their wicked ways or be exiled to Babylon. The latter is sadly the result."
+			}
+		]
 	},
 	{
 		"bookId": 25,
-		"overview": "The utterance of Jeremiah's sorrow upon the capture of Jerusalem and the destruction of the temple. "
+		"data": [
+			{
+				"type": "title",
+				"data": "A collection of five funeral poems offered on behalf of Jerusalem after its destruction by Babylon."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Lamentations may not be the most popular book in the Bible, but it is an essential ingredient for helping humans to understand an important aspect of their relationship with God – the expression of grief and distress. This special book is a collection of five lament poems recounting the tragic fall of Jerusalem to Babylon."
+			},
+			{
+				"type": "video",
+				"data": "p8GDFPdaQZQ"
+			},
+			{
+				"type": "info",
+				"data": "This catastrophic event was the direct result of Israel's constant rebellion against God's Covenant despite His persistent warnings through prophets to Jerusalem's royal lineage.\n\nNow surrounded by war, grief and suffering, the people of Israel acknowledge their sin and cry out to God for restoration and repentance in the lament poems, which are a way to process emotion and confusion at the disorder and chaos and to express themselves to God. Reading Lamentations helps us today to understand that communicating our distress to God about what's wrong in our lives is an appropriate response to the evil in the world, rather than keeping it bottled up inside."
+			}
+		]
 	},
 	{
 		"bookId": 26,
-		"overview": "Messages of warning and comfort to the Jews in their captivity. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Among the exiles in Babylon, Ezekiel shows that Israel deserved this judgment, and also that God’s justice creates hope for the future."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Ezekiel can seem vague and confusing for some readers, but with careful observation it contains key details God wants us to know about. Many of the divine visions that Ezekiel shares are relevant to God's plans for reconstructing the present world and restoring His people to our former days in the Garden of Eden."
+			},
+			{
+				"type": "video",
+				"data": "R-CIPu1nko8"
+			},
+			{
+				"type": "info",
+				"data": "Through Ezekiel, we learn that spiritual things are just as important as the physical, and even more important regarding the physical's temporary circumstances. We also get a glimpse of God's glory manifested with His presence when riding a heavenly chariot.\n\nGod's presence being revealed to Ezekiel in Babylon also demonstrates that holiness has nothing to do with geographical location, but rather the condition of people's hearts. God is moved by the faithfulness of men like Ezekiel, who became His priest not because of status but because of his faith in God in a dark land, no matter the circumstances. His example is a model for believers everywhere."
+			},
+			{
+				"type": "video",
+				"data": "SDeCWW_Bnyw"
+			}
+		]
 	},
 	{
 		"bookId": 27,
-		"overview": "A narrative of some of the occurrences of the captivity, and a series of prophecies concerning Christ. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The story of Daniel motivates faithfulness despite exile in Babylon. His visions offer hope that God will bring all nations under his rule."
+			},
+			{
+				"type": "subtitle",
+				"data": "Can there ever be faith again in the midst of darkness, rebellion, and gloom? According to the Book of Daniel, yes, there can. This remarkable piece of Scripture has encouraged the faithful for centuries, giving us a glimpse to future events that already came to pass and and are yet to come."
+			},
+			{
+				"type": "video",
+				"data": "9cSC9uobtPM"
+			},
+			{
+				"type": "info",
+				"data": "Christians and Jews alike will appreciate the timely events that Daniel sees in his visions, while giving us hope to look forward to where evil hearts and rulers will one day finally come to an end.\n\nWe also have a chance to get to know Daniel, Shadrach, Meeshach, and Abendego and see them as the model example for believers living in the midst of a dark world, which applies both to Daniel's day and to ours in the end times. Keep an eye out for key manifestations of Jesus Christ as well, as He is often referred to descriptions of being like a \"Son of Man.\""
+			}
+		]
 	},
 	{
 		"bookId": 28,
-		"overview": "Prophecies relating to Christ and the latter days. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Hosea accuses Israel of breaking their covenant with God, and warns them of the tragic consequences to follow."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Northern Kingdom of Israel enjoyed moderate success from conquering neighboring kingdoms, but they were spiritually bankrupt on the inside. In the Book of Hosea, God sends Hosea to Israel during King Jeroboam II's reign to admonish them of their wrongs in perpetual idol worship and dependence on outside nations."
+			},
+			{
+				"type": "video",
+				"data": "kE6SZ1ogOVU"
+			},
+			{
+				"type": "info",
+				"data": "King Jeroboam II, one of the worst kings in Israel's history, grew apathetic and allowed idol worship to run amok in the nation, opening the doorway for Israelites to cheat, steal, have unlawful sex with, and even murder each other on a constant basis. Growing cold and distant, they had forgotten about knowing God as their intimate first love, ushering in a disaster that would imminently strike through Assyria's siege. But God does not forget Israel even in their self-destruction, and He teaches us that love is the strongest force of all, even over sin.\n\nHope would still come through God's Messiah."
+			}
+		]
 	},
 	{
 		"bookId": 29,
-		"overview": "Prediction of woes upon Judah, and of the favor with which God will receive the penitent people. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Joel reflects on the \"Day of the Lord\" and how true repentance will bring about the great restoration hoped for in the other prophetic books."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Joel accounts for justice over evil in a form that's unique to the other Old Testament prophets. Unlike the other Books, Joel tells us a story about a terrible plague of locusts that seems to traverse across time."
+			},
+			{
+				"type": "video",
+				"data": "zQLazbgz90c"
+			},
+			{
+				"type": "info",
+				"data": "No particular mention of Israel's sins is present in the book, but the consequences of the terrible events described are certainly clear: God will one day wipe out all evil and start creation over. But through this destruction also comes eternal protection for those who believe in Him.\n\nSalvation from the Messianic King is once again prophesied, but this time the Holy Spirit is prophesied to come too, causing seemingly ordinary people to have visions, divine dreams, and be filled with God's Spirit. That's exactly what happened during Pentecost to Jesus' disciples after His death and resurrection, ensuring us that the Day of the Lord is even closer at hand today."
+			}
+		]
 	},
 	{
 		"bookId": 30,
-		"overview": "Prediction that Israel and other neighboring nations will be punished by conquerors from the north, and of the fulfillment of the Messiah's kingdom. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Amos accuses Israel of breaking their covenant with God, and highlights how their idolatry has led to injustice and the neglect of the poor."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Amos is an intriguing Scripture from a unique individual, Amos, a shepherd and fig tree farmer dwelling in southern Judah who is called by God to go to Bethel and announce warnings of judgment to the northern kingdom of Israel."
+			},
+			{
+				"type": "video",
+				"data": "mGgWaPGpGz4"
+			},
+			{
+				"type": "info",
+				"data": "Northern Israel had conquered other nations and enjoyed its recent successes, but was spiritually bankrupt on the inside. Worshiping local pagan gods twisted their moral perceptions, and the people of Israel infamously cheated, stole and sold their poor into slavery in foreign lands.\n\nGod is grieved by the evils he sees the people of Israel doing, but through His mercy, He is willing to give them another chance to change their ways. What can we learn by reading Amos today? Through Amos' wisdom, we discover that doing the right thing and loving others is more important than sacrifice to God, who desires to renew the hearts of everything through His coming Messiah King."
+			}
+		]
 	},
 	{
 		"bookId": 31,
-		"overview": "Prediction of the desolation of Edom. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Obadiah announces Edom's downfall to Babylon, which is an image of how God will bring down all arrogant and violent nations."
+			},
+			{
+				"type": "subtitle",
+				"data": "The smallest Old Testament account, the Book of Obadiah is a vision written by The Lord's prophet known as Obadiah, who prophesied against Israel's relative nation Edom."
+			},
+			{
+				"type": "video",
+				"data": "i4ogCrEoG5s"
+			},
+			{
+				"type": "info",
+				"data": "The Edomites, who were descended from Jacob's brother Esau, still carried the grudge their founder had for Jacob's deception. Worse, Esau's nation hated Israel even more. They refused to help Israel in their need, sold them as slaves, and even abused them while they were exiled to Babylon.\n\nThrough Obadiah, God declares judgment over Edom and prophesies that they will be erased from history. Babylon overtook Edom 100 years later, never to recover again."
+			}
+		]
 	},
 	{
 		"bookId": 32,
-		"overview": "Prophecies relating to Nineveh. "
+		"data": [
+			{
+				"type": "title",
+				"data": "A subversive story about a rebellious prophet who despises his God for loving his enemies."
+			},
+			{
+				"type": "subtitle",
+				"data": "If you have ever attended church, Sunday school, or bedtime story sessions as a child, you have likely heard about the story in the Book of Jonah at some point. But, the prophet Jonah's account of remarkable experiences with storms at sea, being eaten by a fish, and plants that miraculously grow and die in a day have lessons that go much deeper than what is on the surface."
+			},
+			{
+				"type": "video",
+				"data": "dLIabZc0O4c"
+			},
+			{
+				"type": "info",
+				"data": "Through Jonah's perspective, we have the opportunity to perform a spiritual checkup of ourselves. Do we truly forgive and love our enemies? Do we run away from the Lord about certain issues, afraid of being exposed? The answer is different for every individual, and yet God personally knows the answers to these questions. By examining ourselves in Jonah's story, we can learn to trust God in His final decisions and give all our concerns to Him, while knowing that He desires to save every individual on Earth and reunite with them forever.\n\nNo one is too far for Him to reach."
+			}
+		]
 	},
 	{
 		"bookId": 33,
-		"overview": "Predictions relating to the invasions of Shalmaneser and Sennacherib, the Babylonish captivity, the establishment of a theocratic kingdom in Jerusalem, and the birth of the Messiah in Bethlehem. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Micah announces that God's justice is coming in order to create a new future of love and faithfulness on the other side of Israel's sin and exile."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Micah describes God's coming judgment on Israel because of its rebellion. The Assyrian Empire and then the Babylon Empire would destroy the nation and leave Jerusalem in ruin."
+			},
+			{
+				"type": "video",
+				"data": "MFEUEcylwLc"
+			},
+			{
+				"type": "info",
+				"data": "However, Micah also gives the people hope. Like a shepherd, God will one day gather and restore a faithful remnant to the land. He will rebuild Jerusalem, defeat evil forever, set a Messianic King to rule over the people and bless all the nations.\n\nBefore that can happen, though, He must confront and judge evil from among His people. Then He can show mercy and fulfill His covenant promise to Abraham and bless all the nations through Israel. His ultimate purpose is not to destroy Israel but to redeem and save the world."
+			}
+		]
 	},
 	{
 		"bookId": 34,
-		"overview": "Prediction of the downfall of Assyria. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Nahum portrays the downfall of Nineveh and Assyria as an image of how God will confront and bring down all violent human empires."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Nahum is a collection of poems announcing the downfall of Assyria, one of Israel's worst oppressors. Referencing Daniel, Exodus, Isaiah and Babylon, Nahum shows us that the destruction of Nineveh and Assyria are examples of how God works in history in every age."
+			},
+			{
+				"type": "video",
+				"data": "Y30DanA5EhU"
+			},
+			{
+				"type": "info",
+				"data": "He is committed to justice and will not allow any arrogant, violent or evil nation to endure forever. However, while He defeats evil, He is also good and cares for the innocent. He will provide a refuge on the day of distress for anyone who humbles himself before God, believes in God's justice and trusts that in His time He will bring down oppressors in every time and place."
+			}
+		]
 	},
 	{
 		"bookId": 35,
-		"overview": "A prediction of the doom of the Chaldeans. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Habakkuk struggles to understand God's goodness in the midst of such evil and injustice in the world."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Habakkuk is a compilation of the prophet's laments, not an accusation against Israel and its sin or a message to the people on God's behalf like some of the other prophetic books. Instead, Habakkuk questions God's goodness because he sees so much injustice, evil and tragedy in the world. He's also concerned because God plans to send Babylon, an intensely evil nation, to judge Israel."
+			},
+			{
+				"type": "video",
+				"data": "OPMaRqGJPUU"
+			},
+			{
+				"type": "info",
+				"data": "Throughout the book, we see that Babylon is an example of any nation that exalts itself above God and practices injustice, violence and idolatry. In the end, God reminds Habakkuk and every generation that God will deal with evil. We can continue to love and trust His timing and plan as we remain faithful to Him."
+			}
+		]
 	},
 	{
 		"bookId": 36,
-		"overview": "A prediction of the overthrow of Judah for its idolatry and wickedness. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Zephaniah announces God’s purifying judgment on Israel. It will remove evil and open up a new future where all people can flourish in peace."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Zephaniah contains some of the most intense images of God's justice and love found in the prophetic books. Zephaniah warns Israel and the surrounding nations that the day of the Lord is near. God will judge the nations with a burning fire as He purifies them from sin, evil and violence."
+			},
+			{
+				"type": "video",
+				"data": "oFZknKPNvz8"
+			},
+			{
+				"type": "info",
+				"data": "God performs this act of justice because He's passionate about protecting and rescuing His world from evil. He loves us so much that He must purify us. Only then can He bring restoration where He removes evil forever and creates a New Jerusalem for His faithful remnant from all nations to gather and flourish in peace and praise Him. Together, God's justice and love give the world future hope."
+			}
+		]
 	},
 	{
 		"bookId": 37,
-		"overview": "Prophecies concerning the rebuilding of the temple."
+		"data": [
+			{
+				"type": "title",
+				"data": "Haggai challenges Israel after the exile to remain faithful to their God and rebuild the temple."
+			},
+			{
+				"type": "subtitle",
+				"data": "The people of Israel were conquered by Babylon because they broke their covenant with God through idolatry and injustice. The book of Haggai was written 70 years after this prophesied exile and recounts the experience of a small group of Israelites, led by Joshua and Zerubbabel, who had returned to rebuild Jerusalem."
+			},
+			{
+				"type": "video",
+				"data": "juPvv_xcX-U"
+			},
+			{
+				"type": "info",
+				"data": "Haggai challenges the returning exiles to remember their covenant, remain faithful to God and build the temple before constructing their own homes. While the new temple didn't meet their expectations, their efforts and faithfulness would be blessed. They could also be encouraged by God's promise to build a New Jerusalem for His international kingdom, defeat evil, and live in their midst. Future prophetic books contain more details about when these promises would be fulfilled."
+			}
+		]
 	},
 	{
 		"bookId": 38,
-		"overview": "Prophecies relating to the rebuilding of the temple and the Messiah. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Zechariah's visions foster hope in the future promise of the messianic kingdom, and challenge Israel after the exile to remain faithful to God."
+			},
+			{
+				"type": "subtitle",
+				"data": "Almost 70 years after the exile, the Israelites were experiencing hardships and wondered if prophetic promises of a New Jerusalem would ever be fulfilled. The book of Zechariah answers this question through several dream visions."
+			},
+			{
+				"type": "video",
+				"data": "_106IfO6Kc0"
+			},
+			{
+				"type": "info",
+				"data": "These bizarre images remind God's people that they must remain faithful to the covenant if they want the New Jerusalem, Messianic kingdom, peace on earth and end of evil to come to pass. Even though the book doesn't follow a neat, orderly pattern and contains scary and bizarre images, it shows glimpses of God's hand at work guiding history toward His own purposes. We can look above the chaos and hope for the coming of God's kingdom, which will motivate faithfulness in the present."
+			}
+		]
 	},
 	{
 		"bookId": 39,
-		"overview": "Prophecies relating to the calling of the Gentiles and the coming of Christ. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Malachi accuses Israel of selfishness after the exile and announces that the day of the Lord will purify Israel and prepare them for God's kingdom."
+			},
+			{
+				"type": "subtitle",
+				"data": "One hundred years after exile, the Israelites who had returned to Jerusalem were as evil and corrupt as their ancestors. The book of Malachi addresses their corruption regarding issues like sacrifices, marriage and tithing. It also affirms that God does love His people and will fulfill prophecy."
+			},
+			{
+				"type": "video",
+				"data": "HPGShWZ4Jvk"
+			},
+			{
+				"type": "info",
+				"data": "The entire Scripture is one unified story that tells us the truth about the human condition and sin while announcing God's promise to one day send a messenger and then show up personally. He will defeat evil and purify a faithful remnant, establish a New Jerusalem and bring peace, healing and justice forever. It's that promise that prompts God's people to denounce sin, remain faithful to His covenant and hope for the future."
+			}
+		]
 	},
 	{
 		"bookId": 40,
-		"overview": "A brief history of the life of Christ. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jesus brings God’s heavenly kingdom to earth and invites his disciples into a new way of life through his death and resurrection."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Gospel of Matthew tells the story of Jesus' birth, life, death and resurrection as a continuation and fulfillment of the whole Biblical story of God and Israel."
+			},
+			{
+				"type": "video",
+				"data": "3Dv4-n6OYGI"
+			},
+			{
+				"type": "info",
+				"data": "Matthew begins with details of how Jesus descends from the line of David, making Him a king. It proceeds to share Jesus' teachings that prove He's an authoritative teacher like Moses. Throughout the book, we see that Jesus is Emmanuel, or God with us, and welcomes everyone into the upside down kingdom where leaders serve. \n\nFrom the calling of the disciples to the parables to the Great Commission, this New Testament book shows readers how the promises and prophecies God made to His people in the Old Testament do come to pass through Jesus."
+			},
+			{
+				"type": "video",
+				"data": "GGCF3OPWN14"
+			}
+		]
 	},
 	{
 		"bookId": 41,
-		"overview": "A brief history of the life of Christ, supplying some incidents omitted by St. Matthew. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Mark demonstrates that Jesus is Israel's messiah who inaugurates God’s kingdom through his suffering, death, and resurrection."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Gospel of Mark is a carefully crafted story that gives an account of Jesus' life and addresses the question of whether or not He is the Jewish Messiah."
+			},
+			{
+				"type": "video",
+				"data": "OVRixfameGY"
+			},
+			{
+				"type": "info",
+				"data": "In the first half, everyone questions who He is, the middle questions the disciples' belief about Him and the second half tells how He became the Messiah. Many Jews hoped that the Messiah would overthrow the Romans and rule as king, but as we read this book, we see that He came as a servant to set up the kingdom of God on earth. While He is the Son of God, He also sacrificed His life to save people from slavery to sin. The book's abrupt ending challenges us to decide if we believe He is the Messiah."
+			},
+			{
+				"type": "video",
+				"data": "HGHqu9-DtXk"
+			}
+		]
 	},
 	{
 		"bookId": 42,
-		"overview": "The history of the life of Christ, with especial reference to his most important acts and discourses. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jesus carries the covenant story of God and Israel to its culmination and he announces the good news of God’s kingdom to the poor and the rich."
+			},
+			{
+				"type": "subtitle",
+				"data": "Eyewitness accounts in the Gospel of Luke show how Jesus fulfills Old Testament prophecies relating to the covenant between God and Israel."
+			},
+			{
+				"type": "video",
+				"data": "XIb_dCIxzr0"
+			},
+			{
+				"type": "info",
+				"data": "Luke documents how Jesus expands God's kingdom and covenant by creating a new Israel that includes the poor, outcasts and others to whom Jesus brings restoration and reverses their life circumstances as He gives them freedom and release from the tyranny of evil and sin.\n\nThroughout the book, we see that Jesus is indeed the messianic king, but He will reign over Israel by suffering. His actions usher in an upside down kingdom marked by self-giving love, and He challenges his disciples to follow His example and share in His ministry."
+			},
+			{
+				"type": "video",
+				"data": "26z_KhwNdD8"
+			}
+		]
 	},
 	{
 		"bookId": 43,
-		"overview": "The life of Christ, giving important discourses not related by the other evangelists. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jesus becomes human as the incarnation of the creator God of Israel, to share His love and the gift of eternal life with the world."
+			},
+			{
+				"type": "subtitle",
+				"data": "Throughout the Gospel of John, we see that Jesus is God and the reality toward which all of Israel's history points."
+			},
+			{
+				"type": "video",
+				"data": "G-2e9mMf7E8"
+			},
+			{
+				"type": "info",
+				"data": "Not only is Jesus the Messiah, but He's also the Son of God who gives eternal life to everyone who believes on His name. We see this reality through the signs and miracles He performs, and seven times He answers \"I Am\" when people question His identity.\n\nHe also uses His time on earth to introduce people to the new birth. By believing that He is the Messiah and God's son, they have eternal life and freedom from sin and are empowered to perform radical acts of kindness, generosity and selfless love as they listen to His voice and obey Him."
+			},
+			{
+				"type": "video",
+				"data": "RUfh_wOsauk"
+			}
+		]
 	},
 	{
 		"bookId": 44,
-		"overview": "The history of the labors of the apostles and of the foundation of the Christian Church. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jesus sends the Holy Spirit to empower his disciples as they carry the good news of his kingdom to the nations of the world."
+			},
+			{
+				"type": "subtitle",
+				"data": "Before Jesus was taken into heaven where He was enthroned to share God's rule over the world, He instructed His followers to be a witness for Him. The book of Acts details their witness."
+			},
+			{
+				"type": "video",
+				"data": "CGbNw855ksw"
+			},
+			{
+				"type": "info",
+				"data": "Jesus' followers received the Holy Spirit on Pentecost and became filled and equipped to spread the good news that would restore God's kingdom over the world. Through persecution, the believers were scattered. They continued to preach, and the church at Antioch was born.\n\nIt grew into the first multiethnic, international church from which missionaries were sent throughout the world to preach about Jesus, the messianic Messiah and risen king of all nations. Paul even continued to preach despite imprisonment and wrote important letters to the churches."
+			},
+			{
+				"type": "video",
+				"data": "Z-17KxpjL0Q"
+			}
+		]
 	},
 	{
 		"bookId": 45,
-		"overview": "A treatise by St. Paul on the doctrine of justification by Christ. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul shows how Jesus created the new covenant family of Abraham through his death and resurrection and the sending of the Spirit."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Romans is a four-part explanation of the Gospel message written by Paul to the Church in Rome. Since Adam, humans chose to live sinful and selfish lives."
+			},
+			{
+				"type": "video",
+				"data": "ej_6dVdJSIU"
+			},
+			{
+				"type": "info",
+				"data": "The people of Israel tried to obey God and follow the Law, but they didn't succeed. Only faith in Jesus' death and resurrection can justify humanity and fulfill God's promise to create a covenant relationship with His people, the descendants of Abraham.\n\nThrough Jesus, God creates a new covenant family that includes Jews and gentiles who are unified as they love and forgive each other. Even though people continue to reject Jesus, God uses their rejection to expand His family and grow the Church."
+			},
+			{
+				"type": "video",
+				"data": "0SVTl4Xa5fY"
+			}
+		]
 	},
 	{
 		"bookId": 46,
-		"overview": "A letter from St. Paul to the Corinthians, correcting errors into which they had fallen. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul shows the new Christians in Corinth that all of life's most complex problems can be seen through the lens of the gospel."
+			},
+			{
+				"type": "subtitle",
+				"data": "1 Corinthians challenges believers to examine every area of life through the lens of the gospel. Specifically, Paul addresses divisions, food, sex, worship gatherings and the resurrection."
+			},
+			{
+				"type": "video",
+				"data": "yiHf8klCCc4"
+			},
+			{
+				"type": "info",
+				"data": "He reminds believers that the Church is not a popularity contest, followers of Jesus cannot compromise when it comes to sexual integrity, the core principle of worship gatherings is love for others, and the resurrection gives us a reason for unity, motivation to maintain sexual purity, ability to love other people more than ourselves and ultimate hope for victory over death.\n\nOur belief that Jesus was raised from the dead makes the gospel more than moral advice or a recipe for private spirituality. It opens a whole new reality for every area of our life."
+			}
+		]
 	},
 	{
 		"bookId": 47,
-		"overview": "St. Paul confirms his disciples in their faith, and vindicates his own character. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul resolves his conflict with the Corinthians by showing how the scandal of the crucifixion turns our value systems upside-down."
+			},
+			{
+				"type": "subtitle",
+				"data": "Paul addressed problems in the Corinth church in 1 Corinthians, but many rejected his advice. This grieved Paul as he had spent a great deal of time with the Corinthian church."
+			},
+			{
+				"type": "video",
+				"data": "3lfPK2vfC54"
+			},
+			{
+				"type": "info",
+				"data": "He followed up with a painful visit and then sent them 2 Corinthians, a letter that assured them he forgave and loved them. After reading the letter, many church members repented and embraced the letter's message.\n\nEssentially, it challenges believers to see life through the paradox of the cross. Because of the cross and God's Spirit, Jesus' followers receive power to live transformed lives. They become equipped to take up Jesus' cruciform life and make it their own.\n\nThrough the cross and resurrection, believers may live differently and model the values God desires, including generosity, humility, and weakness."
+			}
+		]
 	},
 	{
 		"bookId": 48,
-		"overview": "St. Paul maintains that we are justified by faith, and not by rites. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul challenges the Galatian Christians to stop allowing controversial Torah observances to divide their church's congregation."
+			},
+			{
+				"type": "subtitle",
+				"data": "The Book of Galatians reminds the Church to embrace and follow the gospel message of the crucified Messiah. The requirement for non-Jewish Christians to become Torah observers and be circumcised or eat kosher misses the point. Jesus alone fulfills the laws of Torah and justifies believers."
+			},
+			{
+				"type": "video",
+				"data": "vmx4UjRFp0M"
+			},
+			{
+				"type": "info",
+				"data": "When people trust in Jesus as Messiah and put their faith in Him, His life, death, and resurrection become theirs. They are new creations, free from the requirement to follow the laws of Torah.\n\nThey now join a new multi-ethnic covenant family of Jesus, thus fulfilling God's promise to Abraham. Because of Jesus and the Spirit, believers learn to love God and others."
+			}
+		]
 	},
 	{
 		"bookId": 49,
-		"overview": "A treatise by St. Paul on the power of divine grace. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul shows how the good news should create ethnically diverse communities that are unified by devotion to Jesus and to each other."
+			},
+			{
+				"type": "subtitle",
+				"data": "In the book of Ephesians, we see how the gospel story affects believers' everyday lives. God the Father planned throughout history for Jesus to create a multi-ethnic community of followers. Comprised of Jews and non-Jews, these followers form the covenant family God promised to Abraham. They live in unity as one body in their families, neighborhoods, and churches because of God's grace."
+			},
+			{
+				"type": "video",
+				"data": "Y71r-T98E2Q"
+			},
+			{
+				"type": "info",
+				"data": "Scripture, prayer, and their relationships with each other equip them to put off their old humanity and put on new humanity that mimics Jesus and marks them as mature followers of Jesus.\n\nEnergized by the Holy Spirit, believers also stand tall against the spiritual evil that threatens their unity as a Church family and maturity as followers of Jesus."
+			}
+		]
 	},
 	{
 		"bookId": 50,
-		"overview": "St. Paul sets forth the beauty of Christian kindness. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul thanks the Philippian Christians for their generosity and shares how they are all called to imitate Jesus’ self-giving love."
+			},
+			{
+				"type": "subtitle",
+				"data": "In the book of Philippians, we read a series of short vignettes revolving around the Messiah Poem in Chapter 2. The poem retells the gospel story and references Adam's rebellion from Genesis and the suffering servant in Isaiah."
+			},
+			{
+				"type": "video",
+				"data": "oE9qqW1-BkU"
+			},
+			{
+				"type": "info",
+				"data": "In each vignette, Paul uses words or ideas from the poem to show how living as a Christian means seeing our own story as a living expression of Jesus' story. We are to imitate His way of life. Even in our suffering, we can be content as we mimic Him and draw closer to Him.\n\nWhile our true citizenship is in heaven, we can enjoy a close connection to Jesus and an awareness of His love and presence now that gives us hope in the darkest hours."
+			}
+		]
 	},
 	{
 		"bookId": 51,
-		"overview": "St. Paul warns his disciples against errors, and exhorts to certain duties. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul encourages the Colossian Christians to see Jesus as the center of all reality, so they don’t give in to pressure from other religions."
+			},
+			{
+				"type": "subtitle",
+				"data": "In the book of Colossians, Paul addresses problems the Church faces and encourages believers to remain devoted to the exalted Jesus."
+			},
+			{
+				"type": "video",
+				"data": "pXTXlDxQsvc"
+			},
+			{
+				"type": "info",
+				"data": "Because of Jesus' position as the firstborn and head of the body and because of His resurrection, they are reconciled to God, free from the law and able to live transformed lives. They are joined to Jesus as new creations and are part of His new multi-ethnic family.\n\nAs members of the new humanity, no part of their human existence remains untouched by the loving and liberating rule of Jesus. Their suffering, temptation to compromise, moral character and the power dynamic in their home must all be re-examined and can be transformed."
+			}
+		]
 	},
 	{
 		"bookId": 52,
-		"overview": "St. Paul exhorts his disciples to continue in the faith and in holy conversation. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul directs the persecuted Thessalonian Christians to hope in the future of king Jesus' return who will make all things right."
+			},
+			{
+				"type": "subtitle",
+				"data": "Paul's letter to the Thessalonians celebrates a flourishing Church. Despite persecution and suffering, believers stand strong in their commitment to Jesus."
+			},
+			{
+				"type": "video",
+				"data": "No7Nq6IX23c"
+			},
+			{
+				"type": "info",
+				"data": "From the very beginning, following Jesus as King has produced a truly counter-cultural holy way of life that will sometimes generate suspicion and conflict among our neighbors.\n\nThe way Jesus' followers respond to such hostility should always be with love, and they should meet opposition with grace and generosity. This way of life is motivated by hope in the coming kingdom of Jesus that has already begun in His resurrection from the dead. Throughout 1 Thessalonians, we see how the Thessalonian Church embodies holiness, love and a future hope as they remain firm in their faith and commitment to Jesus their King."
+			}
+		]
 	},
 	{
 		"bookId": 53,
-		"overview": "St. Paul corrects an error concerning the speedy coming of Christ the second time. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul clarified his earlier teachings about Jesus' future return and rebukes the Christians who were disrupting the community."
+			},
+			{
+				"type": "subtitle",
+				"data": "In 2 Thessalonians, Paul addresses ongoing problems in the Church. Despite intense persecution, Paul encourages them to show victory over the world by imitating Jesus' non-violent and patient endurance."
+			},
+			{
+				"type": "video",
+				"data": "kbPBDKOn1cc"
+			},
+			{
+				"type": "info",
+				"data": "While they also worried they had missed Jesus' return, Paul clarifies that they should not fuel apocalyptic speculation but recall Jesus' words in Mark 13 about the public and obvious events leading up to His return. They should also remain faithful, hopeful, and confident and not fearful while waiting for Jesus' return and deliverance from the evil ruler.\n\nFinally, Paul addresses idleness and challenges believers to imitate Jesus' self-giving love. Their hard work provides for themselves and benefits others. Throughout the book, we see that what we hope for shapes what we live for."
+			}
+		]
 	},
 	{
 		"bookId": 54,
-		"overview": "St. Paul instructs Timothy in the duty of a pastor, and encourages him in the work of the ministry. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul shows Timothy how to restore order and purpose to the church in Ephesus which has been disrupted by false teachers."
+			},
+			{
+				"type": "subtitle",
+				"data": "In 1 Timothy, we read a holistic vision of the nature and mission of the church. Many bad teachers shared false theology that confused believers."
+			},
+			{
+				"type": "video",
+				"data": "7RoqnGcEjcs"
+			},
+			{
+				"type": "info",
+				"data": "Paul instructs Timothy on how to address these teachers and lead the church effectively. Throughout the book, we see that what a church believes will directly shape how its members live and behave.\n\nThe church's theology and beliefs must constantly be critiqued and formed by scriptures and the good news about Jesus. How the church is perceived in public is also very important. It should be known for its devotion to the risen King Jesus as it models integrity, good works and serving the poor and most vulnerable."
+			}
+		]
 	},
 	{
 		"bookId": 55,
-		"overview": "St. Paul instructs Timothy in the duty of a pastor, and encourages him in the work of the ministry. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul is near execution and offers a personal challenge to Timothy to keep following Jesus no matter the sacrifice and risk."
+			},
+			{
+				"type": "subtitle",
+				"data": "Paul's final and most personal letter, 2 Timothy encourages church planter Timothy to accept his calling and deal with corrupt teachers."
+			},
+			{
+				"type": "video",
+				"data": "urlvnxCaL00"
+			},
+			{
+				"type": "info",
+				"data": "The letter also reminds Timothy to maintain faith and hope in Jesus' resurrection and to raise faithful leaders who will teach the good news about Jesus. They must focus on the Scriptures' unified story line that leads to salvation in Jesus and helps believers achieve their purpose of spreading the good news.\n\nWhile following Jesus, believers will experience challenges, suffering, risk, tension, discomforts and struggles. In those dark and difficult moments, Jesus' presence, love and faithfulness can become tangible and real, which imprisoned and abandoned Paul and generations of Christians after him, know firsthand."
+			}
+		]
 	},
 	{
 		"bookId": 56,
-		"overview": "Epistle to Titus. St. Paul encourages Titus in the performance of his ministerial duties. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul commissions Titus to show how the good news of Jesus and the power of the Spirit can transform Cretan culture from within."
+			},
+			{
+				"type": "subtitle",
+				"data": "Paul wrote the book of Titus for his companion. Titus was to visit Crete, infamous for its sin, and restore order to house churches there. Part of his job was to replace corrupt teachers in the churches with godly leaders."
+			},
+			{
+				"type": "video",
+				"data": "PUEYCVXJM3k"
+			},
+			{
+				"type": "info",
+				"data": "Paul also reminded Cretan believers that while they lived in a sinful culture, they could be transformed into a new humanity by the same grace that Jesus demonstrated when He died to redeem them.\n\nAs new humanity, they could say no to a lifestyle that was inconsistent with God's generous love. They could also show God's salvation message and transform their communities by participating in Cretan culture, rejecting anything corrupt, embracing good, living and devoting themselves to Jesus and promoting the common good."
+			}
+		]
 	},
 	{
 		"bookId": 57,
-		"overview": "An appeal to a converted master to receive a converted escaped slave with kindness. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Paul helps his friend Philemon to reconcile with his escaped former slave Onesimus, and shows that they are equals because of Jesus."
+			},
+			{
+				"type": "subtitle",
+				"data": "One of Paul's shortest and the most explosive letters, the book of Philemon demonstrates the gospel through action. It's written to Philemon whose slave Onesimus ran away and became a believer under Paul's teaching."
+			},
+			{
+				"type": "video",
+				"data": "aW9Q3Jt6Yvk"
+			},
+			{
+				"type": "info",
+				"data": "Paul urges Philemon to forgive Onesimus and accept him back as an equal. Because they are both believers, God's grace and healing mercy have made them partners under the new humanity Jesus' established.\n\nWhile Paul doesn't mention Jesus' death and resurrection directly in this book, he offers to take on any punishment Onesimus deserves, a demonstration of what Jesus did on the cross. He encourages Philemon to do the same as he reconciles to Onesimus before God."
+			}
+		]
 	},
 	{
 		"bookId": 58,
-		"overview": "St. Paul maintains that Christ is the substance of the ceremonial law. "
+		"data": [
+			{
+				"type": "title",
+				"data": "The author shows how Jesus is the ultimate revelation of God's love and mercy and is worthy of our devotion."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Hebrews compares and contrasts Jesus to key historical people and events from the Old Testament. Through these comparisons, we see His superiority. He is greater than angels, the Torah, Moses, the Promised Land, priests, Melchizedek, sacrifices, and the covenant. He is God's Word, the hope for a new creation, our eternal priest, and the perfect sacrifice."
+			},
+			{
+				"type": "video",
+				"data": "1fNWTZZwgbs"
+			},
+			{
+				"type": "info",
+				"data": "Throughout the book, we are also challenged to remain faithful to Jesus and follow great models of faith from the Old Testament despite hardships and persecution. These challenges will make us uncomfortable but instead of fearing them, remember that rejecting Jesus is foolish.\n\nJesus is the ultimate revelation of God's love and mercy and is worthy of all our trust and devotion."
+			}
+		]
 	},
 	{
 		"bookId": 59,
-		"overview": "A treatise on the efficacy of faith united with good works. "
+		"data": [
+			{
+				"type": "title",
+				"data": "James combines the wisdom of his brother Jesus with the book of Proverbs in his own challenging call to live a life wholly devoted to God."
+			},
+			{
+				"type": "subtitle",
+				"data": "Written by Jesus' half brother Jacob, the book of James shares sage wisdom for all the churches and followers of Jesus. It's influenced by Proverbs and frequently quotes Jesus' Sermon on the Mount."
+			},
+			{
+				"type": "video",
+				"data": "qn-hLHWwRYY"
+			},
+			{
+				"type": "info",
+				"data": "The introduction summarizes the words and themes found throughout the book, which is filled with short, challenging wisdom speeches that are full of metaphors and easily memorized one-liners.\n\nWhile James doesn't teach new theology, it does challenge believers on how they should live. Topics covered include words, favoritism, love, wealth and hardship. When believers listen to and obey God's word, they love Him and others. Their actions match their words, and their lives are made whole, complete and perfect."
+			}
+		]
 	},
 	{
 		"bookId": 60,
-		"overview": "Exhortations to a Christian life, with various warnings and predictions. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Peter offers hope to persecuted Christians and guides them with practical instruction on living life consistent with following Jesus. "
+			},
+			{
+				"type": "subtitle",
+				"data": "1 Peter gives persecuted Christians a powerful reminder that they have hope in the midst of their suffering. From the time of Abraham, God's people were a misunderstood minority and should expect to face hostility because they live under King Jesus' rule."
+			},
+			{
+				"type": "video",
+				"data": "WhP7AZQlzCg"
+			},
+			{
+				"type": "info",
+				"data": "Apostles are chosen by God, and their persecution is actually a gift because it offers them a chance to show others the surprising generosity and love of Jesus, which is fueled by hope in His return and victory over evil. Peter is hopeful that their imitation of Jesus and demonstration of His upside-down kingdom, which includes baptism and service, will give power to their words as they bear witness to God's mercy and show people the beautiful truth about Jesus."
+			}
+		]
 	},
 	{
 		"bookId": 61,
-		"overview": "Exhortations to a Christian life, with various warnings and predictions. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Peter calls for faithfulness and confronts corrupt teachers who distorted the message about Jesus and lead others astray."
+			},
+			{
+				"type": "subtitle",
+				"data": "2 Peter is an intense, passionate farewell speech addressed to the same Messianic church communities as 1 Peter. In the book, Peter challenges Jesus' followers to continue growing in their faith, love and service to God."
+			},
+			{
+				"type": "video",
+				"data": "wWLv_ITyKYc"
+			},
+			{
+				"type": "info",
+				"data": "He issues two warnings against corrupt teachers who are leading the Christian communities astray with their way of life and distorted theology.\n\nPeter addresses their objections to the reality of Jesus' resurrection and the final judgment. He reminds Christians that their hope is in God. In His time on the Day of the Lord, He will expose evil and injustice and remove it to make way for a new heaven and earth that's permeated with righteousness, God's love and people who know and love God and their neighbors."
+			}
+		]
 	},
 	{
 		"bookId": 62,
-		"overview": "Respecting the person of our Lord, and an exhortation to Christian love and conduct. "
+		"data": [
+			{
+				"type": "title",
+				"data": "John calls followers of Jesus to share in God's own life and love by devoting themselves to loving one another. "
+			},
+			{
+				"type": "subtitle",
+				"data": "Written by John the Elder to house church believers, 1 John, 2 John, 3 John echo the gospel of John. They emphasize that God is light and love and every true believer will demonstrate God's light and love."
+			},
+			{
+				"type": "video",
+				"data": "l3QkE6nKylM"
+			},
+			{
+				"type": "info",
+				"data": "Each book also addresses deceivers, teachers who no longer acknowledge that Jesus is the Messiah or Son of God but spread fear and division among believers. All legitimate teachers will share the truth about Jesus and the cross, love others sacrificially and spread love and light rather than fear. He also reminds believers to welcome true missionaries who teach the message of the cross and love others. They should not welcome deceivers or make idols of anything that exalts itself in God's place."
+			}
+		]
 	},
 	{
 		"bookId": 63,
-		"overview": "St. John warns a converted lady against false teachers. "
+		"data": [
+			{
+				"type": "title",
+				"data": "John calls followers of Jesus to share in God's own life and love by devoting themselves to loving one another. "
+			},
+			{
+				"type": "subtitle",
+				"data": "Written by John the Elder to house church believers, 1 John, 2 John, 3 John echo the gospel of John. They emphasize that God is light and love and every true believer will demonstrate God's light and love."
+			},
+			{
+				"type": "video",
+				"data": "l3QkE6nKylM"
+			},
+			{
+				"type": "info",
+				"data": "Each book also addresses deceivers, teachers who no longer acknowledge that Jesus is the Messiah or Son of God but spread fear and division among believers. All legitimate teachers will share the truth about Jesus and the cross, love others sacrificially and spread love and light rather than fear. He also reminds believers to welcome true missionaries who teach the message of the cross and love others. They should not welcome deceivers or make idols of anything that exalts itself in God's place."
+			}
+		]
 	},
 	{
 		"bookId": 64,
-		"overview": "A letter to Gaius, praising him for his hospitality. "
+		"data": [
+			{
+				"type": "title",
+				"data": "John calls followers of Jesus to share in God's own life and love by devoting themselves to loving one another. "
+			},
+			{
+				"type": "subtitle",
+				"data": "Written by John the Elder to house church believers, 1 John, 2 John, 3 John echo the gospel of John. They emphasize that God is light and love and every true believer will demonstrate God's light and love."
+			},
+			{
+				"type": "video",
+				"data": "l3QkE6nKylM"
+			},
+			{
+				"type": "info",
+				"data": "Each book also addresses deceivers, teachers who no longer acknowledge that Jesus is the Messiah or Son of God but spread fear and division among believers. All legitimate teachers will share the truth about Jesus and the cross, love others sacrificially and spread love and light rather than fear. He also reminds believers to welcome true missionaries who teach the message of the cross and love others. They should not welcome deceivers or make idols of anything that exalts itself in God's place."
+			}
+		]
 	},
 	{
 		"bookId": 65,
-		"overview": "Warnings against deceivers. "
+		"data": [
+			{
+				"type": "title",
+				"data": "Jude confronts corrupt teachers who distort the message about his brother Jesus and lead others astray."
+			},
+			{
+				"type": "subtitle",
+				"data": "Judah, one of Jesus' half brothers, wrote the book of Jude to Messianic believers who were familiar with Old Testament scriptures and Jewish literature. He uses these texts to refute corrupt teachers who lived immoral lives."
+			},
+			{
+				"type": "video",
+				"data": "6UoCmakZmys"
+			},
+			{
+				"type": "info",
+				"data": "Judah illustrate God's judgment on rebellion, but he warns against rebels corrupting other people. He then challenges the church to contend for the faith and stay faithful to God. As God's new temple, believers must build their lives on the core message of Jesus and then pray, love and obey.\n\nTheir lives must reflect their faith because God's grace through Jesus demands a whole-life response that includes moral living. The way they live is the most reliable indicator of what they actually believe."
+			}
+		]
 	},
 	{
 		"bookId": 66,
-		"overview": "The future of the Church foretold. "
+		"data": [
+			{
+				"type": "title",
+				"data": "John's visions reveal that Jesus has overcome evil by his death and resurrection, and will return one day as the true king of the world."
+			},
+			{
+				"type": "subtitle",
+				"data": "The book of Revelation was written to seven churches as both encouragement and challenge. An apocalyptic letter, it relies on visions, symbols, and Old Testament references to reveal the ultimate fulfillment of God's promise given to Abraham in Genesis."
+			},
+			{
+				"type": "video",
+				"data": "5nvVVcYD-0w"
+			},
+			{
+				"type": "info",
+				"data": "The book is not a secret code that allows believers to decipher the timeline of Jesus's return. Instead, it shows that every human kingdom eventually becomes Babylon and must be resisted. Jesus, the slain Lamb who died for the sins of the world, will return one day as King with His followers to prompt repentance.\n\nHe will remove evil permanently and make all things anew. That promise motivates every generation of God's people to remain faithful in the midst of persecution until their King returns."
+			},
+			{
+				"type": "video",
+				"data": "QpnIrbq2bKo"
+			}
+		]
 	}
 ]
