@@ -8,12 +8,14 @@ import getApolloClient from 'getApolloClient'
 import { useAuth } from 'providers/Auth'
 import { booksRegex } from 'helper'
 
+import Navbar from './Navbar'
+import Footer from './Footer'
 import Home from './Home'
 import Timeline from './Timeline'
 import ContactMe from './ContactMe'
 import ChapterDetail from './ChapterDetail'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import ChapterInfo from './ChapterInfo'
+import Notes from './Notes'
 
 export default () => {
 	const { jwt } = useAuth()
@@ -34,10 +36,13 @@ export default () => {
 					<AbsoluteAnimatedSwitch className="flex">
 						<Route exact path="/contact-me" component={ContactMe} />
 						<Route exact path={`/:bookName(${booksRegex})/:chapter`} component={ChapterDetail} />
+						<Route exact path={`/:bookName(${booksRegex})`} component={ChapterInfo} />
 						<Route exact path="/" component={Home} />
 						{/* Only allow past here if logged in */}
 						{!jwt ? <Redirect to="/" /> : null}
+						<Route exact path="/notes" component={Notes} />
 						<Route path="/timeline" component={Timeline} />
+						<Redirect to="/" />
 					</AbsoluteAnimatedSwitch>
 					<Footer />
 					<div id="modal-root" />
