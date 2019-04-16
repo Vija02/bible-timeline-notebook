@@ -139,7 +139,7 @@ export const formatStringLineBreak = str => {
 	return str
 		.replace(/\n/g, '<br />')
 		.split(/(<br \/>)/g)
-		.map(text => (text === '<br />' ? <br /> : text))
+		.map((text, i) => (text === '<br />' ? <br key={i} /> : text))
 }
 
 // Validate chapter
