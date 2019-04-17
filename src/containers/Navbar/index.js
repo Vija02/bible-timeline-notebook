@@ -32,7 +32,10 @@ export default class NavbarIndex extends Component {
 						<div className={styles.rightContainer}>
 							{/* <Link to="/about">About</Link> */}
 							{userId >= 0 ? (
-								<span onClick={onLogout}>Logout</span>
+								<>
+									<Link to="/notes">Notes</Link>
+									<span onClick={onLogout}>Logout</span>
+								</>
 							) : (
 								<LoginModalToggler>
 									<span>Login</span>

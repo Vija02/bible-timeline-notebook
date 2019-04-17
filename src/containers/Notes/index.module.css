@@ -1,0 +1,45 @@
+.division {
+	font-weight: 500;
+	font-size: 30px;
+	color: #aaa;
+	margin-bottom: 15px;
+}
+
+.divisionContainer{
+	margin-left: 20px;
+}
+
+.bookName {
+	color: #474747;
+	font-weight: 500;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.bookName span {
+	color: #848484;
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+
+.summaryContainer {
+	background-color: #859fe3;
+	color: white;
+	font-weight: 500;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 2px;
+}
+
+.summaryContainer p {
+	margin: 0;
+	word-wrap: break-word;
+}
+
+.chapterNumber {
+	position: absolute;
+	margin: 0px;
+	left: 0;
+	font-size: 1.5em;
+	color: #656565;
+}
