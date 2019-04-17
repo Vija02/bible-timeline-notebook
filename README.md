@@ -1,9 +1,6 @@
-<center>
-  
-  ![](public/favicon.ico)
-  
-  <h1>OverRise</h1>
-</center>
+![](public/favicon.ico)
+
+# OverRise
 
 OverRise is a website that aims to **help you read the Bible**.  
 Visit the site [here!](https://overrise.co.uk)
