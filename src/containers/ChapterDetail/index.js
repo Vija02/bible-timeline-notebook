@@ -116,6 +116,8 @@ const DropdownSelector = ({ bookName, chapter }) => {
 			<Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
 				<a
 					href={`https://www.biblegateway.com/passage/?search=${bookName}+${chapter}&version=NIRV`}
+					target="_blank"
+					rel="noopener noreferrer"
 					className="plainLink"
 				>
 					<MenuItem>Read elsewhere</MenuItem>

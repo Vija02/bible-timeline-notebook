@@ -17,7 +17,12 @@ export default props => {
 	return (
 		<div className="bodyContainer">
 			<div className="padContainer">
-				<a href="https://thebibleproject.com/explore/" className={styles.bibleProjectBanner}>
+				<a
+					href="https://thebibleproject.com/explore/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={styles.bibleProjectBanner}
+				>
 					The Bible Project
 				</a>
 				<h1 className={styles.bookTitle}>{bookName}</h1>
@@ -41,7 +46,12 @@ export default props => {
 					</div>
 					<span className={styles.credits}>
 						All Videos and content originated from{' '}
-						<a href="https://thebibleproject.com/explore/" className="link">
+						<a
+							href="https://thebibleproject.com/explore/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="link"
+						>
 							The Bible Project
 						</a>
 					</span>

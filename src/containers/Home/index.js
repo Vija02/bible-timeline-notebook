@@ -85,7 +85,7 @@ class ResourcesRow extends Component {
 		const { title, content, link } = this.props
 
 		return (
-			<a href={link} style={{ textDecoration: 'none' }}>
+			<a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
 				<div className="cardContainer">
 					<h4 className={styles.resourcesTitle}>
 						<span className={styles.resourcesTitle}>{title}</span>

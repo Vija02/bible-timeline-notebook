@@ -19,7 +19,12 @@ export default () => {
 					</Link>
 				</p>
 				<p>
-					<a className={styles.footerLink} href="https://github.com/overriseapp/overrise-web">
+					<a
+						className={styles.footerLink}
+						href="https://github.com/overriseapp/overrise-web"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						Github
 					</a>
 				</p>

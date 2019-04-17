@@ -17,12 +17,18 @@ export default () => {
 							<h1>Contact Me</h1>
 							<p>Feel free to send me anything! Feedback and suggestion welcomed.</p>
 							<h3>My Website</h3>
-							<a href="https://michaelsalim.co.uk">https://michaelsalim.co.uk</a>
+							<a href="https://michaelsalim.co.uk" target="_blank" rel="noopener noreferrer">
+								https://michaelsalim.co.uk
+							</a>
 							<h3>E-Mail</h3>
 							<p>salim.michaelmi@gmail.com</p>
 							<h3>Github</h3>
 							<p>File an issue in Github if website related</p>
-							<a href="https://github.com/overriseapp/overrise-web">
+							<a
+								href="https://github.com/overriseapp/overrise-web"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								https://github.com/overriseapp/overrise-web
 							</a>
 						</div>
