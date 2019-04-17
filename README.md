@@ -1,5 +1,7 @@
 # OverRise Web
 
+![](public/favicon.icoM)
+
 OverRise is a web app that allows user to make bible notes using a timeline view.  
 
 This repo holds the web frontend of OverRise.  
