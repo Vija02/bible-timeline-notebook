@@ -1,16 +1,22 @@
-# OverRise Web
+<div style="text-align: center;">
+  
+  ![](public/favicon.ico)
+  
+  <h2 style="font-size: 3em; margin: 0px;">OverRise</h2>
+</div>
 
-![](public/favicon.icoM)
+-----
 
-OverRise is a web app that allows user to make bible notes using a timeline view.  
+OverRise is a website that aims to **help you read the Bible**.  
+Visit the site [here!](https://overrise.co.uk)
 
-This repo holds the web frontend of OverRise.  
-The project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  
-Click [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) for the most recent guide of CRA
+Any Suggestions or Feedback, please create an issue or [contact me](https://overrise.co.uk/contact-me), Thank you!
 
-Look at the server for this project [here](https://github.com/OverRiseApp/overrise-server)
 
 # Development
+This repo holds the web frontend of OverRise and was bootstrapped with [Create React App](https://facebook.github.io/create-react-app/docs/getting-started). 
+
+Look at the server code powering this project [here](https://github.com/OverRiseApp/overrise-server)
 
 ## Get started
 Clone this repo, then:
