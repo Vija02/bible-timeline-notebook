@@ -1,11 +1,9 @@
-<div style="text-align: center;">
+<div style="display: flex; flex-direction: column; align-items: center;">
   
   ![](public/favicon.ico)
   
   <h2 style="font-size: 3em; margin: 0px;">OverRise</h2>
 </div>
-
------
 
 OverRise is a website that aims to **help you read the Bible**.  
 Visit the site [here!](https://overrise.co.uk)
