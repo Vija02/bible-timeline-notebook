@@ -7,6 +7,7 @@ Visit the site [here!](https://overrise.co.uk)
 
 Any Suggestions or Feedback, please create an issue or [contact me](https://overrise.co.uk/contact-me), Thank you!
 
+![](media/ss.png)
 
 # Development
 This repo holds the web frontend of OverRise and was bootstrapped with [Create React App](https://facebook.github.io/create-react-app/docs/getting-started). 
