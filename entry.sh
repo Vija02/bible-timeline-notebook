@@ -10,6 +10,8 @@ while read line; do
   eval "ACTUAL_ENV=\$$ENV_NAME"
 
   find /usr/share/nginx -type f -exec sed -i "s|$STRING_TO_REPLACE|$ACTUAL_ENV|g" {} \;
+  # Then we gzip the files
+  gzip -fk /usr/share/nginx/html/static/js/*.js && gzip -fk /usr/share/nginx/html/static/css/*.css
 done < /var/www/.env.production
 
 echo "Starting Nginx!"

@@ -10,7 +10,6 @@ RUN yarn
 
 COPY . .
 RUN yarn build
-RUN yarn gzip
 
 FROM nginx:alpine
 
