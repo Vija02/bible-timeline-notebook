@@ -37,9 +37,10 @@
 }
 
 .chapterNumber {
+	width: 30px;
 	position: absolute;
 	margin: 0px;
-	left: 0;
-	font-size: 1.5em;
+	left: -12px;
+	text-align: center;
 	color: #656565;
 }

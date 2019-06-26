@@ -44,7 +44,14 @@ export default () => {
 																.filter(node => node.bookId === book.bookId)
 																.map(node => (
 																	<div className={styles.summaryContainer}>
-																		<p className={styles.chapterNumber}>
+																		<p
+																			style={{
+																				fontSize: `${1.7 -
+																					node.chapter.toString().length *
+																						0.2}em`,
+																			}}
+																			className={styles.chapterNumber}
+																		>
 																			{node.chapter}
 																		</p>
 																		<p>{node.summary}</p>
