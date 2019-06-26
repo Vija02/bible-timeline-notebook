@@ -29,6 +29,7 @@
 		"react-scripts": "2.1.8",
 		"react-sizeme": "^2.3.6",
 		"react-toastify": "^4.4.0",
+		"unfetch": "^4.1.0",
 		"yup": "^0.26.6"
 	},
 	"scripts": {
