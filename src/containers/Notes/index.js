@@ -42,8 +42,8 @@ export default () => {
 															</h4>
 															{data.allChapterSummaries.nodes
 																.filter(node => node.bookId === book.bookId)
-																.map(node => (
-																	<div className={styles.summaryContainer}>
+																.map((node, i) => (
+																	<div key={i} className={styles.summaryContainer}>
 																		<p
 																			style={{
 																				fontSize: `${1.7 -
