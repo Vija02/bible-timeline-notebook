@@ -1,4 +1,4 @@
-@value themeColor from "sharedStyles/colors.css";
+@value themeColor from "../../sharedStyles/colors.css";
 @value scrollerSidePadding: 40px;
 @value dashSideMargin: 5px;
 @value dashWidth: 50px;

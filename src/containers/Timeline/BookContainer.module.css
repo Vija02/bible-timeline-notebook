@@ -1,4 +1,4 @@
-@value themeColor, selectedThemeColor from "sharedStyles/colors.css";
+@value themeColor, selectedThemeColor from "../../sharedStyles/colors.css";
 @value padding: 10px;
 .bookContainer, .selectedBookContainer {
 	transition: all 0.1s ease;

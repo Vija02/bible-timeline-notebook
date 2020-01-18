@@ -1,4 +1,4 @@
-@value boldThemeColor from "sharedStyles/colors.css";
+@value boldThemeColor from "../../../sharedStyles/colors.css";
 .container {
   display: flex;
   flex-direction: column;
