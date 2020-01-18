@@ -12,7 +12,7 @@ export default props => {
 	const bookId = bookIdFromName(props.match.params.bookName)
 	const bookName = unformatBook(props.match.params.bookName)
 
-	const bookOverviewData = useMemo(() => book_overview.find(book => book.bookId === bookId).data)
+	const bookOverviewData = useMemo(() => book_overview.find(book => book.bookId === bookId).data, [bookId])
 
 	return (
 		<div className="bodyContainer">
