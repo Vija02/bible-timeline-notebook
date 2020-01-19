@@ -1,0 +1,13 @@
+@value themeColor from "~sharedStyles/colors.css";
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+  color: themeColor;
+}
+
+.color{
+  color: themeColor;
+}
