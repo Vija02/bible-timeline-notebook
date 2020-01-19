@@ -11,7 +11,6 @@ import { booksRegex } from 'helper'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Home from './Home'
-import Timeline from './Timeline'
 import ContactMe from './ContactMe'
 import ChapterDetail from './ChapterDetail'
 import ChapterInfo from './ChapterInfo'
@@ -41,7 +40,6 @@ export default () => {
 						{/* Only allow past here if logged in */}
 						{!jwt ? <Redirect to="/" /> : null}
 						<Route exact path="/notes" component={Notes} />
-						<Route path="/timeline" component={Timeline} />
 						<Redirect to="/" />
 					</AbsoluteAnimatedSwitch>
 					<Footer />

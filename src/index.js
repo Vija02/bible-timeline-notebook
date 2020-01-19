@@ -12,8 +12,6 @@ import { AuthProvider } from 'providers/Auth'
 
 import { version } from '../package.json'
 
-import sizeMe from 'react-sizeme'
-sizeMe.noPlaceholders = true
 ;(async () => {
 	if (typeof fetch === 'undefined') {
 		await import('unfetch')
