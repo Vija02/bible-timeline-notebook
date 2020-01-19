@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { Menu, MenuItem } from '@material-ui/core'
 
+import Loading from 'components/Loading'
+import Error from 'components/Error'
+
+import useEsv from 'hooks/useEsv'
+
 import OwnSummary from './OwnSummary'
 import AllChapterSummaries from './AllChapterSummaries'
 
 import {
 	getPreviousChapter,
 	getNextChapter,
-	getChapter,
 	bookIdFromName,
 	bookNameFromId,
 	unformatBook,
@@ -27,9 +31,19 @@ export default props => {
 		return <Redirect to="/" />
 	}
 
+	const { loading, error, data } = useEsv(bookId, chapter)
+
+	if (loading) {
+		return <Loading />
+	}
+
+	if (error) {
+		return <Error />
+	}
+
 	const bookName = unformatBook(props.match.params.bookName)
 
-	const allChapter = getChapter(bookId, chapter)
+	const allChapter = data.allEsvs.nodes.map(node => [node.verse, node.content])
 
 	return (
 		<div className="bodyContainer">
