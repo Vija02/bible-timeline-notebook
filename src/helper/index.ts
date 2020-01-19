@@ -1,27 +1,34 @@
 import React from 'react'
 import * as Yup from 'yup'
 import bookData from 'assets/book_metadata.json'
-import esv from 'assets/esv.json'
 
-export const clampValue = (val, min, max) => {
+type ChapterReference = {
+	bookId: number
+	chapter: number
+	verseCount?: number
+}
+type ChapterContent = VerseData[]
+type VerseData = [number, string]
+
+export const clampValue = (val: number, min: number, max: number): number => {
 	return Math.min(Math.max(val, min), max)
 }
 
-export const toTitleCase = str => {
+export const toTitleCase = (str: string): string => {
 	return str.replace(/\w\S*/g, txt => {
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
 	})
 }
 
-export const formatBook = book => {
+export const formatBook = (book: string): string => {
 	return book.replace(/ /g, '_').toLowerCase()
 }
 
-export const unformatBook = book => {
+export const unformatBook = (book: string): string => {
 	return toTitleCase(book.replace(/_/g, ' '))
 }
 
-export const getPreviousChapter = (bookId, chapter) => {
+export const getPreviousChapter = (bookId: number, chapter: number): ChapterReference | null => {
 	if (chapter > 1) {
 		return { bookId, chapter: chapter - 1 }
 	} else if (bookId > 1) {
@@ -31,7 +38,7 @@ export const getPreviousChapter = (bookId, chapter) => {
 	}
 }
 
-export const getNextChapter = (bookId, chapter) => {
+export const getNextChapter = (bookId: number, chapter: number): ChapterReference | null => {
 	if (chapter < getChapterCount(bookId)) {
 		return { bookId, chapter: chapter + 1 }
 	} else if (bookId < 66) {
@@ -41,69 +48,64 @@ export const getNextChapter = (bookId, chapter) => {
 	}
 }
 
-export const randomChapter = () => {
-	// [[{bookId, chapter, verseCount}, {bookId, chapter, verseCount}], [], ...]
-	const chaptersPerBookArray = bookData.map(book =>
-		book.chapters.map(chapter => ({ ...chapter, bookId: book.bookId })),
-	)
-	// We want to flatten that
-	const listOfChapters = chaptersPerBookArray.reduce((acc, val) => {
-		return [...acc, ...val]
-	}, [])
+export const randomChapter = (): ChapterReference => {
+	const listOfChapters: ChapterReference[] = bookData
+		.map(book => book.chapters.map(chapter => ({ ...chapter, bookId: book.bookId })))
+		// [[{bookId, chapter, verseCount}, {bookId, chapter, verseCount}], [], ...]
+		// Above ^. We want to flatten that
+		.flat(Infinity)
 
 	return listOfChapters[Math.floor(Math.random() * listOfChapters.length)]
 }
 
-export const getChapter = (bookId, chapter) => {
-	const esvChaptersObject = esv[bookNameFromId(bookId)][chapter]
-
-	return Object.entries(esvChaptersObject).sort(([aKey], [bKey]) => {
-		if (parseInt(aKey, 10) < parseInt(bKey, 10)) {
-			return -1
-		} else if (parseInt(aKey, 10) > parseInt(bKey, 10)) {
-			return 1
-		} else {
-			return 0
-		}
-	})
-}
-
-export const getSlicedChapter = (bookId, chapter, maxChapter = 300) => {
-	return getChapter(bookId, chapter).reduce((acc, val) => {
+export const sliceChapter = (chapterData: ChapterContent, maxChapter: number = 300) => {
+	return chapterData.reduce((acc, val) => {
 		// Get the current length in the acc
 		const currentLength = acc.reduce((a, v) => {
 			return a + v[1].length
 		}, 0)
 
 		if (currentLength < maxChapter) {
-			return [...acc, [val[0], val[1].slice(0, maxChapter - currentLength)]]
+			const newArr: VerseData = [val[0], val[1].slice(0, maxChapter - currentLength)]
+			return [...acc, newArr]
 		} else {
 			return acc
 		}
-	}, [])
+	}, [] as ChapterContent)
 }
 
-export const bookIdFromName = book => {
-	return bookData.find(data => formatBook(data.bookName) === formatBook(book)).bookId
+export const bookIdFromName = (book: string): number | null => {
+	return bookData.find(data => formatBook(data.bookName) === formatBook(book))?.bookId ?? null
 }
 
-export const bookNameFromId = bookId => {
-	return bookData.find(data => data.bookId === parseInt(bookId, 10)).bookName
+export const bookNameFromId = (bookId: number | string): string | null => {
+	return bookData.find(data => data.bookId === parseInt(bookId.toString(), 10))?.bookName ?? null
 }
 
 export const oldTestament = bookData.filter(book => book.bookSection === 'OT')
 export const newTestament = bookData.filter(book => book.bookSection === 'NT')
 export const booksRegex = bookData.map(book => formatBook(book.bookName)).join('|')
 
-export const getChapterCount = bookId => {
-	return bookData.find(data => data.bookId === bookId).chaptersCount
+export const getChapterCount = (bookId: number): number => {
+	// Let's return -1 when not found. Too bothersome to handle null and so on for now
+	return bookData.find(data => data.bookId === bookId)?.chaptersCount ?? -1
 }
 
-export const getVerseCount = (bookId, chapter) => {
-	return bookData.find(data => data.bookId === bookId).chapters.find(data => data.chapter === chapter).verseCount
+export const getVerseCount = (bookId: number, chapter: number): number | null => {
+	return (
+		bookData.find(data => data.bookId === bookId)?.chapters.find(data => data.chapter === chapter)?.verseCount ??
+		null
+	)
 }
 
-export const composeReference = (startBookId, startChapter, startVerse, endBookId, endChapter, endVerse) => {
+export const composeReference = (
+	startBookId: number,
+	startChapter: number,
+	startVerse: number,
+	endBookId: number,
+	endChapter: number,
+	endVerse: number,
+) => {
 	const startPassage = `${bookNameFromId(startBookId)} ${startChapter}:${startVerse}`
 	let endPassage = ''
 	let diff
@@ -128,18 +130,18 @@ export const composeReference = (startBookId, startChapter, startVerse, endBookI
 	return `${startPassage}-${endPassage}`
 }
 
-export const getUserIdFromJWT = jwt => {
+export const getUserIdFromJWT = (jwt: string) => {
 	if (jwt) {
 		return JSON.parse(atob(jwt.split('.')[1])).user_id
 	}
 	return -1
 }
 
-export const formatStringLineBreak = str => {
+export const formatStringLineBreak = (str: string): (string | JSX.Element)[] => {
 	return str
 		.replace(/\n/g, '<br />')
 		.split(/(<br \/>)/g)
-		.map((text, i) => (text === '<br />' ? <br key={i} /> : text))
+		.map((text, i) => (text === '<br />' ? React.createElement('br', { key: i }) : text))
 }
 
 // Validate chapter
@@ -157,7 +159,7 @@ Yup.addMethod(Yup.number, 'chapter', function(bookRef) {
 				const book = bookData.find(el => el.bookName.toLowerCase() === bookInput.toLowerCase())
 				const chapter = parseInt(value, 10)
 
-				return chapter > 0 && chapter <= book.chaptersCount
+				return chapter > 0 && chapter <= (book?.chaptersCount ?? 0)
 			}
 			return false
 		},
@@ -182,9 +184,11 @@ Yup.addMethod(Yup.number, 'verse', function(bookRef, chapterRef) {
 				const chapterValid = chapter > 0 && chapter <= chapterCount
 
 				if (chapterValid) {
-					const verseCount = book.chapters.find(chap => parseInt(chap.chapter, 10) === chapter).verseCount
+					// @ts-ignore
+					const verseCount = book.chapters.find(chap => parseInt(chap.chapter, 10) === chapter)?.verseCount
 					const verse = parseInt(value, 10)
 
+					// @ts-ignore
 					return verse > 0 && verse <= verseCount
 				}
 			}
@@ -195,6 +199,8 @@ Yup.addMethod(Yup.number, 'verse', function(bookRef, chapterRef) {
 
 export const bibleVerseSchema = Yup.object().shape({
 	book: Yup.mixed().oneOf(bookData.map(book => book.bookName)),
+	// @ts-ignore
 	chapter: Yup.number().chapter(Yup.ref('book')),
+	// @ts-ignore
 	verse: Yup.number().verse(Yup.ref('book'), Yup.ref('chapter')),
 })
