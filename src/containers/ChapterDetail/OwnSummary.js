@@ -1,28 +1,26 @@
 import React from 'react'
 import { toast } from 'react-toastify'
+import { useMutation } from '@apollo/react-hooks'
 
 import LoginModalToggler from 'containers/Navbar/LoginModalToggler'
 import ChapterSummaryFormIndex from 'containers/Forms/ChapterSummaryForm'
 
-import Mutation from 'components/Mutation'
 import { useAuth } from 'providers/Auth'
 
 import { CREATE_CHAPTER_SUMMARY, ALL_CHAPTER_SUMMARIES } from './queries'
 
 export default ({ bookId, chapter }) => {
 	const { jwt, userId } = useAuth()
+	const [createChapterSummary] = useMutation(CREATE_CHAPTER_SUMMARY)
+
 	return (
 		<>
 			{!!jwt ? (
-				<Mutation mutation={CREATE_CHAPTER_SUMMARY}>
-					{createChapterSummary => (
-						<ChapterSummaryFormIndex
-							onSubmit={data => {
-								return addSummary(createChapterSummary, userId, bookId, chapter, data)
-							}}
-						/>
-					)}
-				</Mutation>
+				<ChapterSummaryFormIndex
+					onSubmit={data => {
+						return addSummary(createChapterSummary, userId, bookId, chapter, data)
+					}}
+				/>
 			) : (
 				<NotLoggedIn />
 			)}
