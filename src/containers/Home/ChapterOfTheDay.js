@@ -1,58 +1,54 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useMemo } from 'react'
+import { Link, Route } from 'react-router-dom'
 import { Code } from 'react-content-loader'
-import { Route } from 'react-router-dom'
+import { useQuery } from '@apollo/react-hooks'
 
-import Query from 'components/Query'
 import AbsoluteAnimatedSwitch from 'components/AbsoluteAnimatedSwitch'
+import Error from 'components/Error'
 
-import { randomChapter, bookNameFromId, getSlicedChapter, formatBook } from 'helper'
+import useEsv, { useLazyEsv } from 'hooks/useEsv'
+
+import { randomChapter, sliceChapter, bookNameFromId, formatBook } from 'helper'
 
 import { GET_CHAPTER_OF_THE_DAY } from './queries'
 import styles from './index.module.css'
 
-export default class ChapterOfTheDay extends Component {
-	render() {
-		return (
-			<div className={styles.cotdInnerContainer}>
-				<div className="cardContainer">
-					<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
-					<Query query={GET_CHAPTER_OF_THE_DAY} throwError={false}>
-						{({ loading, data, error }) => {
-							return (
-								<AbsoluteAnimatedSwitch location={{ pathname: loading ? '/loading' : '/' }}>
-									<Route
-										path="/loading"
-										exact
-										render={() => <Code height={80} width={700} style={{ marginTop: 40 }} />}
-									/>
-									<Route
-										path="/"
-										render={() => {
-											const theChapter = error ? randomChapter() : data.getChapterOfTheDay
+export default () => {
+	const { loading, error, data } = useQuery(GET_CHAPTER_OF_THE_DAY)
+	const [preLoadChapter] = useLazyEsv(data?.getChapterOfTheDay?.bookId, data?.getChapterOfTheDay?.chapter)
 
-											return (
-												<ChapterContent
-													bookId={theChapter.bookId}
-													chapter={theChapter.chapter}
-												/>
-											)
-										}}
-									/>
-								</AbsoluteAnimatedSwitch>
-							)
+	useEffect(() => {
+		preLoadChapter()
+	}, [data, preLoadChapter])
+
+	return (
+		<div className={styles.cotdInnerContainer}>
+			<div className="cardContainer">
+				<div className={styles.chapterOfTheDayTitle}>Chapter of the day</div>
+				<AbsoluteAnimatedSwitch location={{ pathname: loading ? '/loading' : '/' }}>
+					<Route path="/loading" exact render={() => <Loader />} />
+					<Route
+						path="/"
+						render={() => {
+							if (error) {
+								return <RandomChapter />
+							}
+							return <ChapterContent chapterOfTheDayData={data.getChapterOfTheDay} />
 						}}
-					</Query>
-				</div>
+					/>
+				</AbsoluteAnimatedSwitch>
 			</div>
-		)
-	}
+		</div>
+	)
 }
 
-const ChapterContent = ({ bookId, chapter }) => {
-	const slicedChapter = getSlicedChapter(bookId, chapter)
+const Loader = () => <Code height={80} width={700} style={{ marginTop: 40 }} />
 
-	const bookName = bookNameFromId(bookId)
+const ChapterContent = ({ chapterOfTheDayData }) => {
+	const slicedChapter = sliceChapter(chapterOfTheDayData.esv.nodes.map(node => [node.verse, node.content]))
+
+	const bookName = bookNameFromId(chapterOfTheDayData.bookId)
+	const chapter = chapterOfTheDayData.chapter
 
 	return (
 		<>
@@ -75,4 +71,22 @@ const ChapterContent = ({ bookId, chapter }) => {
 			</Link>
 		</>
 	)
+}
+
+// We can probably make this simpler. But at the time I didn't want to spend too much time on this
+const RandomChapter = () => {
+	const theChapter = useMemo(() => randomChapter(), [])
+	const { error, loading, data } = useEsv(theChapter.bookId, theChapter.chapter)
+
+	if (loading) {
+		return <Loader />
+	}
+
+	if (error) {
+		return <Error />
+	}
+
+	const chapterOfTheDayData = { bookId: theChapter.bookId, chapter: theChapter.chapter, esv: data.allEsvs }
+
+	return <ChapterContent chapterOfTheDayData={chapterOfTheDayData} />
 }

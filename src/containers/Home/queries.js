@@ -5,6 +5,13 @@ export const GET_CHAPTER_OF_THE_DAY = gql`
 		getChapterOfTheDay {
 			bookId
 			chapter
+			esv {
+				nodes {
+					bookId
+					verse
+					content
+				}
+			}
 		}
 	}
 `
