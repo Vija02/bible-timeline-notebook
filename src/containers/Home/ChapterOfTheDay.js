@@ -45,7 +45,9 @@ export default () => {
 const Loader = () => <Code height={80} width={700} style={{ marginTop: 40 }} />
 
 const ChapterContent = ({ chapterOfTheDayData }) => {
-	const slicedChapter = sliceChapter(chapterOfTheDayData.esv.nodes.map(node => [node.verse, node.content]))
+	const slicedChapter = sliceChapter(
+		chapterOfTheDayData.esv.nodes.sort((a, b) => a.verse - b.verse).map(node => [node.verse, node.content]),
+	)
 
 	const bookName = bookNameFromId(chapterOfTheDayData.bookId)
 	const chapter = chapterOfTheDayData.chapter

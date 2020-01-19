@@ -18,6 +18,10 @@ export const useLazyEsv = (bookId, chapter) => {
 	const res = useLazyQuery(GET_GREETING, {
 		variables: { bookId, chapter },
 	})
+	if (!!res.data?.allEsvs?.nodes) {
+		res.data.allEsvs.nodes = res.data.allEsvs.nodes.sort((a, b) => a.verse - b.verse)
+		return res
+	}
 	return res
 }
 
@@ -25,5 +29,9 @@ export default (bookId, chapter) => {
 	const res = useQuery(GET_GREETING, {
 		variables: { bookId, chapter },
 	})
+	if (!!res.data?.allEsvs?.nodes) {
+		res.data.allEsvs.nodes = res.data.allEsvs.nodes.sort((a, b) => a.verse - b.verse)
+		return res
+	}
 	return res
 }
