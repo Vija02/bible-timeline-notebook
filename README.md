@@ -2,6 +2,8 @@
 
 # OverRise
 
+## This branch is for reference before the whole timeline page is removed from master
+
 OverRise is a website that aims to **help you read the Bible**.  
 Visit the site [here!](https://overrise.co.uk)
 
