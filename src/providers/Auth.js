@@ -33,7 +33,7 @@ export const AuthProvider = props => {
 		)
 	}
 
-	const onLogout = (showMessage = true) => {
+	const onLogout = (showMessage = false) => {
 		setJwt(null)
 		if (showMessage) {
 			toast.info(
