@@ -17,7 +17,7 @@ import ChapterInfo from './ChapterInfo'
 import Notes from './Notes'
 
 export default () => {
-	const { jwt } = useAuth()
+	const { jwt, onLogout } = useAuth()
 
 	return (
 		<ApolloProvider
@@ -26,7 +26,7 @@ export default () => {
 				if (jwt !== null) {
 					toast.warn('You have been logged out. Current login session expired.')
 				}
-				this.onLogout()
+				onLogout()
 			}, jwt)}
 		>
 			<Router>
