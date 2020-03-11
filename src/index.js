@@ -1,3 +1,6 @@
+import 'react-app-polyfill/ie9'
+import 'react-app-polyfill/stable'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Raven from 'raven-js'
@@ -12,23 +15,16 @@ import { AuthProvider } from 'providers/Auth'
 
 import { version } from '../package.json'
 
-;(async () => {
-	if (typeof fetch === 'undefined') {
-		await import('unfetch')
-	}
-	
-	if (process.env.REACT_APP_SENTRY_DSN && process.env.NODE_ENV === 'production') {
-		Raven.config(process.env.REACT_APP_SENTRY_DSN, {
-			release: version,
-		}).install()
-	}
+if (process.env.REACT_APP_SENTRY_DSN && process.env.NODE_ENV === 'production') {
+	Raven.config(process.env.REACT_APP_SENTRY_DSN, {
+		release: version,
+	}).install()
+}
 
-	ReactDOM.render(
-		<AuthProvider>
-			<Root />
-		</AuthProvider>,
-		document.getElementById('root'),
-	)
-})()
-
+ReactDOM.render(
+	<AuthProvider>
+		<Root />
+	</AuthProvider>,
+	document.getElementById('root'),
+)
 // registerServiceWorker()
